@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  text-align: center;
+  font-size: small;
+  max-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: var(--spacingMedium);
+}
