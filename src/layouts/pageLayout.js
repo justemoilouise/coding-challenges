@@ -7,6 +7,7 @@ import { Drawer } from '../components/drawer/drawer';
 export const PageLayout = ({ children }) => (
   <>
     <Header />
+    <Drawer />
     <Content>{children}</Content>
     <Footer />
     <Drawer />
