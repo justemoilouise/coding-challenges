@@ -1,10 +1,11 @@
 import * as React from 'react';
 import * as styles from './drawer.module.css';
 import anime from 'animejs';
-import { useDrawer } from '../../context/drawer-context';
+import { useSelector } from 'react-redux';
 
 export const Drawer = () => {
-  const drawerContext = useDrawer();
+  const isDrawerOpen = useSelector(state => state.drawer.open);
+
   const animation = React.useRef(null);
 
   React.useLayoutEffect(() => {
@@ -22,8 +23,8 @@ export const Drawer = () => {
   }, []);
 
   React.useEffect(() => {
-    !drawerContext.open ? animation.current.play() : animation.current.reverse();
-  });
+    !isDrawerOpen ? animation.current.play() : animation.current.reverse();
+  }, [isDrawerOpen]);
 
   return (
     <div id='drawer' className={styles.container}>

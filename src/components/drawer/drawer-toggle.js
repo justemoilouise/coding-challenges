@@ -1,10 +1,13 @@
 import * as React from 'react';
 import * as styles from './drawer-toggle.module.css';
 import anime from 'animejs';
-import { useDrawer } from '../../context/drawer-context';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggle } from '../../state/drawer-reducer';
 
 export const DrawerToggle = () => {
-  const drawerContext = useDrawer();
+  const isDrawerOpen = useSelector(state => state.drawer.open);
+  const dispatch = useDispatch();
+
   const animation = React.useRef(null);
 
   React.useLayoutEffect(() => {
@@ -34,12 +37,15 @@ export const DrawerToggle = () => {
       });
   }, []);
 
-  React.useEffect(() => {
-    drawerContext.open ? animation.current.play() : animation.current.reverse();
-  });
+  const handleClick = (evt) => {
+    evt.preventDefault();
+
+    isDrawerOpen ? animation.current.play() : animation.current.reverse();
+    dispatch(toggle());
+  };
 
   return (
-    <button className={styles.container} onClick={drawerContext.toggle}>
+    <button className={styles.container} onClick={handleClick}>
       <div className={styles.block} id='drawer-toggle-block-1' />
       <div className={styles.block} id='drawer-toggle-block-2' />
       <div className={styles.block} id='drawer-toggle-block-3' />
