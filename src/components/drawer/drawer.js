@@ -1,32 +1,32 @@
 import * as React from 'react';
 import * as styles from './drawer.module.css';
 import anime from 'animejs';
-import { useDrawer } from '../../context/drawer-context';
+import { useSelector } from 'react-redux';
 
 export const Drawer = () => {
-  const drawerContext = useDrawer();
+  const isDrawerOpen = useSelector(state => state.drawer.open);
+
+  const ref = React.useRef(null);
   const animation = React.useRef(null);
 
-  React.useLayoutEffect(() => {
-    animation.current = anime.timeline({
+  React.useEffect(() => {
+    animation.current = anime({
       direction: 'normal',
       easing: 'easeInOutSine',
       duration: 250,
+      delay: 0,
       autoplay: false,
-    });
-
-    animation.current.add({
-      targets: '#drawer',
+      targets: ref.current,
       translateX: '-100%',
     });
   }, []);
 
   React.useEffect(() => {
-    !drawerContext.open ? animation.current.play() : animation.current.reverse();
-  });
+    !isDrawerOpen ? animation.current.play() : animation.current.reverse();
+  }, [isDrawerOpen]);
 
   return (
-    <div id='drawer' className={styles.container}>
+    <div ref={ref} className={styles.container}>
       Sidebar
     </div>
   );
