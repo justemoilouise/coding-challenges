@@ -1,12 +1,12 @@
 .container {
   background-color: #FFF;
   width: 320px;
-  height: 100vh;
+  height: calc(100vh - 72px);
   position: absolute;
   z-index: 1;
   top: 0;
   left: 0;
-  margin-top: 72px;
+  padding-top: 72px;
   box-shadow: #2e2e2e -2px 2px 4px;
   transform: translateX(-100%);
 }
