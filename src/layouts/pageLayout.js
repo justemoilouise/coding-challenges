@@ -3,9 +3,9 @@ import { Header } from '../components/header/header';
 import { Content } from '../components/content/content';
 import { Footer } from '../components/footer/footer';
 
-export const PageLayout = ({ pageTitle, children }) => (
+export const PageLayout = ({ children }) => (
   <>
-    <Header pageTitle={pageTitle} />
+    <Header />
     <Content>{children}</Content>
     <Footer />
   </>
