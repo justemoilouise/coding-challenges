@@ -3,7 +3,7 @@ import { PageLayout } from '../layouts/pageLayout';
 
 const IndexPage = () => {
   return (
-    <PageLayout pageTitle='Hello'>
+    <PageLayout>
       Hello world!
     </PageLayout>
   );
