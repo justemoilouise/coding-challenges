@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.block {
+  width: 24px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+
+.block:not(:last-child) {
+  margin-bottom: 4px;
+}
