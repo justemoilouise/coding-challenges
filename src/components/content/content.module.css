@@ -1,5 +1,4 @@
 .container {
   position: relative;
-  padding: var(--spacingLarge);
-  min-height: calc(100vh - 168px);
+  min-height: calc(100vh - 120px);
 }

@@ -1,0 +1,8 @@
+.container {
+  width: 100%;
+  padding: var(--spacingLarge);
+}
+
+.heading {
+  margin: 0;
+}
