@@ -4,11 +4,11 @@ import { PageLayout } from '../layouts/pageLayout';
 const IndexPage = () => {
   return (
     <PageLayout>
-      Hello world!
+      <i>You had me at, "Hello world!"</i>
     </PageLayout>
   );
 };
 
 export default IndexPage;
 
-export const Head = () => <title>Hello world!</title>;
+export const Head = () => <title>Coding Challenges</title>;

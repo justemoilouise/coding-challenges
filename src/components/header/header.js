@@ -10,7 +10,7 @@ export const Header = () => {
       <div className={styles.toggleHeading}>
         <DrawerToggle />
         <h1 className={styles.heading}>
-          Playground
+          Coding Challenges
         </h1>
       </div>
       <a href='https://github.com/justemoilouise/vercel-gatsby/' className={styles.githubLink}>

@@ -1,11 +1,10 @@
 import * as React from 'react';
 import * as styles from './drawer-toggle.module.css';
 import anime from 'animejs';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { toggle } from '../../state/drawer-reducer';
 
 export const DrawerToggle = () => {
-  const isDrawerOpen = useSelector(state => state.drawer.open);
   const dispatch = useDispatch();
 
   const ref = React.useRef(null);
@@ -15,9 +14,9 @@ export const DrawerToggle = () => {
     const timeline = anime.timeline({
       direction: 'normal',
       easing: 'easeInOutSine',
-      delay: 0,
-      duration: 150,
+      duration: 100,
       autoplay: false,
+      loop: false,
     });
 
     timeline
@@ -45,8 +44,9 @@ export const DrawerToggle = () => {
     evt.preventDefault();
     evt.stopPropagation();
 
-    isDrawerOpen ? animation.current.play() : animation.current.reverse();
+    animation.current.play();
     dispatch(toggle());
+    animation.current.reverse();
   };
 
   return (

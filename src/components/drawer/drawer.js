@@ -10,19 +10,26 @@ export const Drawer = () => {
   const animation = React.useRef(null);
 
   React.useEffect(() => {
-    animation.current = anime({
+    const timeline = anime.timeline({
       direction: 'normal',
       easing: 'easeInOutSine',
       duration: 250,
-      delay: 0,
       autoplay: false,
+      loop: false,
       targets: ref.current,
       translateX: '-100%',
     });
+
+    timeline.add({
+      translateX: 0,
+    });
+
+    animation.current = timeline;
   }, []);
 
   React.useEffect(() => {
-    !isDrawerOpen ? animation.current.play() : animation.current.reverse();
+    animation.current.play();
+    animation.current.reverse();
   }, [isDrawerOpen]);
 
   return (

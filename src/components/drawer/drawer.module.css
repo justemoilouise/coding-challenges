@@ -8,5 +8,5 @@
   left: 0;
   padding-top: 72px;
   box-shadow: #2e2e2e -2px 2px 4px;
-  transform: translateX(-100%);
+  transform-origin: top left;
 }
