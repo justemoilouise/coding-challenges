@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as styles from './header.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { DrawerToggle } from '../drawer/drawer-toggle';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { DrawerToggle } from '../drawer/drawer';
 
 export const Header = () => {
   return (
@@ -10,7 +10,7 @@ export const Header = () => {
       <div className={styles.toggleHeading}>
         <DrawerToggle />
         <h1 className={styles.heading}>
-          Playground
+          Coding Challenges
         </h1>
       </div>
       <a href='https://github.com/justemoilouise/vercel-gatsby/' className={styles.githubLink}>
