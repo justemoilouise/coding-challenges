@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacingLarge);
+}
+
+.breadcrumbItem {
+  margin: 0;
+  font-size: small;
+}

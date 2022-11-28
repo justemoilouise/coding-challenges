@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as styles from './header.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { DrawerToggle } from '../drawer/drawer-toggle';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { DrawerToggle } from '../drawer/drawer';
 
 export const Header = () => {
   return (

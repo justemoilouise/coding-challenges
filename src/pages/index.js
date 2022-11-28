@@ -4,7 +4,7 @@ import { PageLayout } from '../layouts/pageLayout';
 const IndexPage = () => {
   return (
     <PageLayout>
-      <i>You had me at, "Hello world!"</i>
+      <i>You had me at "Hello world!"</i>
     </PageLayout>
   );
 };
