@@ -1,0 +1,26 @@
+.container {
+  padding: var(--spacingLarge) 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacingMedium);
+}
+
+.inputField {
+  padding: var(--spacingSmall);
+}
+
+.inputPill {
+  background-color: var(--colorSecondary);
+  border-radius: 4px;
+  font-size: small;
+  padding: 4px;
+}
+
+.inputPill:not(:last-child) {
+  margin-right: var(--spacingSmall);
+}

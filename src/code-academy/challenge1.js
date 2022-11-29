@@ -1,18 +1,26 @@
 import * as React from 'react';
-// import * as styles from './challenge1.module.css';
-
-const input = [500, 400, 400, 375, 300, 350, 325, 300];
+import * as styles from './challenge1.module.css';
 
 export const Challenge1 = () => {
+  const [input, setInput] = React.useState([]);
+
   const getMean = () => {
+    if (input.length === 0) {
+      return 0;
+    }
+
     const total = input.reduce((sum, num) => {
       return sum + num;
     }, 0);
 
-    return total / input.length;
+    return (total / input.length).toFixed(2);
   };
 
   const getMode = () => {
+    if (input.length === 0) {
+      return 0;
+    }
+
     const mode = input
       .reduce((arr, num) => {
         const x = arr.find(x => x.value === num);
@@ -35,10 +43,33 @@ export const Challenge1 = () => {
     return mode.value;
   };
 
+  const onKeyDown = (evt) => {
+    if (evt.code === 'Enter') {
+      const currentTarget = evt.currentTarget;
+      setInput(input.concat(parseInt(currentTarget.value)));
+      currentTarget.value = undefined;
+    }
+  };
+
   return (
-    <div>
-      Mean: {getMean()}
-      Mode: {getMode()}
+    <div className={styles.container}>
+      <div>
+        <div className={styles.inputContainer}>
+          Input:&nbsp;<input type='number' className={styles.inputField} onKeyDown={onKeyDown} />
+        </div>
+        {input.length > 0 && (
+          <div className={styles.inputContainer}>
+            {input.map((value, index) => (
+              <div key={index} className={styles.inputPill}>{value}</div>
+            ))}
+          </div>
+        )}
+      </div>
+      <div>
+        Mean: <strong>{getMean()}</strong>
+        <br /><br />
+        Mode: <strong>{getMode()}</strong>
+      </div>
     </div>
   );
 };
