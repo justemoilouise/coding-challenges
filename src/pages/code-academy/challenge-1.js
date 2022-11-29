@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Challenge1 } from '../../code-academy/challenge1';
 import { CodeAcademyPageLayout } from '../../layouts/codeAcademy-pageLayout';
+import data from '../../content/code-academy.json';
 
 const breadcumbItems = [
   {
@@ -12,17 +13,13 @@ const breadcumbItems = [
   },
 ];
 
-export const details = {
-  title: 'Challenge 1 - Calculate the Mean and Mode',
-  description: 'Given a list of numbers, return the list\'s mean and mode. If there are multiple modes, return the mode that occurs first.',
-  link: 'https://www.codecademy.com/code-challenges/code-challenge-calculate-the-mean-and-mode-javascript',
-  tags: [ 'Algorithmic Complexity', 'Intermediate' ],
-};
+const details = data[0];
 
 const Page = () => {
   return (
     <CodeAcademyPageLayout
       {...details}
+      title={`Challenge 1 - ${details.title}`}
       breadcumbItems={breadcumbItems}
     >
       <Challenge1 />

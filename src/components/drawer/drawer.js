@@ -27,11 +27,14 @@ export const Drawer = () => {
     });
 
     animation.current = timeline;
+
+    animation.current.reverse();
+    animation.current.play();
   }, []);
 
   React.useEffect(() => {
-    animation.current.play();
     animation.current.reverse();
+    animation.current.play();
   }, [isDrawerOpen]);
 
   return (
@@ -77,6 +80,9 @@ export const DrawerToggle = () => {
       });
     
     animation.current = timeline;
+
+    animation.current.reverse();
+    animation.current.play();
   }, []);
 
   const handleClick = (evt) => {
