@@ -1,0 +1,15 @@
+.container {
+  padding: var(--spacingLarge) 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacingMedium);
+}
+
+.inputField {
+  padding: var(--spacingSmall);
+}

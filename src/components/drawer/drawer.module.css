@@ -30,3 +30,22 @@
 .block:not(:last-child) {
   margin-bottom: 4px;
 }
+
+.linkItem {
+  display: block;
+  padding: var(--spacingLarge);
+}
+
+.linkItem:hover {
+  background-color: var(--colorSecondary);
+  color: #000;
+  cursor: pointer;
+}
+
+.linkItem.active {
+  color: var(--colorPrimary);
+}
+
+.linkItem:not(:last-child) {
+  border-bottom: 1px solid #2e2e2e;
+}
