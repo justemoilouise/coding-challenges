@@ -4,23 +4,25 @@ import { Card } from '../../components/card/card';
 import { Grid } from '../../components/grid/grid';
 import { Pill } from '../../components/pill/pill';
 import { CodeAcademyPageLayout } from '../../layouts/codeAcademy-pageLayout';
-import { details as Challenge1Details } from './challenge-1';
+import data from '../../content/code-academy.json';
 
 const Page = () => {
   return (
     <CodeAcademyPageLayout>
       <Grid>
-        <Link to='/code-academy/challenge-1'>
-          <Card>
-            <h4>Challenge 1</h4>
-            <p>Calculate the Mean and Mode</p>
-            <div>
-              {Challenge1Details.tags.map((tag, index) => (
-                <Pill key={index} variant='primary'>{tag}</Pill>
-              ))}
-            </div>
-          </Card>
-        </Link>
+        {data.map((d, i) => (
+          <Link key={i} to={`/code-academy/challenge-${i + 1}`}>
+            <Card>
+              <h4>Challenge {i+1}</h4>
+              <p>{d.title}</p>
+              <div>
+                {d.tags.map((tag, index) => (
+                  <Pill key={index} variant='primary'>{tag}</Pill>
+                ))}
+              </div>
+            </Card>
+          </Link>
+        ))}
       </Grid>
     </CodeAcademyPageLayout>
   );
