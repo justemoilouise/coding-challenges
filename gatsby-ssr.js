@@ -1,3 +1,3 @@
-import wrapperRedux from './wrapper-redux';
+import rootWrapper from './root-wrapper';
 
-export const wrapRootElement = wrapperRedux;
+export const wrapRootElement = rootWrapper;

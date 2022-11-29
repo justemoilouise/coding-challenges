@@ -1,5 +1,5 @@
 import'@fontsource/raleway';
 import './src/styles/theme.css';
-import wrapperRedux from './wrapper-redux';
+import rootWrapper from './root-wrapper';
 
-export const wrapRootElement = wrapperRedux;
+export const wrapRootElement = rootWrapper;
