@@ -2,8 +2,8 @@ import * as React from 'react';
 import * as styles from './drawer.module.css';
 import anime from 'animejs';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggle } from '../../state/drawer-reducer';
 import { Link } from 'gatsby';
+import { toggle } from '../../state/drawer-reducer';
 
 export const Drawer = () => {
   const isDrawerOpen = useSelector(state => state.drawer.open);
