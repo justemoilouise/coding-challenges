@@ -13,14 +13,3 @@
 .inputField {
   padding: var(--spacingSmall);
 }
-
-.inputPill {
-  background-color: var(--colorSecondary);
-  border-radius: 4px;
-  font-size: small;
-  padding: 4px;
-}
-
-.inputPill:not(:last-child) {
-  margin-right: var(--spacingSmall);
-}

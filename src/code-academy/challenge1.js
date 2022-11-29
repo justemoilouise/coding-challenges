@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Pill } from '../components/pill/pill';
 import * as styles from './challenge1.module.css';
 
 export const Challenge1 = () => {
@@ -60,7 +61,7 @@ export const Challenge1 = () => {
         {input.length > 0 && (
           <div className={styles.inputContainer}>
             {input.map((value, index) => (
-              <div key={index} className={styles.inputPill}>{value}</div>
+              <Pill key={index} variant='secondary'>{value}</Pill>
             ))}
           </div>
         )}
