@@ -3,6 +3,7 @@ import * as styles from './drawer.module.css';
 import anime from 'animejs';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggle } from '../../state/drawer-reducer';
+import { Link } from 'gatsby';
 
 export const Drawer = () => {
   const isDrawerOpen = useSelector(state => state.drawer.open);
@@ -35,7 +36,9 @@ export const Drawer = () => {
 
   return (
     <div ref={ref} className={styles.container}>
-      Sidebar
+      <Link to='/code-academy' className={styles.linkItem} activeClassName={styles.active}>
+        Code Academy
+      </Link>
     </div>
   );
 };
