@@ -30,8 +30,8 @@ export const Drawer = () => {
   }, []);
 
   React.useEffect(() => {
-    animation.current.play();
     animation.current.reverse();
+    animation.current.play();
   }, [isDrawerOpen]);
 
   return (
