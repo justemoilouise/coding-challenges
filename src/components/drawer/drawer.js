@@ -27,6 +27,9 @@ export const Drawer = () => {
     });
 
     animation.current = timeline;
+
+    animation.current.reverse();
+    animation.current.play();
   }, []);
 
   React.useEffect(() => {
@@ -77,6 +80,9 @@ export const DrawerToggle = () => {
       });
     
     animation.current = timeline;
+
+    animation.current.reverse();
+    animation.current.play();
   }, []);
 
   const handleClick = (evt) => {
