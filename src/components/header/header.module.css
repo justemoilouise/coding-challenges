@@ -17,6 +17,10 @@
   align-items: center;
 }
 
+.headingLink:hover {
+  color: #FFF !important;
+}
+
 .heading {
   margin: 0 0 0 var(--spacingLarge);
 }
