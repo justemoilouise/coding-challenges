@@ -2,9 +2,14 @@
   display: flex;
   align-items: center;
   margin-bottom: var(--spacingLarge);
+  color: var(--colorGrey);
 }
 
 .breadcrumbItem {
   margin: 0;
   font-size: small;
+}
+
+.icon {
+  margin: 0 var(--spacingSmall);
 }
