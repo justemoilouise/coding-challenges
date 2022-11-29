@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { CodeAcademyPageLayout } from '../layouts/codeAcademy-pageLayout';
+import { CodeAcademyPageLayout } from '../../layouts/codeAcademy-pageLayout';
 
 const Page = () => {
   return (
