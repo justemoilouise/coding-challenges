@@ -13,7 +13,7 @@ const Page = () => {
         {data.map((d, i) => (
           <Link key={i} to={`/code-academy/challenge-${i + 1}`}>
             <Card>
-              <h4>Challenge {i+1}</h4>
+              <h3>Challenge {i+1}</h3>
               <p>{d.title}</p>
               <div>
                 {d.tags.map((tag, index) => (
