@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Pill } from '../components/pill/pill';
 import * as styles from './challenge1.module.css';
+import { Pill } from '../components/pill/pill';
 
 export const Challenge1 = () => {
   const [input, setInput] = React.useState([]);
