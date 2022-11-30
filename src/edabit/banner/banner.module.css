@@ -1,0 +1,11 @@
+.container {
+  margin-bottom: var(--spacingLarge);
+  padding: var(--spacingLarge);
+  height: 220px;
+  background: linear-gradient(to right, beige, rgb(45, 184, 75));
+}
+
+.heading {
+  margin: 0;
+  font-size: xxx-large;
+}
