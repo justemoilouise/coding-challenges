@@ -3,15 +3,15 @@ import { Link } from 'gatsby';
 import { Card } from '../../components/card/card';
 import { Grid } from '../../components/grid/grid';
 import { Pill } from '../../components/pill/pill';
-import { CodeAcademyPageLayout } from '../../layouts/codeAcademy-pageLayout';
-import data from '../../content/code-academy.json';
+import { EdabitPageLayout } from '../../layouts/edabit-pageLayout';
+import data from '../../content/edabit.json';
 
 const Page = () => {
   return (
-    <CodeAcademyPageLayout>
+    <EdabitPageLayout>
       <Grid>
         {data.map((d, i) => (
-          <Link key={i} to={`/code-academy/challenge-${i + 1}`}>
+          <Link key={i} to={`/edabit/challenge-${i + 1}`}>
             <Card>
               <h3>Challenge {i+1}</h3>
               <p>{d.title}</p>
@@ -24,10 +24,10 @@ const Page = () => {
           </Link>
         ))}
       </Grid>
-    </CodeAcademyPageLayout>
+    </EdabitPageLayout>
   );
 };
 
 export default Page;
 
-export const Head = () => <title>Coding Challenges - Code Academy</title>;
+export const Head = () => <title>Coding Challenges - Edabit</title>;

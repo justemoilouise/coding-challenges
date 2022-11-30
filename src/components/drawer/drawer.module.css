@@ -47,5 +47,5 @@
 }
 
 .linkItem:not(:last-child) {
-  border-bottom: 1px solid #2e2e2e;
+  border-bottom: 1px solid #e1e1e1;
 }

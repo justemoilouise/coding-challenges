@@ -5,6 +5,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'gatsby';
 import { toggle } from '../../state/drawer-reducer';
 
+const links = [
+  {
+    label: 'Code Academy',
+    url: '/code-academy',
+  },
+  {
+    label: 'Edabit',
+    url: '/edabit',
+  },
+];
+
 export const Drawer = () => {
   const isDrawerOpen = useSelector(state => state.drawer.open);
 
@@ -39,9 +50,11 @@ export const Drawer = () => {
 
   return (
     <div ref={ref} className={styles.container}>
-      <Link to='/code-academy' className={styles.linkItem} activeClassName={styles.active}>
-        Code Academy
-      </Link>
+      {links.map((link, index) => (
+        <Link key={index} to={link.url} className={styles.linkItem} activeClassName={styles.active}>
+          {link.label}
+        </Link>
+      ))}
     </div>
   );
 };
