@@ -4,7 +4,7 @@
   padding: var(--spacingLarge) 0;
 }
 
-.inputContainer {
+.flexContainer {
   display: flex;
   align-items: center;
   margin-bottom: var(--spacingMedium);

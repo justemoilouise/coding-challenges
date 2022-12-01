@@ -28,12 +28,12 @@ export const Challenge2 = () => {
   return (
     <div className={styles.container}>
       <div>
-        <div className={styles.inputContainer}>
+        <div className={styles.flexContainer}>
           Input:&nbsp;<input type='number' className={styles.inputField} onKeyDown={onKeyDown} />
           <button className={styles.button} onClick={onClick}>Submit</button>
         </div>
         {input.length > 0 && (
-          <div className={styles.inputContainer}>
+          <div className={styles.flexContainer}>
             {input.map((value, index) => (
               <Pill key={index} variant='secondary'>{value}</Pill>
             ))}
@@ -42,7 +42,16 @@ export const Challenge2 = () => {
       </div>
       {output && (
         <div>
-          Output:&nbsp;<strong>{output.toString()}</strong>
+          <div className={styles.flexContainer}>
+            Output:
+          </div>
+          {output.length > 0 && (
+          <div className={styles.flexContainer}>
+            {output.map((value, index) => (
+              <Pill key={index} variant='secondary'>{value}</Pill>
+            ))}
+          </div>
+        )}
         </div>
       )}
     </div>
