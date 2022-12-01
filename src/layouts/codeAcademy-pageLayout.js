@@ -12,7 +12,7 @@ export const CodeAcademyPageLayout = ({ breadcumbItems, title, description, link
     {title && <h3>{title}</h3>}
     {description && (
       <p>
-        {description}
+        <span dangerouslySetInnerHTML={{ __html: description }} />
         {link && (
           <>
             &nbsp;
