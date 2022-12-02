@@ -1,5 +1,6 @@
 import * as React from 'react';
-import * as styles from './challenge2.module.css';
+import * as styles from '../styles/challenge.module.css';
+import classNames from 'classnames';
 import { Pill } from '../components/pill/pill';
 
 export const Challenge2 = () => {
@@ -35,8 +36,8 @@ export const Challenge2 = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.inputContainer}>
+    <div className={classNames(styles.container, styles.gridContainer)}>
+      <div className={styles.flexContainer}>
         Input:&nbsp;<input type='number' min={0} ref={inputRef} className={styles.inputField} />
         <button className={styles.button} onClick={handleClick}>Submit</button>
       </div>
