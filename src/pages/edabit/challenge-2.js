@@ -29,4 +29,4 @@ const Page = () => {
 
 export default Page;
 
-export const Head = () => <title>Coding Challenges - Code Academy - Challenge 2</title>;
+export const Head = () => <title>Coding Challenges - Edabit - Challenge 2</title>;

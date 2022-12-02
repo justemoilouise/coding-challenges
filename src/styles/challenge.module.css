@@ -2,7 +2,12 @@
   padding: var(--spacingLarge) 0;
 }
 
-.inputContainer {
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.flexContainer {
   display: flex;
   align-items: center;
   margin-bottom: var(--spacingMedium);

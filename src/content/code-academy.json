@@ -10,5 +10,11 @@
     "description": "Given the daily values of a stock, create a function called <b>maxProfitDays()</b> that, given a list of integers, will return the index value of the two elements that represent the day on which one should have bought a share and the day on which one should have sold a share based on the max profit.<br /><br />A list of integers will represent the stock price at the beginning of each day for a week. You are required to buy and sell only once. You also must buy a stock before selling it.<br /><br />For example, given the list <b>[17, 11, 60, 25, 150, 75, 31, 120]</b>, you can assume that index 0 represents day 0 and index 7 represents day 7. In this case, purchasing on day 1 and selling on day 4 would yield the most profit.",
     "link": "https://www.codecademy.com/code-challenges/code-challenge-maximize-stock-trading-profit-javascript",
     "tags": [ "Algorithmic Complexity", "Intermediate" ]
+  },
+  {
+    "title": "Prime Number Finder",
+    "description": "Create a function that takes in a number, and returns all the prime numbers from <b>1</b> to <b>n</b> (inclusive). As a reminder, a prime number is a number that is only divisible by <b>1</b> and itself.",
+    "link": "https://www.codecademy.com/code-challenges/code-challenge-maximize-stock-trading-profit-javascript",
+    "tags": [ "Algorithmic Complexity", "Intermediate", "Arrays" ]
   }
 ]

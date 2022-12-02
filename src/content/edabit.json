@@ -10,5 +10,11 @@
     "description": "Create a function that takes a number as an argument and returns n instances of the Fibonacci sequence as an array.",
     "link": "https://edabit.com/challenge/PeDpzoeGyv9TfF5G5",
     "tags": [ "Arrays", "Algorithms", "Numbers", "Loops" ]
+  },
+  {
+    "title": "Seven Boom!",
+    "description": "Create a function that takes an array of numbers and return \"Boom!\" if the digit 7 appears in the array. Otherwise, return \"there is no 7 in the array\"",
+    "link": "https://edabit.com/challenge/6R6gReGTGwzpwuffD",
+    "tags": [ "Arrays", "Numbers", "Loops", "Regex" ]
   }
 ]

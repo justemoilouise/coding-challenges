@@ -1,6 +1,5 @@
 import * as React from 'react';
-import * as styles from './challenge1.module.css';
-import classNames from 'classnames';
+import * as styles from '../styles/challenge.module.css';
 import { Pill } from '../components/pill/pill';
 
 export const Challenge1 = () => {
@@ -32,17 +31,17 @@ export const Challenge1 = () => {
 
   return (
     <div className={styles.container}>
-      <div className={classNames(styles.inputContainer, styles.row)}>
+      <div className={styles.flexContainer}>
         Input:&nbsp;<input ref={inputRef} className={styles.inputField} />
         <button className={styles.button} onClick={handleClick}>Convert</button>
       </div>
       {data && (
         <>
-          <div className={styles.row}>
+          <div className={styles.flexContainer}>
             Given:&nbsp;
             {data.input.map((num, i) => (<Pill key={i} variant='secondary'>{num}</Pill>))}
           </div>
-          <div className={styles.row}>
+          <div className={styles.flexContainer}>
             Output:&nbsp;<strong>{data.output}</strong>
           </div>
         </>
