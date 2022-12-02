@@ -21,7 +21,15 @@ export const Challenge = () => {
   };
 
   const isPrime = (num) => {
-    return num === 2 || num % 2 !== 0;
+    if ([2,3,5].includes(num)) {
+      return true;
+    }
+
+    if (num % 2 === 0 || num % 3 === 0 || num % 5 === 0) {
+      return false;
+    }
+
+    return true;
   };
 
   return (
@@ -32,7 +40,8 @@ export const Challenge = () => {
       </div>
       {output && (
         <div className={styles.flexContainer}>
-          Output:&nbsp;
+          Output:
+          <br />
           {output.map((value, index) => (
             <Pill key={index} variant='secondary'>{value}</Pill>
           ))}
