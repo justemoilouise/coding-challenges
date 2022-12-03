@@ -1,14 +1,18 @@
+import * as React from 'react';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import * as React from 'react';
+import { Banner } from '../components/banner/banner';
 import { Breadcrumbs } from '../components/breadcrumbs/breadcrumbs';
-import { EdabitBanner } from '../edabit/banner/banner';
 import { PageLayout } from './pageLayout';
 
 export const EdabitPageLayout = ({ breadcumbItems, title, description, link, children }) => (
   <PageLayout>
     <Breadcrumbs items={breadcumbItems} />
-    <EdabitBanner />
+    <Banner
+      bgColor={[ 'beige', 'rgb(45, 184, 75)' ]}
+      link='https://edabit.com/challenges'
+      title='Edabit'
+    />
     {title && <h3>{title}</h3>}
     {description && (
       <p>
