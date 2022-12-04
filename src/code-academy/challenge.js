@@ -7,7 +7,7 @@ export const getMean = (input) => {
     return sum + num;
   }, 0);
 
-  return (total / input.length).toFixed(2);
+  return total / input.length;
 }
 
 export const getMode = (input) => {

@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Code Academy challenges snapshots Challenge 1 1`] = `
+<div
+  className=""
+>
+  <div>
+    <div>
+      Input: 
+      <input
+        onKeyDown={[Function]}
+        type="number"
+      />
+    </div>
+  </div>
+  <div>
+    Mean: 
+    <strong>
+      0.00
+    </strong>
+    <br />
+    <br />
+    Mode: 
+    <strong>
+      0
+    </strong>
+  </div>
+</div>
+`;
+
+exports[`Code Academy challenges snapshots Challenge 2 1`] = `
+<div
+  className=""
+>
+  <div>
+    <div>
+      Input: 
+      <input
+        onKeyDown={[Function]}
+        type="number"
+      />
+      <button
+        onClick={[Function]}
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+  <div>
+    <div>
+      Output:
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Code Academy challenges snapshots Challenge 3 1`] = `
+<div
+  className=""
+>
+  <div>
+    Input: 
+    <input
+      type="number"
+    />
+    <button
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+  <div>
+    Output:
+    <br />
+  </div>
+</div>
+`;

@@ -30,7 +30,7 @@ export const Challenge = () => {
         )}
       </div>
       <div>
-        Mean: <strong>{getMean(input)}</strong>
+        Mean: <strong>{getMean(input).toFixed(2)}</strong>
         <br /><br />
         Mode: <strong>{getMode(input)}</strong>
       </div>

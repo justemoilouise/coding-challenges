@@ -17,8 +17,8 @@ export const Challenge = () => {
     setSeq(undefined);
 
     const input = parseInt(inputRef.current.value);
-    if (input && input > 0) {
-      setSeq(getFibonacci([0], input));
+    if (input) {
+      setSeq(getFibonacci(input));
     }
   };
 

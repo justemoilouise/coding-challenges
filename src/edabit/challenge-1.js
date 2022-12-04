@@ -13,13 +13,9 @@ export const Challenge = () => {
       return null;
     }
 
-    const input = inputRef.current.value.toLowerCase().split(' ').filter(x => ['zero', 'one'].includes(x));
-    const output = convertBinaryTextToNumber(input);
+    const { input, output } = convertBinaryTextToNumber(inputRef.current.value);
 
-    setData({
-      input,
-      output,
-    });
+    setData({ input, output });
     inputRef.current.value = '';
   };
 
