@@ -26,6 +26,6 @@ jobs:
       - name: Build Project
         env:
             PREFIX_PATHS: 'true'
-        run: yarnrun  build --if-present
+        run: yarn run  build --if-present
       - name: Run tests
         run: yarn test
