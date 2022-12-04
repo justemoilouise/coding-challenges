@@ -4,7 +4,7 @@ import { Challenge as Challenge1 } from '../challenge-1';
 import { Challenge as Challenge2 } from '../challenge-2';
 import { Challenge as Challenge3 } from '../challenge-3';
 
-describe('Code Academy challenges snapshots', () => {
+describe('Edabit challenges snapshots', () => {
   it('Challenge 1', () => {
     const tree = renderer
       .create(<Challenge1 />)

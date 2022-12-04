@@ -18,4 +18,4 @@ describe('Edabit challenges fns', () => {
     expect(boomSeven([1, 2, 3, 4, 5, 6, 7])).toBe('BOOM!');
     expect(boomSeven([8, 6, 33, 100])).toBe('there is no 7 in the array');
   });
-})
+});

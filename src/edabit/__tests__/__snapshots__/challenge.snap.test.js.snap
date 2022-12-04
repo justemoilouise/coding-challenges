@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Edabit challenges snapshots Challenge 1 1`] = `
+<div>
+  <div>
+    Input: 
+    <input />
+    <button
+      onClick={[Function]}
+    >
+      Convert
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Edabit challenges snapshots Challenge 2 1`] = `
+<div
+  className=""
+>
+  <div>
+    Input: 
+    <input
+      min={0}
+      type="number"
+    />
+    <button
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Edabit challenges snapshots Challenge 3 1`] = `
+<div
+  className=""
+>
+  <div>
+    <div>
+      Input: 
+      <input
+        onKeyDown={[Function]}
+        type="number"
+      />
+      <button
+        onClick={[Function]}
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+  <div>
+    <div>
+      Output:
+    </div>
+  </div>
+</div>
+`;
