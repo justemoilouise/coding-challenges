@@ -2,8 +2,9 @@ import * as React from 'react';
 import * as styles from '../styles/challenge.module.css';
 import classNames from 'classnames';
 import { Pill } from '../components/pill/pill';
+import { getFibonacci } from './challenge';
 
-export const Challenge2 = () => {
+export const Challenge = () => {
   const inputRef = React.useRef();
 
   const [seq, setSeq] = React.useState();
@@ -19,20 +20,6 @@ export const Challenge2 = () => {
     if (input && input > 0) {
       setSeq(getFibonacci([0], input));
     }
-  };
-
-  const getFibonacci = (arr, len) => {
-    if (arr.length === len ) {
-      return arr;
-    }
-
-    if (arr.length < 2) {
-      return getFibonacci(arr.concat(1), len);
-    }
-
-    const arrLength = arr.length;
-    const value = arr[arrLength - 1] + arr[arrLength - 2];
-    return getFibonacci(arr.concat(value), len);
   };
 
   return (

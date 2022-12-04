@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Challenge } from '../../code-academy/challenge3';
+import { Challenge } from '../../code-academy/challenge-3';
 import { CodeAcademyPageLayout } from '../../layouts/codeAcademy-pageLayout';
 import data from '../../content/code-academy.json';
 

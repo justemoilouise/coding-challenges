@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Challenge1 } from '../../edabit/challenge1';
+import { Challenge } from '../../edabit/challenge-1';
 import { EdabitPageLayout } from '../../layouts/edabit-pageLayout';
 import data from '../../content/edabit.json';
 
@@ -22,7 +22,7 @@ const Page = () => {
       title={`Challenge 1 - ${details.title}`}
       breadcumbItems={breadcumbItems}
     >
-      <Challenge1 />
+      <Challenge />
     </EdabitPageLayout>
   );
 };

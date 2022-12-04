@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as styles from '../styles/challenge.module.css';
 import classNames from 'classnames';
 import { Pill } from '../components/pill/pill';
+import { getPrimeNumbers } from './challenge';
 
 export const Challenge = () => {
   const inputRef = React.useRef(null);
@@ -13,23 +14,9 @@ export const Challenge = () => {
     }
     
     const value = inputRef.current.value;
-    const primeNumArr = Array.from({ length: value - 1 }).reduce((arr, num, index) => {
-      return isPrime(index + 2) ? arr.concat(index + 2) : arr;
-    }, []);
+    const primeNumArr = getPrimeNumbers(value);
 
     setOutput(primeNumArr);
-  };
-
-  const isPrime = (num) => {
-    if ([2,3,5].includes(num)) {
-      return true;
-    }
-
-    if (num % 2 === 0 || num % 3 === 0 || num % 5 === 0) {
-      return false;
-    }
-
-    return true;
   };
 
   return (

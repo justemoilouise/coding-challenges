@@ -2,8 +2,9 @@ import * as React from 'react';
 import * as styles from '../styles/challenge.module.css';
 import classNames from 'classnames';
 import { Pill } from '../components/pill/pill';
+import { boomSeven } from './challenge';
 
-export const Challenge2 = () => {
+export const Challenge = () => {
   const [input, setInput] = React.useState([]);
   const [output, setOutput] = React.useState([]);
 
@@ -16,14 +17,7 @@ export const Challenge2 = () => {
   };
 
   const onClick = () => {
-    const min = Math.min(...input);
-    const minIndex = input.findIndex(x => x === min);
-
-    const subArr = input.slice(minIndex);
-    const max = Math.max(...subArr);
-    const maxIndex = input.findIndex(x => x === max);
-
-    setOutput([minIndex, maxIndex]);
+    setOutput(boomSeven(input));
   };
 
   return (
@@ -48,9 +42,7 @@ export const Challenge2 = () => {
           </div>
           {output.length > 0 && (
           <div className={styles.flexContainer}>
-            {output.map((value, index) => (
-              <Pill key={index} variant='secondary'>{value}</Pill>
-            ))}
+            <strong>{output}</strong>
           </div>
         )}
         </div>

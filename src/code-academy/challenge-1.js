@@ -2,23 +2,17 @@ import * as React from 'react';
 import * as styles from '../styles/challenge.module.css';
 import classNames from 'classnames';
 import { Pill } from '../components/pill/pill';
+import { getMean, getMode } from './challenge';
 
 export const Challenge = () => {
   const [input, setInput] = React.useState([]);
-  const [output, setOutput] = React.useState([]);
 
   const onKeyDown = (evt) => {
     if (evt.code === 'Enter') {
       const currentTarget = evt.currentTarget;
       setInput(input.concat(parseInt(currentTarget.value)));
-      currentTarget.value = '';
+      currentTarget.value = undefined;
     }
-  };
-
-  const onClick = () => {
-    setOutput(input.includes(7)
-      ? 'BOOM!'
-      : 'there is no 7 in the array');
   };
 
   return (
@@ -26,7 +20,6 @@ export const Challenge = () => {
       <div>
         <div className={styles.flexContainer}>
           Input:&nbsp;<input type='number' className={styles.inputField} onKeyDown={onKeyDown} />
-          <button className={styles.button} onClick={onClick}>Submit</button>
         </div>
         {input.length > 0 && (
           <div className={styles.flexContainer}>
@@ -36,18 +29,11 @@ export const Challenge = () => {
           </div>
         )}
       </div>
-      {output && (
-        <div>
-          <div className={styles.flexContainer}>
-            Output:
-          </div>
-          {output.length > 0 && (
-          <div className={styles.flexContainer}>
-            <strong>{output}</strong>
-          </div>
-        )}
-        </div>
-      )}
+      <div>
+        Mean: <strong>{getMean(input)}</strong>
+        <br /><br />
+        Mode: <strong>{getMode(input)}</strong>
+      </div>
     </div>
   );
 };

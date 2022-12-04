@@ -1,8 +1,9 @@
 import * as React from 'react';
 import * as styles from '../styles/challenge.module.css';
 import { Pill } from '../components/pill/pill';
+import { convertBinaryTextToNumber } from './challenge';
 
-export const Challenge1 = () => {
+export const Challenge = () => {
   const inputRef = React.useRef();
 
   const [data, setData] = React.useState();
@@ -12,15 +13,8 @@ export const Challenge1 = () => {
       return null;
     }
 
-    let input = inputRef.current.value.toLowerCase().split(' ').filter(x => ['zero', 'one'].includes(x));
-
-    const mod = input.length % 8;
-    if (mod !== 0) {
-      const quot = Math.floor(input.length / 8);
-      input = input.slice(0, quot * 8);
-    }
-
-    const output = input.map(textNum => (textNum === 'zero' ? 0 : 1));
+    const input = inputRef.current.value.toLowerCase().split(' ').filter(x => ['zero', 'one'].includes(x));
+    const output = convertBinaryTextToNumber(input);
 
     setData({
       input,

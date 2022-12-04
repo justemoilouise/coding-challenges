@@ -2,55 +2,23 @@ import * as React from 'react';
 import * as styles from '../styles/challenge.module.css';
 import classNames from 'classnames';
 import { Pill } from '../components/pill/pill';
+import { getMaxProfitDays } from './challenge';
 
-export const Challenge1 = () => {
+export const Challenge = () => {
   const [input, setInput] = React.useState([]);
-
-  const getMean = () => {
-    if (input.length === 0) {
-      return 0;
-    }
-
-    const total = input.reduce((sum, num) => {
-      return sum + num;
-    }, 0);
-
-    return (total / input.length).toFixed(2);
-  };
-
-  const getMode = () => {
-    if (input.length === 0) {
-      return 0;
-    }
-
-    const mode = input
-      .reduce((arr, num) => {
-        const x = arr.find(x => x.value === num);
-        if(!x) {
-          return arr.concat({
-            value: num,
-            f: 1,
-          });
-        }
-        x.f++;
-        return arr;
-      }, [])
-      .reduce((obj, value) => {
-        if (value.f > obj.f) {
-          return value;
-        }
-        return obj;
-      }, { f: 0} );
-
-    return mode.value;
-  };
+  const [output, setOutput] = React.useState([]);
 
   const onKeyDown = (evt) => {
     if (evt.code === 'Enter') {
       const currentTarget = evt.currentTarget;
       setInput(input.concat(parseInt(currentTarget.value)));
-      currentTarget.value = undefined;
+      currentTarget.value = '';
     }
+  };
+
+  const onClick = () => {
+    const output = getMaxProfitDays(input);
+    setOutput(output);
   };
 
   return (
@@ -58,6 +26,7 @@ export const Challenge1 = () => {
       <div>
         <div className={styles.flexContainer}>
           Input:&nbsp;<input type='number' className={styles.inputField} onKeyDown={onKeyDown} />
+          <button className={styles.button} onClick={onClick}>Submit</button>
         </div>
         {input.length > 0 && (
           <div className={styles.flexContainer}>
@@ -67,11 +36,20 @@ export const Challenge1 = () => {
           </div>
         )}
       </div>
-      <div>
-        Mean: <strong>{getMean()}</strong>
-        <br /><br />
-        Mode: <strong>{getMode()}</strong>
-      </div>
+      {output && (
+        <div>
+          <div className={styles.flexContainer}>
+            Output:
+          </div>
+          {output.length > 0 && (
+          <div className={styles.flexContainer}>
+            {output.map((value, index) => (
+              <Pill key={index} variant='secondary'>{value}</Pill>
+            ))}
+          </div>
+        )}
+        </div>
+      )}
     </div>
   );
 };
