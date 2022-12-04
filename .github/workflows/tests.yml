@@ -24,6 +24,8 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Build Project
-        run: yarn build --if-present
+        env:
+            PREFIX_PATHS: 'true'
+        run: yarnrun  build --if-present
       - name: Run tests
         run: yarn test
