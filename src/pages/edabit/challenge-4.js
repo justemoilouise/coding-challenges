@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Challenge } from '../../edabit/challenge-3';
+import { Challenge } from '../../edabit/challenge-4';
 import { EdabitPageLayout } from '../../layouts/edabit-pageLayout';
 import data from '../../content/edabit.json';
 
@@ -9,17 +9,17 @@ const breadcumbItems = [
     label: 'Edabit'
   },
   {
-    label: 'Challenge 3',
+    label: 'Challenge 4',
   },
 ];
 
-const details = data[2];
+const details = data[3];
 
 const Page = () => {
   return (
     <EdabitPageLayout
       {...details}
-      title={`Challenge 3 - ${details.title}`}
+      title={`Challenge 4 - ${details.title}`}
       breadcumbItems={breadcumbItems}
     >
       <Challenge />
@@ -29,4 +29,4 @@ const Page = () => {
 
 export default Page;
 
-export const Head = () => <title>Coding Challenges - Edabit - Challenge 3</title>;
+export const Head = () => <title>Coding Challenges - Edabit - Challenge 4</title>;
