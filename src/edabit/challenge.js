@@ -35,3 +35,14 @@ export const boomSeven = (input) => {
     ? 'BOOM!'
     : 'there is no 7 in the array';
 }
+
+export const towerOfHanoi = (disc, moves = [], from = 'A', to = 'B', aux = 'C') => {
+  if (disc === 0) {
+    return moves;
+  }
+
+  const newMoves = towerOfHanoi(disc - 1, moves, from, aux, to);
+  const move = `Move disc #${disc} from ${from} to ${aux}`;
+
+  return towerOfHanoi(disc - 1, newMoves.concat(move), aux, to, from);
+}
