@@ -1,4 +1,4 @@
-import { getMaxProfitDays, getMean, getMode, getPrimeNumbers } from "../challenge";
+import { arrayToBST, getMaxProfitDays, getMean, getMode, getPrimeNumbers } from "../challenge";
 
 describe('Code Academy challenges fns', () => {
   test('challenge 1', () => {
@@ -21,5 +21,10 @@ describe('Code Academy challenges fns', () => {
     expect(primeNumArr).toContain(2);
     expect(primeNumArr).toContain(11);
     expect(primeNumArr.length).toBe(5);
+  });
+
+  test('challenge 4', () => {
+    const arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
+    expect(arrayToBST(arr1, 0, arr1.length - 1).value).toBe(5);
   });
 });
