@@ -16,5 +16,11 @@
     "description": "Create a function that takes in a number, and returns all the prime numbers from <b>1</b> to <b>n</b> (inclusive). As a reminder, a prime number is a number that is only divisible by <b>1</b> and itself.",
     "link": "https://www.codecademy.com/code-challenges/code-challenge-maximize-stock-trading-profit-javascript",
     "tags": [ "Algorithmic Complexity", "Intermediate", "Arrays" ]
+  },
+  {
+    "title": "Balanced Binary Search Tree",
+    "description": "Given a sorted array of numbers, write a function to create a balanced binary search tree. A balanced BST has no more than one level of depth difference between the right and left sides of the tree.<br /><br />Each value in the array <b>a</b> should correspond to a node value. The return value will be the root node of the balanced tree. An empty array should return <b>null</b>.",
+    "link": "https://www.codecademy.com/code-challenges/code-challenge-balanced-binary-search-tree-javascript",
+    "tags": [ "Trees", "Intermediate" ]
   }
 ]

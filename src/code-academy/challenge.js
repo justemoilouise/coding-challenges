@@ -1,3 +1,5 @@
+import { TreeNode } from "../data/treeNode";
+
 export const getMean = (input) => {
   if (input.length === 0) {
     return 0;
@@ -52,6 +54,31 @@ export const getPrimeNumbers = (input) => {
   return Array.from({ length: input - 1 }).fill(2).reduce((arr, num, index) => {
     return isPrime(num + index) ? arr.concat(num + index) : arr;
   }, []);
+}
+
+export const arrayToBST = (arr, start, end) => {
+  if (start > end) {
+    return null;
+  }
+
+  const mid = Math.ceil((start + end) / 2);
+  const node = new TreeNode(arr[mid]);
+  node.left = arrayToBST(arr, start, mid - 1);
+  node.right = arrayToBST(arr, mid + 1, end);
+
+  return node;
+}
+
+export const preorderBST = (node, arr = []) => {
+  if (node == null) {
+    return arr;
+  }
+
+  arr.push(node.value);
+  arr.concat(preorderBST(node.left, arr));
+  arr.concat(preorderBST(node.right, arr));
+
+  return arr;
 }
 
 const isPrime = (num) => {
