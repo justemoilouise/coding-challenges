@@ -69,6 +69,18 @@ export const arrayToBST = (arr, start, end) => {
   return node;
 }
 
+export const preorderBST = (node, arr = []) => {
+  if (node == null) {
+    return arr;
+  }
+
+  arr.push(node.value);
+  arr.concat(preorderBST(node.left, arr));
+  arr.concat(preorderBST(node.right, arr));
+
+  return arr;
+}
+
 const isPrime = (num) => {
   if ([2,3,5].includes(num)) {
     return true;

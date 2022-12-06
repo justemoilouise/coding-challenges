@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as styles from '../styles/challenge.module.css';
 import classNames from 'classnames';
 import { Pill } from '../components/pill/pill';
-import { arrayToBST } from './challenge';
+import { arrayToBST, preorderBST } from './challenge';
 
 export const Challenge = () => {
   const [input, setInput] = React.useState([]);
@@ -18,7 +18,7 @@ export const Challenge = () => {
 
   const onClick = () => {
     const rootNode = arrayToBST(input, 0, input.length - 1);
-    setOutput(rootNode);
+    setOutput(preorderBST(rootNode));
   };
 
   return (
@@ -37,8 +37,15 @@ export const Challenge = () => {
         )}
       </div>
       {output && (
-        <div className={styles.flexContainer}>
-          Output: {output.value}
+        <div>
+          <div className={styles.flexContainer}>
+            Output:
+          </div>
+          <div className={styles.flexContainer}>
+            {output.map((value, index) => (
+              <Pill key={index} variant='secondary'>{value}</Pill>
+            ))}
+          </div>
         </div>
       )}
     </div>
