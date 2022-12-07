@@ -46,3 +46,16 @@ export const towerOfHanoi = (disc, moves = [], from = 'A', to = 'B', aux = 'C') 
 
   return towerOfHanoi(disc - 1, newMoves.concat(move), aux, to, from);
 }
+
+export const countBoomerangs = (input) => {
+  return input.reduce((count, num, index) => {
+    if (index > input.length - 3) {
+      // almost end of the array
+      // no boomerangs formed
+      return count;
+    }
+
+    const isBoomerang = num === input[index+2] && num !== input[index+1];
+    return isBoomerang ? count + 1 : count;
+  }, 0);
+}
