@@ -1,5 +1,5 @@
 import * as React from 'react';
-// import { Challenge } from '../../code-academy/challenge-4';
+import { Challenge } from '../../code-academy/challenge-5';
 import { CodeAcademyPageLayout } from '../../layouts/codeAcademy-pageLayout';
 import data from '../../content/code-academy.json';
 
@@ -22,7 +22,7 @@ const Page = () => {
       title={`Challenge 5 - ${details.title}`}
       breadcumbItems={breadcumbItems}
     >
-      {/* <Challenge /> */}
+      <Challenge />
     </CodeAcademyPageLayout>
   );
 };

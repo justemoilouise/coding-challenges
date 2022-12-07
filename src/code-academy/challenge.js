@@ -81,6 +81,28 @@ export const preorderBST = (node, arr = []) => {
   return arr;
 }
 
+export const getSemiPrimeNumbers = (input) => {
+  if (input < 4) {
+    return [];
+  }
+
+  const primeNumbers = getPrimeNumbers(input)
+
+  // start with 4 because we know that this is the first non-prime number
+  return Array.from({ length: input - 4 }).fill(4).reduce((arr, num, index) => {
+    const currentNumber = num + index;
+
+    for (const primeNum of primeNumbers) {
+      const quot = currentNumber / primeNum;
+      if (!Number.isNaN(quot) && primeNumbers.includes(quot)) {
+        return arr.concat(currentNumber);
+      }
+    }
+
+    return arr;
+  }, []);
+}
+
 const isPrime = (num) => {
   if ([2,3,5].includes(num)) {
     return true;
