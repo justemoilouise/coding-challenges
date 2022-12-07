@@ -22,5 +22,11 @@
     "description": "There are three towers. The objective of the game is to move all the disks over to tower #3, but you can't place a larger disk onto a smaller disk. Create a function that takes a number discs as an argument and returns the minimum amount of steps needed to complete the game.",
     "link": "https://edabit.com/challenge/3ZtykTsx3GSoPHyBb",
     "tags": [ "Algorithms", "Numbers", "Games", "Math" ]
+  },
+  {
+    "title": "Number of Boomerangs",
+    "description": "A boomerang is a V-shaped sequence that is either upright or upside down. Specifically, a boomerang can be defined as: sub-array of length 3, with the first and last digits being the same and the middle digit being different.",
+    "link": "https://edabit.com/challenge/b7iHQDw72zzkmgCun",
+    "tags": [ "Arrays", "Loops" ]
   }
 ]

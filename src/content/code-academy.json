@@ -22,5 +22,11 @@
     "description": "Given a sorted array of numbers, write a function to create a balanced binary search tree. A balanced BST has no more than one level of depth difference between the right and left sides of the tree.<br /><br />Each value in the array <b>a</b> should correspond to a node value. The return value will be the root node of the balanced tree. An empty array should return <b>null</b>.",
     "link": "https://www.codecademy.com/code-challenges/code-challenge-balanced-binary-search-tree-javascript",
     "tags": [ "Trees", "Intermediate" ]
+  },
+  {
+    "title": "Semi-Prime Numbers",
+    "description": "Create a function that takes in an integer, `n`, and returns the count of semi-prime numbers from 1 to `n`, non-inclusive. A semi-prime number is a number that is the product of two prime numbers. Note that the numbers don't have to be distinct, meaning that 4 is a semi-prime number since it is 2 * 2.",
+    "link": "https://www.codecademy.com/code-challenges/code-challenge-semi-prime-numbers-javascript",
+    "tags": [ "Algorithmic Complexity", "Intermediate" ]
   }
 ]
