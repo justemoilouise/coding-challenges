@@ -105,7 +105,7 @@ export const getSemiPrimeNumbers = (input) => {
 
 export const flatten2DArray = (input) => {
   return input.reduce((arr, value) => {
-    return arr.concat(parseInt(value));
+    return arr.concat(value);
   }, []);
 }
 

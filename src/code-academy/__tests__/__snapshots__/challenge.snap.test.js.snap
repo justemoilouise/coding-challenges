@@ -113,8 +113,7 @@ exports[`Code Academy challenges snapshots Challenge 5 1`] = `
     </button>
   </div>
   <div>
-    Output:
-    <br />
+    Output: 
   </div>
 </div>
 `;
@@ -125,9 +124,7 @@ exports[`Code Academy challenges snapshots Challenge 6 1`] = `
 >
   <div>
     Input: 
-    <input
-      type="number"
-    />
+    <input />
     <button
       onClick={[Function]}
     >
@@ -135,8 +132,7 @@ exports[`Code Academy challenges snapshots Challenge 6 1`] = `
     </button>
   </div>
   <div>
-    Output:
-    <br />
+    Output: 
   </div>
 </div>
 `;
