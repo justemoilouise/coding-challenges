@@ -59,3 +59,25 @@ export const countBoomerangs = (input) => {
     return isBoomerang ? count + 1 : count;
   }, 0);
 }
+
+/**
+ * The politeness of a number is defined as the number of ways it can be expressed as the sum of consecutive integers.
+ * This can be determine by getting the number of odd factors of a number.
+ */
+export const getNumberPoliteness = (input) => {
+  let divisor = input;
+
+  // get the "greatest" odd divisor
+  while (divisor % 2 === 0) {
+    divisor /= 2;
+  }
+
+  const divisors = [];
+  for(let i = 3; i <= divisor; i+=2) {
+    if ((divisor % i) === 0) {
+      divisors.push(i);
+    }
+  }
+
+  return divisors;
+}
