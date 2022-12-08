@@ -5,6 +5,7 @@ import { Grid } from '../../components/grid/grid';
 import { Pill } from '../../components/pill/pill';
 import { CodeAcademyPageLayout } from '../../layouts/codeAcademy-pageLayout';
 import data from '../../content/code-academy.json';
+import * as styles from '../../styles/page.module.css';
 
 const Page = () => {
   return (
@@ -15,7 +16,7 @@ const Page = () => {
             <Card>
               <h3>Challenge {i+1}</h3>
               <p>{d.title}</p>
-              <div>
+              <div className={styles.tags}>
                 {d.tags.map((tag, index) => (
                   <Pill key={index} variant='primary'>{tag}</Pill>
                 ))}
