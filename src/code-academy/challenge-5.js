@@ -27,8 +27,7 @@ export const Challenge = () => {
       </div>
       {output && (
         <div className={styles.flexContainer}>
-          Output:
-          <br />
+          Output:&nbsp;
           {output.map((value, index) => (
             <Pill key={index} variant='secondary'>{value}</Pill>
           ))}
