@@ -103,6 +103,12 @@ export const getSemiPrimeNumbers = (input) => {
   }, []);
 }
 
+export const flatten2DArray = (input) => {
+  return input.reduce((arr, value) => {
+    return arr.concat(value);
+  }, []);
+}
+
 const isPrime = (num) => {
   if ([2,3,5].includes(num)) {
     return true;

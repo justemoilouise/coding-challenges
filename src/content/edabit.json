@@ -28,5 +28,11 @@
     "description": "A boomerang is a V-shaped sequence that is either upright or upside down. Specifically, a boomerang can be defined as: sub-array of length 3, with the first and last digits being the same and the middle digit being different.",
     "link": "https://edabit.com/challenge/b7iHQDw72zzkmgCun",
     "tags": [ "Arrays", "Loops" ]
+  },
+  {
+    "title": "Consecutive Sum Check",
+    "description": "Create a function that takes a number as an argument and checks whether the given number can be expressed as a sum of two or more consecutive positive numbers.",
+    "link": "https://edabit.com/challenge/KX4eJv6ZSJWsvtijd",
+    "tags": [ "Bit operations", "Logic", "Math", "Numbers", "Validation" ]
   }
 ]

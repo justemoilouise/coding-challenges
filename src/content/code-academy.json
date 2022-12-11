@@ -27,6 +27,12 @@
     "title": "Semi-Prime Numbers",
     "description": "Create a function that takes in an integer, `n`, and returns the count of semi-prime numbers from 1 to `n`, non-inclusive. A semi-prime number is a number that is the product of two prime numbers. Note that the numbers don't have to be distinct, meaning that 4 is a semi-prime number since it is 2 * 2.",
     "link": "https://www.codecademy.com/code-challenges/code-challenge-semi-prime-numbers-javascript",
-    "tags": [ "Algorithmic Complexity", "Intermediate" ]
+    "tags": [ "Algorithmic Complexity", "Advanced" ]
+  },
+  {
+    "title": "Flatten an array",
+    "description": "Write a function that takes in a 2-dimensional array, flattens it into a 1-dimensional array, and returns it. You can assume that you will only be given one or two-dimensional arrays.",
+    "link": "https://www.codecademy.com/code-challenges/code-challenge-flatten-an-array-javascript",
+    "tags": [ "Arrays", "Advanced" ]
   }
 ]

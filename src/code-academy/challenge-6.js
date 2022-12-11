@@ -2,7 +2,6 @@ import * as React from 'react';
 import * as styles from '../styles/challenge.module.css';
 import classNames from 'classnames';
 import { Pill } from '../components/pill/pill';
-import { getSemiPrimeNumbers } from './challenge';
 
 export const Challenge = () => {
   const inputRef = React.useRef(null);
@@ -14,15 +13,14 @@ export const Challenge = () => {
     }
     
     const value = inputRef.current.value;
-    const primeNumArr = getSemiPrimeNumbers(value);
-
-    setOutput(primeNumArr);
+    const output = value.replaceAll(/\[|\]/g, '').trim().split(',');
+    setOutput(output);
   };
 
   return (
     <div className={classNames(styles.container, styles.gridContainer)}>
       <div className={styles.flexContainer}>
-        Input:&nbsp;<input type='number' ref={inputRef} className={styles.inputField} />
+        Input:&nbsp;<input ref={inputRef} className={styles.inputField} />
         <button className={styles.button} onClick={onClick}>Submit</button>
       </div>
       {output && (
