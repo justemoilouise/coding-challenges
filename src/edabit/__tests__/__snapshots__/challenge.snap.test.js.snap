@@ -140,7 +140,7 @@ exports[`Edabit challenges snapshots Challenge 7 1`] = `
   </div>
   <div>
     Output: 
-    Yes
+    <strong />
   </div>
 </div>
 `;

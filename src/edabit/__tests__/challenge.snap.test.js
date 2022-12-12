@@ -53,7 +53,7 @@ describe('Edabit challenges snapshots', () => {
 
   it('Challenge 7', () => {
     const tree = renderer
-      .create(<Challenge6 />)
+      .create(<Challenge7 />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
