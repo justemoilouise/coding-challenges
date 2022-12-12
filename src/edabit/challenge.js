@@ -81,3 +81,11 @@ export const getNumberPoliteness = (input) => {
 
   return divisors;
 }
+
+export const oddishOrEvenish = (input) => {
+  const sum = String(input).split('').reduce((partialSum, num) => {
+    return partialSum + parseInt(num);
+  }, 0);
+
+  return sum % 2 === 0 ? 'Evenish' : 'Oddish';
+}

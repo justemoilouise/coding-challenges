@@ -1,4 +1,4 @@
-import { boomSeven, convertBinaryTextToNumber, countBoomerangs, getFibonacci, getNumberPoliteness, towerOfHanoi } from "../challenge";
+import { boomSeven, convertBinaryTextToNumber, countBoomerangs, getFibonacci, getNumberPoliteness, oddishOrEvenish, towerOfHanoi } from "../challenge";
 
 describe('Edabit challenges fns', () => {
   test('Challenge 1', () => {
@@ -34,5 +34,11 @@ describe('Edabit challenges fns', () => {
   test('Challenge 6', () => {
     expect(getNumberPoliteness(90).length).toBe(5);
     expect(getNumberPoliteness(15).length).toBe(3);
+  });
+
+  test('Challenge 7', () => {
+    expect(oddishOrEvenish(43)).toBe('Oddish');
+    expect(oddishOrEvenish(373)).toBe('Oddish');
+    expect(oddishOrEvenish(4433)).toBe('Evenish');
   });
 });

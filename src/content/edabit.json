@@ -34,5 +34,11 @@
     "description": "Create a function that takes a number as an argument and checks whether the given number can be expressed as a sum of two or more consecutive positive numbers.",
     "link": "https://edabit.com/challenge/KX4eJv6ZSJWsvtijd",
     "tags": [ "Bit operations", "Logic", "Math", "Numbers", "Validation" ]
+  },
+  {
+    "title": "Oddish vs Evenish",
+    "description": "Create a function that determines whether a number is Oddish or Evenish. A number is Oddish if the sum of all of its digits is odd, and a number is Evenish if the sum of all of its digits is even.",
+    "link": "https://edabit.com/challenge/r6TSNwkLZ2DgsoKiH",
+    "tags": [ "Conditions", "Math", "Numbers", "Validation" ]
   }
 ]

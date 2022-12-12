@@ -1,4 +1,5 @@
 import { TreeNode } from "../data/treeNode";
+import { getNumberPoliteness } from "../edabit/challenge";
 
 export const getMean = (input) => {
   if (input.length === 0) {
@@ -107,6 +108,13 @@ export const flatten2DArray = (input) => {
   return input.reduce((arr, value) => {
     return arr.concat(value);
   }, []);
+}
+
+export const getSumOrPrimeFactors = (input) => {
+  const oddDivisors = getNumberPoliteness(input);
+  const primeDivisors = oddDivisors.filter(x => isPrime(x) && x !== input);
+
+  return primeDivisors.reduce((sum, num) => sum + num, 0);
 }
 
 const isPrime = (num) => {
