@@ -117,6 +117,24 @@ export const getSumOfPrimeFactors = (input) => {
   return primeDivisors.reduce((sum, num) => sum + num, 0);
 }
 
+export const isUniqueString = (input) => {
+  const charCountObj = input.split('').reduce((obj, char) => {
+    if (obj[char]) {
+      return {
+        ...obj,
+        [char]: obj[char] + 1,
+      };
+    }
+
+    return {
+      ...obj,
+      [char]: 1,
+    };
+  }, {});
+
+  return Object.values(charCountObj).find(x => x > 1) ? false : true;
+}
+
 const isPrime = (num) => {
   if ([2,3,5].includes(num)) {
     return true;
