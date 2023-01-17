@@ -110,7 +110,7 @@ export const flatten2DArray = (input) => {
   }, []);
 }
 
-export const getSumOrPrimeFactors = (input) => {
+export const getSumOfPrimeFactors = (input) => {
   const oddDivisors = getNumberPoliteness(input);
   const primeDivisors = oddDivisors.filter(x => isPrime(x) && x !== input);
 

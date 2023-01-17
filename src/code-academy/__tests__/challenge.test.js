@@ -1,4 +1,4 @@
-import { arrayToBST, flatten2DArray, getMaxProfitDays, getMean, getMode, getPrimeNumbers, getSemiPrimeNumbers, getSumOrPrimeFactors, preorderBST } from "../challenge";
+import { arrayToBST, flatten2DArray, getMaxProfitDays, getMean, getMode, getPrimeNumbers, getSemiPrimeNumbers, getSumOfPrimeFactors, preorderBST } from "../challenge";
 
 describe('Code Academy challenges fns', () => {
   test('Challenge 1', () => {
@@ -45,6 +45,6 @@ describe('Code Academy challenges fns', () => {
   });
 
   test('Challenge 7', () => {
-    expect(getSumOrPrimeFactors(91)).toBe(20);
+    expect(getSumOfPrimeFactors(91)).toBe(20);
   });
 });

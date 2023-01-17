@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as styles from '../styles/challenge.module.css';
 import classNames from 'classnames';
-import { getSumOrPrimeFactors } from './challenge';
+import { getSumOfPrimeFactors } from './challenge';
 
 export const Challenge = () => {
   const inputRef = React.useRef(null);
@@ -12,7 +12,7 @@ export const Challenge = () => {
       return null;
     }
 
-    setOutput(getSumOrPrimeFactors(parseInt(inputRef.current.value)));
+    setOutput(getSumOfPrimeFactors(parseInt(inputRef.current.value)));
   };
 
   return (

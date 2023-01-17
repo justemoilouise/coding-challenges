@@ -40,5 +40,11 @@
     "description": "Create a function that takes in an integer `n` and returns the sum of all of its prime factors. As a reminder, a prime number is a number whose only factors are one and itself. Therefore, a prime factor is a factor of a given number that itself is a prime number.",
     "link": "https://www.codecademy.com/code-challenges/code-challenge-sum-of-prime-factors-javascript",
     "tags": [ "Algorithmic Complexity", "Intermediate" ]
+  },
+  {
+    "title": "Unique characters in a string",
+    "description": "Write a `uniqueCharacters()` function that determines if any given string has all unique characters (i.e. no character in the string is duplicated). If the string has all unique characters, the function should return `true`. If the string does not have all unique characters, return `false`.<br /><br />For example, `uniqueCharacters('apple')` should return `false`.<br/><br />Note that if the function is called with an empty string, it should return an error message.",
+    "link": "https://www.codecademy.com/code-challenges/code-challenge-unique-characters-in-a-string-javascript",
+    "tags": [ "Algorithmic Complexity", "Intermediate" ]
   }
 ]
