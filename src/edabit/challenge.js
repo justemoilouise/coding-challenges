@@ -89,3 +89,8 @@ export const oddishOrEvenish = (input) => {
 
   return sum % 2 === 0 ? 'Evenish' : 'Oddish';
 }
+
+export const getAvgSpeed = (upRate, downRate) => {
+  console.log(upRate, downRate);
+  return (2 * upRate * downRate) / (upRate + downRate);
+}

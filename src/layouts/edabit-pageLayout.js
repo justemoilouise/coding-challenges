@@ -16,7 +16,7 @@ export const EdabitPageLayout = ({ breadcumbItems, title, description, link, chi
     {title && <h3>{title}</h3>}
     {description && (
       <p>
-        {description}
+        <span dangerouslySetInnerHTML={{ __html: description }} />
         {link && (
           <>
             &nbsp;

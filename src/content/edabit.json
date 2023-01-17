@@ -19,7 +19,7 @@
   },
   {
     "title": "Tower of Hanoi",
-    "description": "There are three towers. The objective of the game is to move all the disks over to tower #3, but you can't place a larger disk onto a smaller disk. Create a function that takes a number discs as an argument and returns the minimum amount of steps needed to complete the game.",
+    "description": "There are three towers. The objective of the game is to move all the disks over to tower #3, but you can't place a larger disk onto a smaller disk.<br /><br />Create a function that takes a number discs as an argument and returns the minimum amount of steps needed to complete the game.",
     "link": "https://edabit.com/challenge/3ZtykTsx3GSoPHyBb",
     "tags": [ "Algorithms", "Numbers", "Games", "Math" ]
   },
@@ -40,5 +40,11 @@
     "description": "Create a function that determines whether a number is Oddish or Evenish. A number is Oddish if the sum of all of its digits is odd, and a number is Evenish if the sum of all of its digits is even.",
     "link": "https://edabit.com/challenge/r6TSNwkLZ2DgsoKiH",
     "tags": [ "Conditions", "Math", "Numbers", "Validation" ]
+  },
+  {
+    "title": "Up the Hill, Down the Hill",
+    "description": "If a person traveled up a hill for 18mins at 20mph and then traveled back down the same path at 60mph then their average speed traveled was 30mph.<br /><br />Write a function that returns the average speed traveled given an uphill time, uphill rate and a downhill rate. Uphill time is given in minutes. Return the rate as an integer (mph). No rounding is necessary.",
+    "link": "https://edabit.com/challenge/vEY5A5Kq8xsPTQG8S",
+    "tags": [ "Math", "Physics" ]
   }
 ]

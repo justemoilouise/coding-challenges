@@ -110,11 +110,29 @@ export const flatten2DArray = (input) => {
   }, []);
 }
 
-export const getSumOrPrimeFactors = (input) => {
+export const getSumOfPrimeFactors = (input) => {
   const oddDivisors = getNumberPoliteness(input);
   const primeDivisors = oddDivisors.filter(x => isPrime(x) && x !== input);
 
   return primeDivisors.reduce((sum, num) => sum + num, 0);
+}
+
+export const isUniqueString = (input) => {
+  const charCountObj = input.split('').reduce((obj, char) => {
+    if (obj[char]) {
+      return {
+        ...obj,
+        [char]: obj[char] + 1,
+      };
+    }
+
+    return {
+      ...obj,
+      [char]: 1,
+    };
+  }, {});
+
+  return Object.values(charCountObj).find(x => x > 1) ? false : true;
 }
 
 const isPrime = (num) => {

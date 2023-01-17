@@ -1,18 +1,19 @@
 import * as React from 'react';
 import * as styles from '../styles/challenge.module.css';
 import classNames from 'classnames';
-import { getSumOfPrimeFactors } from './challenge';
+import { isUniqueString } from './challenge';
 
 export const Challenge = () => {
   const inputRef = React.useRef(null);
   const [output, setOutput] = React.useState();
 
   const onClick = () => {
-    if (!inputRef?.current) {
-      return null;
+    if (!inputRef?.current || inputRef.current.value.length === 0) {
+      setOutput('invalid input');
+      return;
     }
 
-    setOutput(getSumOfPrimeFactors(parseInt(inputRef.current.value)));
+    setOutput(isUniqueString(inputRef.current.value));
   };
 
   return (
@@ -22,7 +23,7 @@ export const Challenge = () => {
         <button className={styles.button} onClick={onClick}>Submit</button>
       </div>
       <div className={styles.flexContainer}>
-        Output:&nbsp;<strong>{output}</strong>
+        Output:&nbsp;<strong>{String(output)}</strong>
       </div>
     </div>
   );
