@@ -1,4 +1,4 @@
-import { boomSeven, convertBinaryTextToNumber, countBoomerangs, getAvgSpeed, getFibonacci, getNumberPoliteness, oddishOrEvenish, towerOfHanoi } from "../challenge";
+import { boomSeven, convertBinaryTextToNumber, countBoomerangs, getAvgSpeed, getFibonacci, getNumberPoliteness, getVodkaBottle, oddishOrEvenish, towerOfHanoi } from "../challenge";
 
 describe('Edabit challenges fns', () => {
   test('Challenge 1', () => {
@@ -46,5 +46,18 @@ describe('Edabit challenges fns', () => {
     expect(getAvgSpeed(20, 60)).toBe(30);
     expect(getAvgSpeed(10, 30)).toBe(15);
     expect(getAvgSpeed(8, 24)).toBe(12);
+  });
+
+  test('Challenge 9', () => {
+    const input = {
+      whiskey: 100,
+      "Rammstein A": 100,
+      "Rammstein B": 50,
+      "Rammstein D": 70,
+      beer: 70,
+    };
+    expect(getVodkaBottle(input, 100)).toBe("Rammstein A");
+    expect(getVodkaBottle(input, 50)).toBe("Rammstein B");
+    expect(getVodkaBottle(input, 70)).toBe("Rammstein D");
   });
 });

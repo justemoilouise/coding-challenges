@@ -91,6 +91,11 @@ export const oddishOrEvenish = (input) => {
 }
 
 export const getAvgSpeed = (upRate, downRate) => {
-  console.log(upRate, downRate);
   return (2 * upRate * downRate) / (upRate + downRate);
+}
+
+export const getVodkaBottle = (obj, num) => {
+  const objEntry = Object.entries(obj).filter(([key, value]) => key.includes('Rammstein') && value === num) ?? [];
+  
+  return objEntry.length > 0 ? objEntry[0][0] : undefined;
 }
