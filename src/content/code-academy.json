@@ -52,5 +52,11 @@
     "description": "Write a function that takes in a number, `n`, and returns an array of the numbers from 1 to `n`. For multiples of three, use <b>Fizz</b> instead of the number, and for the multiples of five, use <b>Buzz</b>. For numbers that are multiples of both three and five, use <b>FizzBuzz</b> (capitalization matters).",
     "link": "https://www.codecademy.com/code-challenges/code-challenge-fizzbuzz-javascript",
     "tags": [ "Arrays", "Intermediate" ]
+  },
+  {
+    "title": "Find the missing numbers",
+    "description": "You have a bag containing tiles with numbers <b>[1, 2, 3, …, n]</b> written on them. Each number appears exactly once, so there are <b>n</b> tiles and <b>n</b> numbers. Now, without looking, <b>k</b> number tiles are randomly picked out of the bag and discarded. Create a function that takes in a list and <b>k</b>, and returns the missing numbers in ascending order (from smallest to greatest).<br /><br />For example, <b>([1, 2, 4, 5, 6, 7, 8, 10], 2)</b> should return <b>[3, 9]</b>.",
+    "link": "https://www.codecademy.com/code-challenges/code-challenge-find-the-missing-numbers-javascript",
+    "tags": [ "Sets", "Intermediate" ]
   }
 ]

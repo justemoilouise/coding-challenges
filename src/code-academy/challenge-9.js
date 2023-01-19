@@ -22,7 +22,7 @@ export const Challenge = () => {
         Input:&nbsp;<input ref={inputRef} className={styles.inputField} />
         <button className={styles.button} onClick={onClick}>Submit</button>
       </div>
-      <div className={styles.flexContainer}>
+      <div>
           Output:&nbsp;
           {output.map((value, index) => (
             <Pill key={index} variant='secondary'>{value}</Pill>
