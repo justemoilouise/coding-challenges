@@ -46,5 +46,11 @@
     "description": "If a person traveled up a hill for 18mins at 20mph and then traveled back down the same path at 60mph then their average speed traveled was 30mph.<br /><br />Write a function that returns the average speed traveled given an uphill time, uphill rate and a downhill rate. Uphill time is given in minutes. Return the rate as an integer (mph). No rounding is necessary.",
     "link": "https://edabit.com/challenge/vEY5A5Kq8xsPTQG8S",
     "tags": [ "Math", "Physics" ]
+  },
+  {
+    "title": "Burglary Series (12): Get Vodka Bottle",
+    "description": "Given an object with alcoholic drinks and a number, return a string with the name of the Rammstein bottle that matches the given number.",
+    "link": "https://edabit.com/challenge/paMpZoEJ6gr4feMS3",
+    "tags": [ "Arrays", "Loops", "Objects" ]
   }
 ]
