@@ -152,6 +152,25 @@ export const fizzbuzz = (input) => {
   }, []);
 }
 
+export const getMissingNumbers = (list, k) => {
+  // sort and remove duplicates
+  const arr = Array.from(new Set(list.sort((a, b) => a - b)));
+  const missingNumArr = [];
+
+  for(let i = 0; i <= arr.length; i++) {
+    const diff = arr[i+1] - arr[i];
+    // not consectuive, hence there's a missing number in between these two
+    if (diff > 1) {
+      missingNumArr.push(...getNumbersInBetween(arr[i], diff));
+    } 
+    if(missingNumArr.length >= k) {
+      break;
+    }
+  }
+
+  return missingNumArr.slice(0, k);
+}
+
 const isPrime = (num) => {
   if ([2,3,5].includes(num)) {
     return true;
@@ -163,3 +182,7 @@ const isPrime = (num) => {
 
   return true;
 };
+
+const getNumbersInBetween = (start, len) => {
+  return Array.from({ length: len - 1 }).map((v, i) => start + i + 1);
+}

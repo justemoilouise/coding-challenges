@@ -1,4 +1,4 @@
-import { arrayToBST, fizzbuzz, flatten2DArray, getMaxProfitDays, getMean, getMode, getPrimeNumbers, getSemiPrimeNumbers, getSumOfPrimeFactors, isUniqueString, preorderBST } from "../challenge";
+import { arrayToBST, fizzbuzz, flatten2DArray, getMaxProfitDays, getMean, getMissingNumbers, getMode, getPrimeNumbers, getSemiPrimeNumbers, getSumOfPrimeFactors, isUniqueString, preorderBST } from "../challenge";
 
 describe('Code Academy challenges fns', () => {
   test('Challenge 1', () => {
@@ -54,7 +54,7 @@ describe('Code Academy challenges fns', () => {
   });
 
   test('Challenge 9', () => {
-    // `fizzbuzz(16)` should return `[1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'FizzBuzz', 16]`.
+    // `fizzbuzz(16)` should return `[1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'FizzBuzz', 16]`
     const output = fizzbuzz(16);
     expect(output.length).toBe(16);
     expect(output[1]).toBe(2);
@@ -62,5 +62,14 @@ describe('Code Academy challenges fns', () => {
     expect(output[9]).toBe('Buzz');
     expect(output[14]).toBe('FizzBuzz');
     expect(output[15]).toBe(16);
+  });
+
+  test('Challenge 10', () => {
+    // ([1, 2, 4, 5, 6, 7, 8, 10], 2)` should return `[3, 9]`
+    const list = [10, 2, 4, 4, 5, 7, 8, 1];
+    const output = getMissingNumbers(list, 2);
+    expect(output.length).toBe(2);
+    expect(output[0]).toBe(3);
+    expect(output[1]).toBe(6);
   });
 });
