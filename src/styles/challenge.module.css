@@ -16,13 +16,14 @@
 
 .inputField {
   padding: var(--spacingSmall);
+  margin-right: var(--spacingMedium);
 }
 
 .button {
   border: 0;
   border-radius: 4px;
   background-color: var(--colorPrimary);
-  margin-left: var(--spacingMedium);
+  /* margin-left: var(--spacingMedium); */
   padding: var(--spacingSmall) var(--spacingMedium);
   font-size: 16px;
   color: #FFF;

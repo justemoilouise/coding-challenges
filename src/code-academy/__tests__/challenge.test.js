@@ -1,4 +1,4 @@
-import { arrayToBST, flatten2DArray, getMaxProfitDays, getMean, getMode, getPrimeNumbers, getSemiPrimeNumbers, getSumOfPrimeFactors, isUniqueString, preorderBST } from "../challenge";
+import { arrayToBST, fizzbuzz, flatten2DArray, getMaxProfitDays, getMean, getMode, getPrimeNumbers, getSemiPrimeNumbers, getSumOfPrimeFactors, isUniqueString, preorderBST } from "../challenge";
 
 describe('Code Academy challenges fns', () => {
   test('Challenge 1', () => {
@@ -51,5 +51,16 @@ describe('Code Academy challenges fns', () => {
   test('Challenge 8', () => {
     expect(isUniqueString('apple')).toBe(false);
     expect(isUniqueString('and')).toBe(true);
+  });
+
+  test('Challenge 9', () => {
+    // `fizzbuzz(16)` should return `[1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'FizzBuzz', 16]`.
+    const output = fizzbuzz(16);
+    expect(output.length).toBe(16);
+    expect(output[1]).toBe(2);
+    expect(output[5]).toBe('Fizz');
+    expect(output[9]).toBe('Buzz');
+    expect(output[14]).toBe('FizzBuzz');
+    expect(output[15]).toBe(16);
   });
 });
