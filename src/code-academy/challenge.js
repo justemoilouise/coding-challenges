@@ -135,6 +135,23 @@ export const isUniqueString = (input) => {
   return Object.values(charCountObj).find(x => x > 1) ? false : true;
 }
 
+export const fizzbuzz = (input) => {
+  return Array.from({ length: input }).reduce((arr, v, i) => {
+    const num = i + 1;
+
+    if (num % 3 === 0 && num % 5 === 0) {
+      return arr.concat('FizzBuzz');
+    }
+    if (num % 3 === 0) {
+      return arr.concat('Fizz');
+    }
+    if (num % 5 === 0) {
+      return arr.concat('Buzz');
+    }
+    return arr.concat(num);
+  }, []);
+}
+
 const isPrime = (num) => {
   if ([2,3,5].includes(num)) {
     return true;

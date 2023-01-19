@@ -9,7 +9,7 @@ export const Challenge = () => {
   const numRef = React.useRef();
 
   const onClick = () => {
-    if (!objRef.current || !numRef.current) {
+    if (!objRef?.current || !numRef?.current) {
       return;
     }
 

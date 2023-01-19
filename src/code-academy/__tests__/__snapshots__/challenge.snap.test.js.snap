@@ -178,3 +178,22 @@ exports[`Code Academy challenges snapshots Challenge 8 1`] = `
   </div>
 </div>
 `;
+
+exports[`Code Academy challenges snapshots Challenge 9 1`] = `
+<div
+  className=""
+>
+  <div>
+    Input: 
+    <input />
+    <button
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+  <div>
+    Output: 
+  </div>
+</div>
+`;
