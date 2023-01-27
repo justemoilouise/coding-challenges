@@ -1,4 +1,4 @@
-import { boomSeven, convertBinaryTextToNumber, countBoomerangs, getAvgSpeed, getFibonacci, getNumberPoliteness, getSumOfProduct, getVodkaBottle, oddishOrEvenish, towerOfHanoi } from "../challenge";
+import { boomSeven, convertBinaryTextToNumber, countBoomerangs, getAvgSpeed, getFibonacci, getNumberPoliteness, getStringsWithNumbers, getSumOfProduct, getVodkaBottle, oddishOrEvenish, towerOfHanoi } from "../challenge";
 
 describe('Edabit challenges fns', () => {
   test('Challenge 1', () => {
@@ -65,5 +65,12 @@ describe('Edabit challenges fns', () => {
     expect(getSumOfProduct(["1,2","1,1","2,3"])).toBe(8);
     expect(getSumOfProduct(["1,2","0,3","3,0"])).toBe(0);
     expect(getSumOfProduct(["10,2","5,0","2,3"])).toBe(100);
+  });
+
+  test('Challenge 11', () => {
+    const arr = ["abc", "ab10c", "a10bc", "bcd"];
+    const output = getStringsWithNumbers(arr);
+    expect(output.length).toBe(2);
+    expect(output.at(0)).toBe("ab10c");
   });
 });

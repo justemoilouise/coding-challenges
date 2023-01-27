@@ -111,3 +111,15 @@ export const getSumOfProduct = (input) => {
 
   return products[0] + products[1];
 }
+
+export const getStringsWithNumbers = (input) => {
+  const regex = new RegExp(/\w*\d+\w*/, 'i');
+  const output = input.reduce((arr, str) => {
+    if (str.match(regex)) {
+      return arr.concat(str);
+    }
+    return arr;
+  }, []);
+
+  return output;
+}
