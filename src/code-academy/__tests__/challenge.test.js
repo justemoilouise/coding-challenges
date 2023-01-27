@@ -1,4 +1,4 @@
-import { arrayToBST, fizzbuzz, flatten2DArray, getMaxProfitDays, getMean, getMissingNumbers, getMode, getPrimeNumbers, getSemiPrimeNumbers, getSumOfPrimeFactors, isUniqueString, preorderBST } from "../challenge";
+import { arrayToBST, fizzbuzz, flatten2DArray, getMaxProfitDays, getMean, getMissingNumbers, getMode, getPrimeNumbers, getSemiPrimeNumbers, getSumOfPrimeFactors, getXth, isUniqueString, preorderBST } from "../challenge";
 
 describe('Code Academy challenges fns', () => {
   test('Challenge 1', () => {
@@ -71,5 +71,11 @@ describe('Code Academy challenges fns', () => {
     expect(output.length).toBe(2);
     expect(output[0]).toBe(3);
     expect(output[1]).toBe(6);
+  });
+
+  test('Challenge 11', () => {
+    const input = [5, 10, -3, -3, 7, 9];
+    expect(getXth(input, 2)).toBe(-3);
+    expect(getXth(input, 4)).toBe(7);
   });
 });
