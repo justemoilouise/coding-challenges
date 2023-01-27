@@ -171,6 +171,11 @@ export const getMissingNumbers = (list, k) => {
   return missingNumArr.slice(0, k);
 }
 
+export const getXth = (input, x) => {
+  const sortedArr = input.sort((a, b) => a - b);
+  return sortedArr.at(x - 1) ?? -1;
+}
+
 const isPrime = (num) => {
   if ([2,3,5].includes(num)) {
     return true;
