@@ -58,5 +58,11 @@
     "description": "Create a function that takes three collections of arguments and returns the sum of the product of numbers. Add the result of the first digit in each collection multiplied together to the result of the second digit in each collection multiplied together to get the final solution.",
     "link": "https://edabit.com/challenge/95YiRnBSnfzSQWAuu",
     "tags": [ "Closures", "Functional programming", "Language fundamentals", "Scope" ]
+  },
+  {
+    "title": "Numbers in strings",
+    "description": "Create a function that takes an array of strings and returns an array with only the strings that have numbers in them. If there are no strings containing numbers, return an empty array.",
+    "link": "https://edabit.com/challenge/eCPim4XcssdZdvs32",
+    "tags": [ "Arrays", "Loops", "Numbers", "Strings", "Regex" ]
   }
 ]
