@@ -64,5 +64,11 @@
     "description": "Write a function, `getX`, that given an int `x` and a integer array `num`, returns the Xth number if the list was in sorted order. In other words, the Xth smallest number.",
     "link": "https://www.codecademy.com/code-challenges/code-challenge-find-xth-number-in-order-javascript",
     "tags": [ "Sorting", "Intermediate" ]
+  },
+  {
+    "title": "Reverse words",
+    "description": "Write a function that will take a given string and reverse the order of the words. You may assume that the string is a sentence that contains only letters and spaces, with all words separated by one space.",
+    "link": "https://www.codecademy.com/code-challenges/code-challenge-reverse-words-javascript",
+    "tags": [ "Strings", "Advanced" ]
   }
 ]

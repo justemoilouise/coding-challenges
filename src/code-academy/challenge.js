@@ -176,6 +176,10 @@ export const getXth = (input, x) => {
   return sortedArr.at(x - 1) ?? -1;
 }
 
+export const reverseWords = (input) => {
+  return input.split(' ').reverse().join(' ');
+}
+
 const isPrime = (num) => {
   if ([2,3,5].includes(num)) {
     return true;

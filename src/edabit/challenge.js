@@ -123,3 +123,7 @@ export const getStringsWithNumbers = (input) => {
 
   return output;
 }
+
+export const getCombinations = (input) => {
+  return input.reduce((p, i) => p * i, 1);
+}
