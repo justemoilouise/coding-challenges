@@ -1,4 +1,4 @@
-import { arrayToBST, fizzbuzz, flatten2DArray, getMaxProfitDays, getMean, getMissingNumbers, getMode, getPrimeNumbers, getSemiPrimeNumbers, getSumOfPrimeFactors, getXth, isUniqueString, preorderBST, reverseWords } from "../challenge";
+import { arrayToBST, fizzbuzz, flatten2DArray, getMaxProfitDays, getMean, getMissingNumbers, getMode, getPrimeNumbers, getProductOfOthers, getSemiPrimeNumbers, getSumOfPrimeFactors, getXth, isUniqueString, preorderBST, reverseWords } from "../challenge";
 
 describe('Code Academy challenges fns', () => {
   test('Challenge 1', () => {
@@ -82,5 +82,14 @@ describe('Code Academy challenges fns', () => {
   test('Challenge 12', () => {
     expect(reverseWords('Codecademy rules')).toBe('rules Codecademy');
     expect(reverseWords('May the Fourth be with you')).toBe('you with be Fourth the May');
+  });
+
+  test('Challenge 13', () => {
+    // ([1, 2, 3, 4, 5]) should return [120, 60, 40, 30, 24]
+    const arr1 = getProductOfOthers([1, 2, 3, 4, 5]);
+    expect(arr1.length).toBe(5);
+    expect(arr1).toContain(40);
+    expect(arr1.at(0)).toBe(120);
+    expect(arr1.at(4)).toBe(24);
   });
 });
