@@ -64,5 +64,11 @@
     "description": "Create a function that takes an array of strings and returns an array with only the strings that have numbers in them. If there are no strings containing numbers, return an empty array.",
     "link": "https://edabit.com/challenge/eCPim4XcssdZdvs32",
     "tags": [ "Arrays", "Loops", "Numbers", "Strings", "Regex" ]
+  },
+  {
+    "title": "Combinations",
+    "description": "Create a function that takes a variable number of arguments, each argument representing the number of items in a group. The function should return the number of permutations (combinations) of choices you would have if you selected one item from each group.",
+    "link": "https://edabit.com/challenge/tRx22rECqK4dTJTg8",
+    "tags": [ "Algorithms", "Numbers" ]
   }
 ]
