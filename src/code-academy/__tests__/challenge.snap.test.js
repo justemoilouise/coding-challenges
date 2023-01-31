@@ -12,6 +12,7 @@ import { Challenge as Challenge9 } from '../challenge-9';
 import { Challenge as Challenge10 } from '../challenge-10';
 import { Challenge as Challenge11 } from '../challenge-11';
 import { Challenge as Challenge12 } from '../challenge-12';
+import { Challenge as Challenge13 } from '../challenge-13';
 
 describe('Code Academy challenges snapshots', () => {
   it('Challenge 1', () => {
@@ -94,6 +95,13 @@ describe('Code Academy challenges snapshots', () => {
   it('Challenge 12', () => {
     const tree = renderer
       .create(<Challenge12 />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('Challenge 13', () => {
+    const tree = renderer
+      .create(<Challenge13 />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

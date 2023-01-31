@@ -127,3 +127,16 @@ export const getStringsWithNumbers = (input) => {
 export const getCombinations = (input) => {
   return input.reduce((p, i) => p * i, 1);
 }
+
+export const isPositiveDominant = (input) => {
+  const { pos: positive, neg: negative } = input.reduce(({ pos, neg }, num) => {
+    if (num > 0 && !pos.includes(num)) {
+      return { neg, pos: pos.concat(num) };
+    } else if (num < 0 && !neg.includes(num)) {
+      return { pos, neg: neg.concat(num) };
+    }
+    return { pos, neg };
+  }, { pos: [], neg: [] });
+
+  return positive.length > negative.length;
+}

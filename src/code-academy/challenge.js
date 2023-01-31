@@ -180,6 +180,18 @@ export const reverseWords = (input) => {
   return input.split(' ').reverse().join(' ');
 }
 
+export const getProductOfOthers = (input) => {
+  const outputArr = [];
+
+  for(let i = 0; i<input.length; i++) {
+    const othersArr = input.slice(0, i).concat(input.slice(i+1));
+    const product = othersArr.reduce((p, num) => p * num, 1);
+    outputArr.push(product); 
+  }
+
+  return outputArr;
+}
+
 const isPrime = (num) => {
   if ([2,3,5].includes(num)) {
     return true;

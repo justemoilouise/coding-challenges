@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as styles from '../styles/challenge.module.css';
 import classNames from 'classnames';
 import { Pill } from '../components/pill/pill';
-import { getCombinations } from './challenge';
+import { isPositiveDominant } from './challenge';
 
 export const Challenge = () => {
   const [input, setInput] = React.useState([]);
@@ -17,7 +17,7 @@ export const Challenge = () => {
   };
 
   const onClick = () => {
-    setOutput(getCombinations(input));
+    setOutput(isPositiveDominant(input));
   };
 
   return (
@@ -36,7 +36,7 @@ export const Challenge = () => {
         )}
       </div>
       <div className={styles.flexContainer}>
-        Output:&nbsp;<strong>{output}</strong>
+        Output:&nbsp;<strong>{output === true ? 'Yes' : 'No'}</strong>
       </div>
     </div>
   );

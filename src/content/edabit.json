@@ -70,5 +70,11 @@
     "description": "Create a function that takes a variable number of arguments, each argument representing the number of items in a group. The function should return the number of permutations (combinations) of choices you would have if you selected one item from each group.",
     "link": "https://edabit.com/challenge/tRx22rECqK4dTJTg8",
     "tags": [ "Algorithms", "Numbers" ]
+  },
+  {
+    "title": "Positive Dominant",
+    "description": "An array is positive dominant if it contains strictly more unique positive values than unique negative values. Write a function that returns <b>true</b> if an array is positive dominant.",
+    "link": "https://edabit.com/challenge/7pkKPYtTJzpxRMckZ",
+    "tags": [ "Arrays", "Validation" ]
   }
 ]
