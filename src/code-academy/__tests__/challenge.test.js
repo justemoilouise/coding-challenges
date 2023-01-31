@@ -1,4 +1,4 @@
-import { arrayToBST, fizzbuzz, flatten2DArray, getMaxProfitDays, getMean, getMissingNumbers, getMode, getPrimeNumbers, getSemiPrimeNumbers, getSumOfPrimeFactors, getXth, isUniqueString, preorderBST } from "../challenge";
+import { arrayToBST, fizzbuzz, flatten2DArray, getMaxProfitDays, getMean, getMissingNumbers, getMode, getPrimeNumbers, getSemiPrimeNumbers, getSumOfPrimeFactors, getXth, isUniqueString, preorderBST, reverseWords } from "../challenge";
 
 describe('Code Academy challenges fns', () => {
   test('Challenge 1', () => {
@@ -77,5 +77,10 @@ describe('Code Academy challenges fns', () => {
     const input = [5, 10, -3, -3, 7, 9];
     expect(getXth(input, 2)).toBe(-3);
     expect(getXth(input, 4)).toBe(7);
+  });
+
+  test('Challenge 12', () => {
+    expect(reverseWords('Codecademy rules')).toBe('rules Codecademy');
+    expect(reverseWords('May the Fourth be with you')).toBe('you with be Fourth the May');
   });
 });
