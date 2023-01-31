@@ -36,8 +36,8 @@ export const Challenge = () => {
         )}
       </div>
       <div className={styles.flexContainer}>
-          Output:&nbsp;<strong>{output}</strong>
-        </div>
+        Output:&nbsp;<strong>{output}</strong>
+      </div>
     </div>
   );
 };

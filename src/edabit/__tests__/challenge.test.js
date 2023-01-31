@@ -1,4 +1,4 @@
-import { boomSeven, convertBinaryTextToNumber, countBoomerangs, getAvgSpeed, getCombinations, getFibonacci, getNumberPoliteness, getStringsWithNumbers, getSumOfProduct, getVodkaBottle, oddishOrEvenish, towerOfHanoi } from "../challenge";
+import { boomSeven, convertBinaryTextToNumber, countBoomerangs, getAvgSpeed, getCombinations, getFibonacci, getNumberPoliteness, getStringsWithNumbers, getSumOfProduct, getVodkaBottle, isPositiveDominant, oddishOrEvenish, towerOfHanoi } from "../challenge";
 
 describe('Edabit challenges fns', () => {
   test('Challenge 1', () => {
@@ -78,5 +78,12 @@ describe('Edabit challenges fns', () => {
     expect(getCombinations([2,3])).toBe(6);
     expect(getCombinations([3,7,4])).toBe(84);
     expect(getCombinations([2,3,4,5])).toBe(120);
+  });
+
+  test('Challenge 13', () => {
+    expect(isPositiveDominant([1, 1, 1, 1, -3, -4])).toBe(false);
+    expect(isPositiveDominant([5, 99, 832, -3, -4])).toBe(true);
+    expect(isPositiveDominant([5, 0])).toBe(true);
+    expect(isPositiveDominant([0, -4, -1])).toBe(false);
   });
 });
