@@ -99,3 +99,31 @@ export const getVodkaBottle = (obj, num) => {
   
   return objEntry.length > 0 ? objEntry[0][0] : undefined;
 }
+
+export const getSumOfProduct = (input) => {
+  const products = input.reduce((productArr, pair) => {
+    const num = pair.split(',');
+    return [
+      productArr[0] * parseInt(num[0]),
+      productArr[1] * parseInt(num[1]),
+    ];
+  }, [1,1]);
+
+  return products[0] + products[1];
+}
+
+export const getStringsWithNumbers = (input) => {
+  const regex = new RegExp(/\w*\d+\w*/, 'i');
+  const output = input.reduce((arr, str) => {
+    if (str.match(regex)) {
+      return arr.concat(str);
+    }
+    return arr;
+  }, []);
+
+  return output;
+}
+
+export const getCombinations = (input) => {
+  return input.reduce((p, i) => p * i, 1);
+}

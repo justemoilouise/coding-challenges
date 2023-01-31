@@ -1,4 +1,4 @@
-import { boomSeven, convertBinaryTextToNumber, countBoomerangs, getAvgSpeed, getFibonacci, getNumberPoliteness, getVodkaBottle, oddishOrEvenish, towerOfHanoi } from "../challenge";
+import { boomSeven, convertBinaryTextToNumber, countBoomerangs, getAvgSpeed, getCombinations, getFibonacci, getNumberPoliteness, getStringsWithNumbers, getSumOfProduct, getVodkaBottle, oddishOrEvenish, towerOfHanoi } from "../challenge";
 
 describe('Edabit challenges fns', () => {
   test('Challenge 1', () => {
@@ -59,5 +59,24 @@ describe('Edabit challenges fns', () => {
     expect(getVodkaBottle(input, 100)).toBe("Rammstein A");
     expect(getVodkaBottle(input, 50)).toBe("Rammstein B");
     expect(getVodkaBottle(input, 70)).toBe("Rammstein D");
+  });
+
+  test('Challenge 10', () => {
+    expect(getSumOfProduct(["1,2","1,1","2,3"])).toBe(8);
+    expect(getSumOfProduct(["1,2","0,3","3,0"])).toBe(0);
+    expect(getSumOfProduct(["10,2","5,0","2,3"])).toBe(100);
+  });
+
+  test('Challenge 11', () => {
+    const arr = ["abc", "ab10c", "a10bc", "bcd"];
+    const output = getStringsWithNumbers(arr);
+    expect(output.length).toBe(2);
+    expect(output.at(0)).toBe("ab10c");
+  });
+
+  test('Challenge 12', () => {
+    expect(getCombinations([2,3])).toBe(6);
+    expect(getCombinations([3,7,4])).toBe(84);
+    expect(getCombinations([2,3,4,5])).toBe(120);
   });
 });

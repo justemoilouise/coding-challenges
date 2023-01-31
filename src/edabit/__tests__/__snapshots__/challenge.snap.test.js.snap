@@ -204,3 +204,72 @@ exports[`Edabit challenges snapshots Challenge 9 1`] = `
   </div>
 </div>
 `;
+
+exports[`Edabit challenges snapshots Challenge 10 1`] = `
+<div
+  className=""
+>
+  <div>
+    <div>
+      Input: 
+      <input
+        onKeyDown={[Function]}
+      />
+      <button
+        onClick={[Function]}
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Edabit challenges snapshots Challenge 11 1`] = `
+<div
+  className=""
+>
+  <div>
+    <div>
+      Input: 
+      <input
+        onKeyDown={[Function]}
+      />
+      <button
+        onClick={[Function]}
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+  <div>
+    <div>
+      Output:
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Edabit challenges snapshots Challenge 12 1`] = `
+<div
+  className=""
+>
+  <div>
+    <div>
+      Input: 
+      <input
+        onKeyDown={[Function]}
+      />
+      <button
+        onClick={[Function]}
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+  <div>
+    Output: 
+    <strong />
+  </div>
+</div>
+`;
