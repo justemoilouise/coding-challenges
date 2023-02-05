@@ -1,4 +1,4 @@
-import { boomSeven, convertBinaryTextToNumber, countBoomerangs, getAvgSpeed, getCombinations, getFibonacci, getNumberPoliteness, getStringsWithNumbers, getSumOfProduct, getVodkaBottle, isPositiveDominant, oddishOrEvenish, towerOfHanoi } from "../challenge";
+import { boomSeven, convertBinaryTextToNumber, countBoomerangs, getAvgSpeed, getCombinations, getFibonacci, getFiscalCode, getNumberPoliteness, getStringsWithNumbers, getSumOfProduct, getVodkaBottle, isPositiveDominant, oddishOrEvenish, towerOfHanoi } from "../challenge";
 
 describe('Edabit challenges fns', () => {
   test('Challenge 1', () => {
@@ -85,5 +85,32 @@ describe('Edabit challenges fns', () => {
     expect(isPositiveDominant([5, 99, 832, -3, -4])).toBe(true);
     expect(isPositiveDominant([5, 0])).toBe(true);
     expect(isPositiveDominant([0, -4, -1])).toBe(false);
+  });
+
+  test('Challenge 14', () => {
+    expect(getFiscalCode({
+      name: "Matt",
+      surname: "Edabit",
+      gender: "M",
+      dob: "1/1/1900"
+    })).toBe('DBTMTT00A01');
+    expect(getFiscalCode({
+      name: "Helen",
+      surname: "Yu",
+      gender: "F",
+      dob: "1/12/1950"
+    })).toBe('YUXHLN50T41');
+    expect(getFiscalCode({
+      name: "Mickey",
+      surname: "Mouse",
+      gender: "M",
+      dob: "16/1/1928"
+    })).toBe('MSOMKY28A16');
+    expect(getFiscalCode({
+      name: "Al",
+      surname: "Fox",
+      gender: "F",
+      dob: "16/3/1948"
+    })).toBe('FXOLAX48C56');
   });
 });

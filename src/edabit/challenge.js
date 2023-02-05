@@ -140,3 +140,66 @@ export const isPositiveDominant = (input) => {
 
   return positive.length > negative.length;
 }
+
+export const getFiscalCode = ({ surname, name, dob, gender }) => {
+  const fiscalCodeArr = [];
+
+  // SURNAME
+  const surnameCode = [];
+  const surnameConsonants = getConsonantsInString(surname).slice(0, 3);
+  surnameCode.push(...surnameConsonants);
+  if (surnameConsonants.length < 3) {
+    const surnameVowels = getVowelsInString(surname).slice(0, 3 - surnameConsonants.length);
+    surnameCode.push(...surnameVowels);
+  }
+  fiscalCodeArr.push(surnameCode.join('').padEnd(3, 'X'));
+
+  // FIRST NAME
+  const nameCode = [];
+  let nameConsonants = getConsonantsInString(name);
+  if (nameConsonants.length > 3) {
+    nameConsonants = nameConsonants[0].concat(...nameConsonants.slice(2, 4));
+  }
+  nameCode.push(...nameConsonants);
+  if (nameConsonants.length < 3) {
+    const nameVowels = getVowelsInString(name).slice(0, 3 - nameConsonants.length);
+    nameCode.push(...nameVowels);
+  }
+  fiscalCodeArr.push(nameCode.join('').padEnd(3, 'X'));
+
+  // DATE OF BIRTH - day / month / year
+  const dobDate = dob.split('/');
+  fiscalCodeArr.push(dobDate[2].slice(2));
+  fiscalCodeArr.push(fiscalCodeMonthConversion[dobDate[1]]);
+
+  if (gender === 'M') {
+    fiscalCodeArr.push(dobDate[0].padStart(2, '0'));
+  } else {
+    fiscalCodeArr.push(parseInt(dobDate[0]) + 40);
+  }
+
+  return fiscalCodeArr.join('').toUpperCase();
+}
+
+const fiscalCodeMonthConversion = {
+  1: "A",
+  2: "B",
+  3: "C",
+  4: "D",
+  5: "E",
+  6: "H",
+  7: "L",
+  8: "M",
+  9: "P",
+  10: "R",
+  11: "S",
+  12: "T",
+};
+
+const getConsonantsInString = (str) =>
+  str.split('').reduce((arr, char) => isVowel(char) ? arr : arr.concat(char), []);
+
+const getVowelsInString = (str) => 
+  str.split('').reduce((arr, char) => isVowel(char) ? arr.concat(char) : arr, []);
+
+const isVowel = (char) => ['a','e','i','o','u'].includes(char.toLowerCase());
