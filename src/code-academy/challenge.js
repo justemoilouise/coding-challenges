@@ -192,6 +192,27 @@ export const getProductOfOthers = (input) => {
   return outputArr;
 }
 
+export const getMaxProduct = (list, k) => {
+  const maxArr = getMaxInArr(list, [], k).slice(0, k);
+
+  return maxArr.reduce((p, n) => p * n, 1);
+}
+
+const getMaxInArr = (inputArr, maxArr, k) => {
+  if (inputArr.length === 0) {
+    return maxArr;
+  }
+
+  const max = Math.max(...inputArr);
+  maxArr.push(max);
+
+  if (maxArr.length === k) {
+    return maxArr;
+  }
+
+  return getMaxInArr(inputArr.filter(x => x !== max), maxArr, k);
+}
+
 const isPrime = (num) => {
   if ([2,3,5].includes(num)) {
     return true;
