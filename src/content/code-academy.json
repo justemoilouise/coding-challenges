@@ -76,5 +76,11 @@
     "description": "Create a function that takes in an array of integers and replaces each number in the array with the product of all the numbers in the array except the number at that index itself.<br /><br />For example, `fn([1, 2, 3, 4, 5])` should return `[120, 60, 40, 30, 24]` and `fn([5, 5, 5])` should return `[25, 25, 25]`.",
     "link": "https://www.codecademy.com/code-challenges/code-challenge-product-of-everything-else-javascript",
     "tags": [ "Algorithmic Complexity", "Advanced" ]
+  },
+  {
+    "title": "Max product finder",
+    "description": "Create a function that takes in a list of numbers and an integer `k`, and returns the largest product that can be attained from any `k` integers in the list. You may presume that the length of the list of integers is greater than or equal to `k`.",
+    "link": "https://www.codecademy.com/code-challenges/code-challenge-max-product-finder-javascript",
+    "tags": [ "Heaps", "Advanced" ]
   }
 ]
