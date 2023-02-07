@@ -198,6 +198,29 @@ export const getMaxProduct = (list, k) => {
   return maxArr.reduce((p, n) => p * n, 1);
 }
 
+export const getPermutations = (n) => {
+  const arr = Array.from({ length: n - 1 }).map((x, i) => i + 1);
+  const onesArr = Array.from({ length: n }).fill(1);
+  return arrayPermutations(arr).concat([onesArr]);
+}
+
+const arrayPermutations = arr => {
+  if (arr.length <= 2) {
+    return arr.length === 2 ? [arr, [arr[1], arr[0]]] : arr;
+  }
+
+  return arr.reduce(
+    (acc, item, i) =>
+      acc.concat(
+        arrayPermutations([...arr.slice(0, i), ...arr.slice(i + 1)]).map(val => [
+          item,
+          ...val,
+        ])
+      ),
+    []
+  );
+};
+
 const getMaxInArr = (inputArr, maxArr, k) => {
   if (inputArr.length === 0) {
     return maxArr;
