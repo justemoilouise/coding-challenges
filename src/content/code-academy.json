@@ -82,5 +82,11 @@
     "description": "Create a function that takes in a list of numbers and an integer `k`, and returns the largest product that can be attained from any `k` integers in the list. You may presume that the length of the list of integers is greater than or equal to `k`.",
     "link": "https://www.codecademy.com/code-challenges/code-challenge-max-product-finder-javascript",
     "tags": [ "Heaps", "Advanced" ]
+  },
+  {
+    "title": "Stairmaster",
+    "description": "Write a function that will compute the number of ways to climb a flight of `n` steps, taking `1`, `2`, or `3` steps at a time. Make sure to find all permutations, not combinations, as the order matters. Climbing one step then two steps is different from climbing two steps then one step.",
+    "link": "https://www.codecademy.com/code-challenges/code-challenge-stairmaster-javascript",
+    "tags": [ "Algorithmic Complexity", "Intermediate" ]
   }
 ]
