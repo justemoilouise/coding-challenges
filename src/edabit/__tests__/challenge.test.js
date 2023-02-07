@@ -1,4 +1,4 @@
-import { boomSeven, convertBinaryTextToNumber, countBoomerangs, getAvgSpeed, getCombinations, getFibonacci, getFiscalCode, getNumberPoliteness, getStringsWithNumbers, getSumOfProduct, getVodkaBottle, isPositiveDominant, oddishOrEvenish, towerOfHanoi } from "../challenge";
+import { boomSeven, convertBinaryTextToNumber, countBoomerangs, encryptCaesarCipher, getAvgSpeed, getCombinations, getFibonacci, getFiscalCode, getNumberPoliteness, getStringsWithNumbers, getSumOfProduct, getVodkaBottle, isPositiveDominant, oddishOrEvenish, towerOfHanoi } from "../challenge";
 
 describe('Edabit challenges fns', () => {
   test('Challenge 1', () => {
@@ -112,5 +112,11 @@ describe('Edabit challenges fns', () => {
       gender: "F",
       dob: "16/3/1948"
     })).toBe('FXOLAX48C56');
+  });
+
+  test('Challenge 15', () => {
+    expect(encryptCaesarCipher('middle-Outz', 2)).toBe('okffng-Qwvb');
+    expect(encryptCaesarCipher('Always-Look-on-the-Bright-Side-of-Life', 5)).toBe('Fqbfdx-Qttp-ts-ymj-Gwnlmy-Xnij-tk-Qnkj');
+    expect(encryptCaesarCipher('A friend in need is a friend indeed', 20)).toBe('U zlcyhx ch hyyx cm u zlcyhx chxyyx');
   });
 });

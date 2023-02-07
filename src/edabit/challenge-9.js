@@ -31,8 +31,8 @@ export const Challenge = () => {
         <button className={styles.button} onClick={onClick}>Submit</button>
       </div>
       <div className={styles.flexContainer}>
-          Output: <strong>{output}</strong>
-        </div>
+        Output: <strong>{output}</strong>
+      </div>
     </div>
   );
 };

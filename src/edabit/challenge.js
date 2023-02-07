@@ -142,6 +142,21 @@ export const isPositiveDominant = (input) => {
 }
 
 export const getFiscalCode = ({ surname, name, dob, gender }) => {
+  const fiscalCodeMonthConversion = {
+    1: "A",
+    2: "B",
+    3: "C",
+    4: "D",
+    5: "E",
+    6: "H",
+    7: "L",
+    8: "M",
+    9: "P",
+    10: "R",
+    11: "S",
+    12: "T",
+  };
+
   const fiscalCodeArr = [];
 
   // SURNAME
@@ -181,20 +196,23 @@ export const getFiscalCode = ({ surname, name, dob, gender }) => {
   return fiscalCodeArr.join('').toUpperCase();
 }
 
-const fiscalCodeMonthConversion = {
-  1: "A",
-  2: "B",
-  3: "C",
-  4: "D",
-  5: "E",
-  6: "H",
-  7: "L",
-  8: "M",
-  9: "P",
-  10: "R",
-  11: "S",
-  12: "T",
-};
+export const encryptCaesarCipher = (text, factor) => {
+  const regex = new RegExp(/\w/, 'i');
+  const output = text.split('').reduce((arr, c) => {
+    let char = c;
+    if (regex.test(c)) {
+      const modFactor = isUppercase(c) ? 'A'.charCodeAt() : 'a'.charCodeAt();
+      const charCode = c.charCodeAt();
+      const newCharCode = ((charCode - modFactor + factor) % 26) + modFactor;
+
+      char = String.fromCharCode(newCharCode);
+    }
+
+    return arr.concat(char);
+  }, []);
+
+  return output.join('');
+}
 
 const getConsonantsInString = (str) =>
   str.split('').reduce((arr, char) => isVowel(char) ? arr : arr.concat(char), []);
@@ -203,3 +221,5 @@ const getVowelsInString = (str) =>
   str.split('').reduce((arr, char) => isVowel(char) ? arr.concat(char) : arr, []);
 
 const isVowel = (char) => ['a','e','i','o','u'].includes(char.toLowerCase());
+
+const isUppercase = (char) => /[A-Z]/.test(char);
