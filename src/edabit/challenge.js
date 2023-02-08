@@ -236,9 +236,9 @@ const textToTapCode = (str) => {
       if (/\w/i.test(c)) {
         const row = TapCodePolybiusSquare.findIndex(r => r.includes(letter));
         if (row > -1) {
-          const column = TapCodePolybiusSquare[row].findIndex(x => x === letter);
-          if (column > -1) {
-            const code = ''.padEnd(row + 1, '.') + ' ' + ''.padEnd(column + 1, '.');
+          const col = TapCodePolybiusSquare[row].findIndex(x => x === letter);
+          if (col > -1) {
+            const code = ''.padEnd(row + 1, '.') + ' ' + ''.padEnd(col + 1, '.');
             return arr.concat(code);
           }
         }
@@ -251,7 +251,17 @@ const textToTapCode = (str) => {
 };
 
 const tapCodeToText = (code) => {
-  return '';
+  const textArr = code
+    .match(/(\.+)\s(\.+)/g)
+    .reduce((arr, c) => {
+      const index = c.split(' ');
+      const row = index[0].split('').length - 1;
+      const col = index[1].split('').length - 1;
+
+      return arr.concat(TapCodePolybiusSquare[row][col]);
+    }, []);
+
+  return textArr.join('').toLowerCase();
 };
 
 const isTapCode = (str) => str.split(' ').every(x => x.includes('.'));
