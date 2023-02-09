@@ -1,4 +1,4 @@
-import { arrayToBST, fizzbuzz, flatten2DArray, getMaxProduct, getMaxProfitDays, getMean, getMissingNumbers, getMode, getPermutations, getPrimeNumbers, getProductOfOthers, getSemiPrimeNumbers, getSumOfPrimeFactors, getXth, isUniqueString, preorderBST, reverseWords } from "../challenge";
+import { arrayToBST, fizzbuzz, flatten2DArray, getMaxProduct, getMaxProfitDays, getMean, getMissingNumbers, getMode, getNthFibonacci, getPermutations, getPrimeNumbers, getProductOfOthers, getSemiPrimeNumbers, getSumOfPrimeFactors, getXth, isUniqueString, preorderBST, reverseWords } from "../challenge";
 
 describe('Code Academy challenges fns', () => {
   test('Challenge 1', () => {
@@ -105,5 +105,11 @@ describe('Code Academy challenges fns', () => {
     const output = getPermutations(4);
 
     expect(output.length).toBe(expectedOutput.length);
+  });
+
+  test('Challenge 16', () => {
+    expect(getNthFibonacci(0)).toBe(0);
+    expect(getNthFibonacci(1)).toBe(1);
+    expect(getNthFibonacci(6)).toBe(8);
   });
 });
