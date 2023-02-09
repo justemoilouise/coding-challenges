@@ -1,5 +1,5 @@
 import { TreeNode } from "../data/treeNode";
-import { getNumberPoliteness } from "../edabit/challenge";
+import { getFibonacci, getNumberPoliteness } from "../edabit/challenge";
 
 export const getMean = (input) => {
   if (input.length === 0) {
@@ -202,6 +202,11 @@ export const getPermutations = (n) => {
   const arr = Array.from({ length: n - 1 }).map((x, i) => i + 1);
   const onesArr = Array.from({ length: n }).fill(1);
   return arrayPermutations(arr).concat([onesArr]);
+}
+
+export const getNthFibonacci = (n) => {
+  const fibSeq = getFibonacci(n + 1);
+  return fibSeq.pop();
 }
 
 const arrayPermutations = arr => {

@@ -214,6 +214,58 @@ export const encryptCaesarCipher = (text, factor) => {
   return output.join('');
 }
 
+export const translateTapCode = (input) => {
+  return isTapCode(input) ? tapCodeToText(input) : textToTapCode(input);
+}
+
+const TapCodePolybiusSquare = [
+  ['A', 'B', 'C', 'D', 'E'],
+  ['F', 'G', 'H', 'I', 'J'],
+  ['L', 'M', 'N', 'O', 'P'],
+  ['Q', 'R', 'S', 'T', 'U'],
+  ['V', 'W', 'X', 'Y', 'Z'],
+];
+
+const textToTapCode = (str) => {
+  const tapCodeArr = str
+    .toUpperCase()
+    .split('')
+    .reduce((arr, c) => {
+      const letter = c === 'K' ? 'C' : c;
+      // check if a letter
+      if (/\w/i.test(c)) {
+        const row = TapCodePolybiusSquare.findIndex(r => r.includes(letter));
+        if (row > -1) {
+          const col = TapCodePolybiusSquare[row].findIndex(x => x === letter);
+          if (col > -1) {
+            const code = ''.padEnd(row + 1, '.') + ' ' + ''.padEnd(col + 1, '.');
+            return arr.concat(code);
+          }
+        }
+      }
+
+      return arr;
+    }, []);
+
+  return tapCodeArr.join(' ');
+};
+
+const tapCodeToText = (code) => {
+  const textArr = code
+    .match(/(\.+)\s(\.+)/g)
+    .reduce((arr, c) => {
+      const index = c.split(' ');
+      const row = index[0].split('').length - 1;
+      const col = index[1].split('').length - 1;
+
+      return arr.concat(TapCodePolybiusSquare[row][col]);
+    }, []);
+
+  return textArr.join('').toLowerCase();
+};
+
+const isTapCode = (str) => str.split(' ').every(x => x.includes('.'));
+
 const getConsonantsInString = (str) =>
   str.split('').reduce((arr, char) => isVowel(char) ? arr : arr.concat(char), []);
 
