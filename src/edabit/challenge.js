@@ -266,6 +266,32 @@ const mergeObjects = (obj1, obj2) => {
   }, obj1);
 };
 
+export const encryptEdabitScheme = (input) => {
+  const str = input.replace(/\s/g, '');
+  const len = str.length;
+
+  const rowCount = Math.floor(Math.sqrt(len));
+  const colCount = Math.ceil(len / rowCount);
+
+  const grid = [];
+
+  for (let i = 0; i < len; i+=colCount) {
+    const substr = str.slice(i, i + colCount);
+    grid.push(substr.split(''));
+  }
+
+  const encryptedArr = [];
+  for (let i = 0; i < colCount; i++) {
+    const fragment = [];
+    for (let j = 0; j < rowCount; j++) {
+      fragment.push(grid[j][i] ?? '');
+    }
+    encryptedArr.push(fragment.join(''));
+  }
+
+  return encryptedArr.join(' ');
+}
+
 const TapCodePolybiusSquare = [
   ['A', 'B', 'C', 'D', 'E'],
   ['F', 'G', 'H', 'I', 'J'],
