@@ -288,7 +288,7 @@ const getCoinsChange = (coins, currAmount, currCoins = []) => {
     coinsArr = coins.slice(1);
   }
 
-  return getCoinsChange(coinsArr, currAmount - coinsArr[0], currCoins.concat(coinsArr[0]));
+  return getCoinsChange(coinsArr, currAmount - coinsArr[0], currCoins.concat(String(coinsArr[0])));
 }
 
 const arrayPermutations = arr => {
