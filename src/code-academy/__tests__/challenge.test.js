@@ -1,4 +1,4 @@
-import { arrayToBST, fizzbuzz, flatten2DArray, getMaxProduct, getMaxProfitDays, getMean, getMissingNumbers, getMode, getNthFibonacci, getPermutations, getPrimeNumbers, getProductOfOthers, getSemiPrimeNumbers, getSumOfPrimeFactors, getXth, isUniqueString, preorderBST, reverseWords } from "../challenge";
+import { arrayToBST, fizzbuzz, flatten2DArray, getMaxProduct, getMaxProfitDays, getMean, getMissingNumbers, getMode, getNthFibonacci, getPermutations, getPrimeNumbers, getProductOfOthers, getSemiPrimeNumbers, getSumOfPrimeFactors, getXth, isUniqueString, preorderBST, reverseWords, swapLinkedListElements } from "../challenge";
 
 describe('Code Academy challenges fns', () => {
   test('Challenge 1', () => {
@@ -111,5 +111,14 @@ describe('Code Academy challenges fns', () => {
     expect(getNthFibonacci(0)).toBe(0);
     expect(getNthFibonacci(1)).toBe(1);
     expect(getNthFibonacci(6)).toBe(8);
+  });
+
+  test('Challenge 18', () => {
+    const arr = [1,2,3,4,5,6];
+    const expectedOutput = [1,5,3,4,2,6];
+    const output = swapLinkedListElements(arr, 2, 5);
+
+    expect(output.length).toBe(arr.length);
+    output.map((o, i) => expect(o).toBe(expectedOutput[i]));
   });
 });
