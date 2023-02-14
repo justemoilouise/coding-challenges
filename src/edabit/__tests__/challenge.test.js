@@ -1,4 +1,4 @@
-import { boomSeven, convertBinaryTextToNumber, countBoomerangs, encryptCaesarCipher, getAvgSpeed, getCombinations, getFibonacci, getFiscalCode, getNumberPoliteness, getStringsWithNumbers, getSumOfProduct, getVodkaBottle, isPositiveDominant, oddishOrEvenish, towerOfHanoi, translateTapCode } from "../challenge";
+import { boomSeven, convertBinaryTextToNumber, countBoomerangs, encryptCaesarCipher, getAvgSpeed, getCombinations, getFibonacci, getFiscalCode, getFrequencyByLevel, getNumberPoliteness, getStringsWithNumbers, getSumOfProduct, getVodkaBottle, isPositiveDominant, oddishOrEvenish, towerOfHanoi, translateTapCode } from "../challenge";
 
 describe('Edabit challenges fns', () => {
   test('Challenge 1', () => {
@@ -123,5 +123,20 @@ describe('Edabit challenges fns', () => {
   test('Challenge 16', () => {
     expect(translateTapCode('break')).toBe('. .. .... .. . ..... . . . ...');
     expect(translateTapCode('.... ... ... ..... . ..... ... ... .... ....')).toBe('spent');
+  });
+
+  test('Challenge 18', () => {
+    // [[0, 1], [1, 2], [2, 3]]
+    const arr1 = [1, 4, 4, [1, 1, [1, 2, 1, 1]]];
+    const output1 = getFrequencyByLevel(arr1, 1);
+    expect(output1.length).toBe(3);
+    expect(output1[2][1]).toBe(3);
+
+    // [[0, 3], [1, 4], [2, 0]]
+    const arr2 = [1, 5, 5, [5, [1, 2, 1, 1], 5, 5], 5, [5]];
+    const output2 = getFrequencyByLevel(arr2, 5);
+    expect(output2.length).toBe(3);
+    expect(output2[1][1]).toBe(4);
+    expect(output2[2][1]).toBe(0);
   });
 });
