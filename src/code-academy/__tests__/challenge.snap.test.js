@@ -100,7 +100,7 @@ describe('Code Academy challenges snapshots', () => {
   });
 
   it('Challenge 18', () => {
-    const tree = renderer.create(<Challenge16 />).toJSON();
+    const tree = renderer.create(<Challenge18 />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
