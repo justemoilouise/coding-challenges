@@ -12,7 +12,7 @@ export const Challenge = () => {
     if (!inputRef?.current) {
       return null;
     }
-    
+
     const value = inputRef.current.value;
     const primeNumArr = getSemiPrimeNumbers(value);
 
@@ -22,14 +22,19 @@ export const Challenge = () => {
   return (
     <div className={classNames(styles.container, styles.gridContainer)}>
       <div className={styles.flexContainer}>
-        Input:&nbsp;<input type='number' ref={inputRef} className={styles.inputField} />
-        <button className={styles.button} onClick={onClick}>Submit</button>
+        Input:&nbsp;
+        <input type='number' ref={inputRef} className={styles.inputField} />
+        <button className={styles.button} onClick={onClick}>
+          Submit
+        </button>
       </div>
       {output && (
         <div className={styles.flexContainer}>
           Output:&nbsp;
           {output.map((value, index) => (
-            <Pill key={index} variant='secondary'>{value}</Pill>
+            <Pill key={index} variant='secondary'>
+              {value}
+            </Pill>
           ))}
         </div>
       )}

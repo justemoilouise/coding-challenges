@@ -1,4 +1,24 @@
-import { arrayToBST, fizzbuzz, flatten2DArray, getMaxProduct, getMaxProfitDays, getMean, getMissingNumbers, getMode, getNthFibonacci, getPermutations, getPrimeNumbers, getProductOfOthers, getSemiPrimeNumbers, getSumOfPrimeFactors, getXth, isUniqueString, preorderBST, reverseWords, swapLinkedListElements } from "../challenge";
+import {
+  arrayToBST,
+  fizzbuzz,
+  flatten2DArray,
+  getMaxProduct,
+  getMaxProfitDays,
+  getMean,
+  getMissingNumbers,
+  getMode,
+  getNthFibonacci,
+  getPermutations,
+  getPrimeNumbers,
+  getProductOfOthers,
+  getSemiPrimeNumbers,
+  getSumOfPrimeFactors,
+  getXth,
+  isUniqueString,
+  preorderBST,
+  reverseWords,
+  swapLinkedListElements,
+} from '../challenge';
 
 describe('Code Academy challenges fns', () => {
   test('Challenge 1', () => {
@@ -26,7 +46,7 @@ describe('Code Academy challenges fns', () => {
   test('Challenge 4', () => {
     const arr1 = [1, 2, 3, 4, 5, 6, 7];
     const rootNode = arrayToBST(arr1, 0, arr1.length - 1);
-    const preorder = [4, 2, 1, 3, 6, 5, 7 ];
+    const preorder = [4, 2, 1, 3, 6, 5, 7];
 
     expect(rootNode.value).toBe(4);
     preorderBST(rootNode).map((value, index) => {
@@ -101,7 +121,15 @@ describe('Code Academy challenges fns', () => {
 
   test('Challenge 15', () => {
     // n=4 should return [1,1,1,1] [2,1,1] [1,2,1] [1,1,2] [2,2] [1,3] [3,1]
-    const expectedOutput = [[1,1,1,1], [2,1,1], [1,2,1], [1,1,2], [2,2], [1,3], [3,1]];
+    const expectedOutput = [
+      [1, 1, 1, 1],
+      [2, 1, 1],
+      [1, 2, 1],
+      [1, 1, 2],
+      [2, 2],
+      [1, 3],
+      [3, 1],
+    ];
     const output = getPermutations(4);
 
     expect(output.length).toBe(expectedOutput.length);
@@ -114,8 +142,8 @@ describe('Code Academy challenges fns', () => {
   });
 
   test('Challenge 18', () => {
-    const arr = [1,2,3,4,5,6];
-    const expectedOutput = [1,5,3,4,2,6];
+    const arr = [1, 2, 3, 4, 5, 6];
+    const expectedOutput = [1, 5, 3, 4, 2, 6];
     const output = swapLinkedListElements(arr, 2, 5);
 
     expect(output.length).toBe(arr.length);

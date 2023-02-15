@@ -25,13 +25,20 @@ export const Challenge = () => {
   return (
     <div className={classNames(styles.container, styles.gridContainer)}>
       <div className={styles.flexContainer}>
-        Input:&nbsp;<input type='number' min={0} ref={inputRef} className={styles.inputField} />
-        <button className={styles.button} onClick={handleClick}>Submit</button>
+        Input:&nbsp;
+        <input type='number' min={0} ref={inputRef} className={styles.inputField} />
+        <button className={styles.button} onClick={handleClick}>
+          Submit
+        </button>
       </div>
       {seq && (
         <div>
           Fibonacci Sequence:&nbsp;
-          {seq.map((num, i) => (<Pill key={i} variant='secondary'>{num}</Pill>))}
+          {seq.map((num, i) => (
+            <Pill key={i} variant='secondary'>
+              {num}
+            </Pill>
+          ))}
         </div>
       )}
     </div>

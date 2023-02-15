@@ -20,121 +20,87 @@ import { Challenge as Challenge18 } from '../challenge-18';
 
 describe('Edabit challenges snapshots', () => {
   it('Challenge 1', () => {
-    const tree = renderer
-      .create(<Challenge1 />)
-      .toJSON();
+    const tree = renderer.create(<Challenge1 />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('Challenge 2', () => {
-    const tree = renderer
-      .create(<Challenge2 />)
-      .toJSON();
+    const tree = renderer.create(<Challenge2 />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('Challenge 3', () => {
-    const tree = renderer
-      .create(<Challenge3 />)
-      .toJSON();
+    const tree = renderer.create(<Challenge3 />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('Challenge 4', () => {
-    const tree = renderer
-      .create(<Challenge4 />)
-      .toJSON();
+    const tree = renderer.create(<Challenge4 />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('Challenge 5', () => {
-    const tree = renderer
-      .create(<Challenge5 />)
-      .toJSON();
+    const tree = renderer.create(<Challenge5 />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('Challenge 6', () => {
-    const tree = renderer
-      .create(<Challenge6 />)
-      .toJSON();
+    const tree = renderer.create(<Challenge6 />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('Challenge 7', () => {
-    const tree = renderer
-      .create(<Challenge7 />)
-      .toJSON();
+    const tree = renderer.create(<Challenge7 />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('Challenge 8', () => {
-    const tree = renderer
-      .create(<Challenge8 />)
-      .toJSON();
+    const tree = renderer.create(<Challenge8 />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('Challenge 9', () => {
-    const tree = renderer
-      .create(<Challenge9 />)
-      .toJSON();
+    const tree = renderer.create(<Challenge9 />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('Challenge 10', () => {
-    const tree = renderer
-      .create(<Challenge10 />)
-      .toJSON();
+    const tree = renderer.create(<Challenge10 />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('Challenge 11', () => {
-    const tree = renderer
-      .create(<Challenge11 />)
-      .toJSON();
+    const tree = renderer.create(<Challenge11 />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('Challenge 12', () => {
-    const tree = renderer
-      .create(<Challenge12 />)
-      .toJSON();
+    const tree = renderer.create(<Challenge12 />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('Challenge 13', () => {
-    const tree = renderer
-      .create(<Challenge13 />)
-      .toJSON();
+    const tree = renderer.create(<Challenge13 />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('Challenge 14', () => {
-    const tree = renderer
-      .create(<Challenge14 />)
-      .toJSON();
+    const tree = renderer.create(<Challenge14 />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('Challenge 15', () => {
-    const tree = renderer
-      .create(<Challenge15 />)
-      .toJSON();
+    const tree = renderer.create(<Challenge15 />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('Challenge 16', () => {
-    const tree = renderer
-      .create(<Challenge16 />)
-      .toJSON();
+    const tree = renderer.create(<Challenge16 />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('Challenge 18', () => {
-    const tree = renderer
-      .create(<Challenge18 />)
-      .toJSON();
+    const tree = renderer.create(<Challenge18 />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

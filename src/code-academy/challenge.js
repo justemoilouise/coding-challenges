@@ -1,8 +1,8 @@
-import { TreeNode } from "../data/treeNode";
-import { LinkedList } from "../data/LinkedList";
-import { getFibonacci, getNumberPoliteness } from "../edabit/challenge";
+import { TreeNode } from '../data/treeNode';
+import { LinkedList } from '../data/LinkedList';
+import { getFibonacci, getNumberPoliteness } from '../edabit/challenge';
 
-export const getMean = (input) => {
+export const getMean = input => {
   if (input.length === 0) {
     return 0;
   }
@@ -12,9 +12,9 @@ export const getMean = (input) => {
   }, 0);
 
   return total / input.length;
-}
+};
 
-export const getMode = (input) => {
+export const getMode = input => {
   if (input.length === 0) {
     return 0;
   }
@@ -22,7 +22,7 @@ export const getMode = (input) => {
   const mode = input
     .reduce((arr, num) => {
       const x = arr.find(x => x.value === num);
-      if(!x) {
+      if (!x) {
         return arr.concat({
           value: num,
           f: 1,
@@ -31,17 +31,20 @@ export const getMode = (input) => {
       x.f++;
       return arr;
     }, [])
-    .reduce((obj, value) => {
-      if (value.f > obj.f) {
-        return value;
-      }
-      return obj;
-    }, { f: 0} );
+    .reduce(
+      (obj, value) => {
+        if (value.f > obj.f) {
+          return value;
+        }
+        return obj;
+      },
+      { f: 0 },
+    );
 
   return mode.value;
 };
 
-export const getMaxProfitDays = (input) => {
+export const getMaxProfitDays = input => {
   const min = Math.min(...input);
   const minIndex = input.findIndex(x => x === min);
 
@@ -50,13 +53,15 @@ export const getMaxProfitDays = (input) => {
   const maxIndex = input.findIndex(x => x === max);
 
   return [minIndex, maxIndex];
-}
+};
 
-export const getPrimeNumbers = (input) => {
-  return Array.from({ length: input - 1 }).fill(2).reduce((arr, num, index) => {
-    return isPrime(num + index) ? arr.concat(num + index) : arr;
-  }, []);
-}
+export const getPrimeNumbers = input => {
+  return Array.from({ length: input - 1 })
+    .fill(2)
+    .reduce((arr, num, index) => {
+      return isPrime(num + index) ? arr.concat(num + index) : arr;
+    }, []);
+};
 
 export const arrayToBST = (arr, start, end) => {
   if (start > end) {
@@ -69,7 +74,7 @@ export const arrayToBST = (arr, start, end) => {
   node.right = arrayToBST(arr, mid + 1, end);
 
   return node;
-}
+};
 
 export const preorderBST = (node, arr = []) => {
   if (node == null) {
@@ -81,44 +86,46 @@ export const preorderBST = (node, arr = []) => {
   arr.concat(preorderBST(node.right, arr));
 
   return arr;
-}
+};
 
-export const getSemiPrimeNumbers = (input) => {
+export const getSemiPrimeNumbers = input => {
   if (input < 4) {
     return [];
   }
 
-  const primeNumbers = getPrimeNumbers(input)
+  const primeNumbers = getPrimeNumbers(input);
 
   // start with 4 because we know that this is the first non-prime number
-  return Array.from({ length: input - 4 }).fill(4).reduce((arr, num, index) => {
-    const currentNumber = num + index;
+  return Array.from({ length: input - 4 })
+    .fill(4)
+    .reduce((arr, num, index) => {
+      const currentNumber = num + index;
 
-    for (const primeNum of primeNumbers) {
-      const quot = currentNumber / primeNum;
-      if (!Number.isNaN(quot) && primeNumbers.includes(quot)) {
-        return arr.concat(currentNumber);
+      for (const primeNum of primeNumbers) {
+        const quot = currentNumber / primeNum;
+        if (!Number.isNaN(quot) && primeNumbers.includes(quot)) {
+          return arr.concat(currentNumber);
+        }
       }
-    }
 
-    return arr;
-  }, []);
-}
+      return arr;
+    }, []);
+};
 
-export const flatten2DArray = (input) => {
+export const flatten2DArray = input => {
   return input.reduce((arr, value) => {
     return arr.concat(value);
   }, []);
-}
+};
 
-export const getSumOfPrimeFactors = (input) => {
+export const getSumOfPrimeFactors = input => {
   const oddDivisors = getNumberPoliteness(input);
   const primeDivisors = oddDivisors.filter(x => isPrime(x) && x !== input);
 
   return primeDivisors.reduce((sum, num) => sum + num, 0);
-}
+};
 
-export const isUniqueString = (input) => {
+export const isUniqueString = input => {
   const charCountObj = input.split('').reduce((obj, char) => {
     if (obj[char]) {
       return {
@@ -134,9 +141,9 @@ export const isUniqueString = (input) => {
   }, {});
 
   return Object.values(charCountObj).find(x => x > 1) ? false : true;
-}
+};
 
-export const fizzbuzz = (input) => {
+export const fizzbuzz = input => {
   return Array.from({ length: input }).reduce((arr, v, i) => {
     const num = i + 1;
 
@@ -151,64 +158,64 @@ export const fizzbuzz = (input) => {
     }
     return arr.concat(num);
   }, []);
-}
+};
 
 export const getMissingNumbers = (list, k) => {
   // sort and remove duplicates
   const arr = Array.from(new Set(list.sort((a, b) => a - b)));
   const missingNumArr = [];
 
-  for(let i = 0; i <= arr.length; i++) {
-    const diff = arr[i+1] - arr[i];
+  for (let i = 0; i <= arr.length; i++) {
+    const diff = arr[i + 1] - arr[i];
     // not consectuive, hence there's a missing number in between these two
     if (diff > 1) {
       missingNumArr.push(...getNumbersInBetween(arr[i], diff));
-    } 
-    if(missingNumArr.length >= k) {
+    }
+    if (missingNumArr.length >= k) {
       break;
     }
   }
 
   return missingNumArr.slice(0, k);
-}
+};
 
 export const getXth = (input, x) => {
   const sortedArr = input.sort((a, b) => a - b);
   return sortedArr.at(x - 1) ?? -1;
-}
+};
 
-export const reverseWords = (input) => {
+export const reverseWords = input => {
   return input.split(' ').reverse().join(' ');
-}
+};
 
-export const getProductOfOthers = (input) => {
+export const getProductOfOthers = input => {
   const outputArr = [];
 
-  for(let i = 0; i<input.length; i++) {
-    const othersArr = input.slice(0, i).concat(input.slice(i+1));
+  for (let i = 0; i < input.length; i++) {
+    const othersArr = input.slice(0, i).concat(input.slice(i + 1));
     const product = othersArr.reduce((p, num) => p * num, 1);
-    outputArr.push(product); 
+    outputArr.push(product);
   }
 
   return outputArr;
-}
+};
 
 export const getMaxProduct = (list, k) => {
   const maxArr = getMaxInArr(list, [], k).slice(0, k);
 
   return maxArr.reduce((p, n) => p * n, 1);
-}
+};
 
-export const getPermutations = (n) => {
+export const getPermutations = n => {
   const arr = Array.from({ length: n - 1 }).map((x, i) => i + 1);
   const onesArr = Array.from({ length: n }).fill(1);
   return arrayPermutations(arr).concat([onesArr]);
-}
+};
 
-export const getNthFibonacci = (n) => {
+export const getNthFibonacci = n => {
   const fibSeq = getFibonacci(n + 1);
   return fibSeq.pop();
-}
+};
 
 // fix swap if root is included
 export const swapLinkedListElements = (arr, el1, el2) => {
@@ -233,7 +240,7 @@ export const swapLinkedListElements = (arr, el1, el2) => {
 
     prev = node;
     node = node.next;
-  } while(node != null);
+  } while (node != null);
 
   if (placeholder1 != null && placeholder2 != null) {
     if (prev1) {
@@ -245,17 +252,17 @@ export const swapLinkedListElements = (arr, el1, el2) => {
 
     const p2Next = placeholder2.next;
     placeholder2.next = placeholder1.next;
-    placeholder1.next = p2Next; 
+    placeholder1.next = p2Next;
   }
 
   return linkedList.toArray();
-}
+};
 
-const convertArrayToLinkedList = (input) => {
+const convertArrayToLinkedList = input => {
   const linkedList = new LinkedList();
   input.map(i => linkedList.insert(i));
   return linkedList;
-}
+};
 
 const arrayPermutations = arr => {
   if (arr.length <= 2) {
@@ -263,14 +270,8 @@ const arrayPermutations = arr => {
   }
 
   return arr.reduce(
-    (acc, item, i) =>
-      acc.concat(
-        arrayPermutations([...arr.slice(0, i), ...arr.slice(i + 1)]).map(val => [
-          item,
-          ...val,
-        ])
-      ),
-    []
+    (acc, item, i) => acc.concat(arrayPermutations([...arr.slice(0, i), ...arr.slice(i + 1)]).map(val => [item, ...val])),
+    [],
   );
 };
 
@@ -286,11 +287,15 @@ const getMaxInArr = (inputArr, maxArr, k) => {
     return maxArr;
   }
 
-  return getMaxInArr(inputArr.filter(x => x !== max), maxArr, k);
+  return getMaxInArr(
+    inputArr.filter(x => x !== max),
+    maxArr,
+    k,
+  );
 };
 
-const isPrime = (num) => {
-  if ([2,3,5].includes(num)) {
+const isPrime = num => {
+  if ([2, 3, 5].includes(num)) {
     return true;
   }
 

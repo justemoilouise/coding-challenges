@@ -22,14 +22,21 @@ export const Challenge = () => {
   return (
     <div className={styles.container}>
       <div className={styles.flexContainer}>
-        Input:&nbsp;<input ref={inputRef} className={styles.inputField} />
-        <button className={styles.button} onClick={handleClick}>Convert</button>
+        Input:&nbsp;
+        <input ref={inputRef} className={styles.inputField} />
+        <button className={styles.button} onClick={handleClick}>
+          Convert
+        </button>
       </div>
       {data && (
         <>
           <div className={styles.flexContainer}>
             Given:&nbsp;
-            {data.input.map((num, i) => (<Pill key={i} variant='secondary'>{num}</Pill>))}
+            {data.input.map((num, i) => (
+              <Pill key={i} variant='secondary'>
+                {num}
+              </Pill>
+            ))}
           </div>
           <div className={styles.flexContainer}>
             Output:&nbsp;<strong>{data.output}</strong>

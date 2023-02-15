@@ -6,7 +6,7 @@ import data from '../../content/edabit.json';
 const breadcumbItems = [
   {
     link: '/edabit',
-    label: 'Edabit'
+    label: 'Edabit',
   },
   {
     label: 'Challenge 15',
@@ -17,11 +17,7 @@ const details = data[14];
 
 const Page = () => {
   return (
-    <EdabitPageLayout
-      {...details}
-      title={`Challenge 15 - ${details.title}`}
-      breadcumbItems={breadcumbItems}
-    >
+    <EdabitPageLayout {...details} title={`Challenge 15 - ${details.title}`} breadcumbItems={breadcumbItems}>
       <Challenge />
     </EdabitPageLayout>
   );

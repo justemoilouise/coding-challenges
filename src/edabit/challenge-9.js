@@ -13,22 +13,23 @@ export const Challenge = () => {
       return;
     }
 
-    setOutput(getVodkaBottle(
-      JSON.parse(objRef.current.value),
-      parseInt(numRef.current.value)
-    ));
+    setOutput(getVodkaBottle(JSON.parse(objRef.current.value), parseInt(numRef.current.value)));
   };
 
   return (
     <div className={classNames(styles.container, styles.gridContainer)}>
       <div>
         <div className={styles.flexContainer}>
-          Object:&nbsp;<textarea ref={objRef} className={styles.inputField} />
+          Object:&nbsp;
+          <textarea ref={objRef} className={styles.inputField} />
         </div>
         <div className={styles.flexContainer}>
-          Number:&nbsp;<input ref={numRef} type='number' className={styles.inputField} />
+          Number:&nbsp;
+          <input ref={numRef} type='number' className={styles.inputField} />
         </div>
-        <button className={styles.button} onClick={onClick}>Submit</button>
+        <button className={styles.button} onClick={onClick}>
+          Submit
+        </button>
       </div>
       <div className={styles.flexContainer}>
         Output: <strong>{output}</strong>

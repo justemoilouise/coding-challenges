@@ -26,6 +26,6 @@
   /* margin-left: var(--spacingMedium); */
   padding: var(--spacingSmall) var(--spacingMedium);
   font-size: 16px;
-  color: #FFF;
+  color: #fff;
   cursor: pointer;
 }

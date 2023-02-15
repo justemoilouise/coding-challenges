@@ -14,11 +14,13 @@ const Page = () => {
         {data.map((d, i) => (
           <Link key={i} to={`/edabit/challenge-${i + 1}`}>
             <Card>
-              <h3>Challenge {i+1}</h3>
+              <h3>Challenge {i + 1}</h3>
               <p>{d.title}</p>
               <div className={styles.tags}>
                 {d.tags.map((tag, index) => (
-                  <Pill key={index} variant='primary'>{tag}</Pill>
+                  <Pill key={index} variant='primary'>
+                    {tag}
+                  </Pill>
                 ))}
               </div>
             </Card>

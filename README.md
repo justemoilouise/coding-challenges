@@ -23,5 +23,6 @@ This repository is built from the Vercel/GatsbyJS template, see [example](https:
 ## Deployment
 
 This site is deployed both on Vercel and on GitHub Pages
+
 - https://vercel-gatsby-blond.vercel.app/
 - https://justemoilouise.github.io/coding-challenges/

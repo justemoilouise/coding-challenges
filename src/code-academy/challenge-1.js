@@ -7,7 +7,7 @@ import { getMean, getMode } from './challenge';
 export const Challenge = () => {
   const [input, setInput] = React.useState([]);
 
-  const onKeyDown = (evt) => {
+  const onKeyDown = evt => {
     if (evt.code === 'Enter') {
       const currentTarget = evt.currentTarget;
       setInput(input.concat(parseInt(currentTarget.value)));
@@ -19,19 +19,23 @@ export const Challenge = () => {
     <div className={classNames(styles.container, styles.gridContainer)}>
       <div>
         <div className={styles.flexContainer}>
-          Input:&nbsp;<input type='number' className={styles.inputField} onKeyDown={onKeyDown} />
+          Input:&nbsp;
+          <input type='number' className={styles.inputField} onKeyDown={onKeyDown} />
         </div>
         {input.length > 0 && (
           <div className={styles.flexContainer}>
             {input.map((value, index) => (
-              <Pill key={index} variant='secondary'>{value}</Pill>
+              <Pill key={index} variant='secondary'>
+                {value}
+              </Pill>
             ))}
           </div>
         )}
       </div>
       <div>
         Mean: <strong>{getMean(input).toFixed(2)}</strong>
-        <br /><br />
+        <br />
+        <br />
         Mode: <strong>{getMode(input)}</strong>
       </div>
     </div>

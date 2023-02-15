@@ -18,11 +18,14 @@ export const Challenge = () => {
   return (
     <div className={classNames(styles.container, styles.gridContainer)}>
       <div className={styles.flexContainer}>
-        Input:&nbsp;<input ref={inputRef} className={styles.inputField} />
-        <button className={styles.button} onClick={onClick}>Reverse</button>
+        Input:&nbsp;
+        <input ref={inputRef} className={styles.inputField} />
+        <button className={styles.button} onClick={onClick}>
+          Reverse
+        </button>
       </div>
       <div>
-          Output:&nbsp;<strong>{output}</strong>
+        Output:&nbsp;<strong>{output}</strong>
       </div>
     </div>
   );

@@ -19,14 +19,19 @@ export const Challenge = () => {
   return (
     <div className={classNames(styles.container, styles.gridContainer)}>
       <div className={styles.flexContainer}>
-        Input:&nbsp;<input ref={inputRef} className={styles.inputField} />
-        <button className={styles.button} onClick={onClick}>Submit</button>
+        Input:&nbsp;
+        <input ref={inputRef} className={styles.inputField} />
+        <button className={styles.button} onClick={onClick}>
+          Submit
+        </button>
       </div>
       <div>
-          Output:&nbsp;
-          {output.map((value, index) => (
-            <Pill key={index} variant='secondary'>{value}</Pill>
-          ))}
+        Output:&nbsp;
+        {output.map((value, index) => (
+          <Pill key={index} variant='secondary'>
+            {value}
+          </Pill>
+        ))}
       </div>
     </div>
   );

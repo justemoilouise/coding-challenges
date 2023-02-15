@@ -13,22 +13,23 @@ export const Challenge = () => {
       return;
     }
 
-    setOutput(encryptCaesarCipher(
-      strRef.current.value,
-      parseInt(numRef.current.value)
-    ));
+    setOutput(encryptCaesarCipher(strRef.current.value, parseInt(numRef.current.value)));
   };
 
   return (
     <div className={classNames(styles.container, styles.gridContainer)}>
       <div>
         <div className={styles.flexContainer}>
-          String:&nbsp;<input ref={strRef} className={styles.inputField} />
+          String:&nbsp;
+          <input ref={strRef} className={styles.inputField} />
         </div>
         <div className={styles.flexContainer}>
-          Factor:&nbsp;<input ref={numRef} type='number' className={styles.inputField} />
+          Factor:&nbsp;
+          <input ref={numRef} type='number' className={styles.inputField} />
         </div>
-        <button className={styles.button} onClick={onClick}>Submit</button>
+        <button className={styles.button} onClick={onClick}>
+          Submit
+        </button>
       </div>
       <div className={styles.flexContainer}>
         Output: <strong>{output}</strong>

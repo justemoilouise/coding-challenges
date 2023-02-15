@@ -6,7 +6,7 @@ import { getFiscalCode } from './challenge';
 export const Challenge = () => {
   const [output, setOutput] = React.useState('');
 
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
     const input = {
       name: e.target.name.value,
@@ -22,18 +22,24 @@ export const Challenge = () => {
     <form onSubmit={onSubmit} className={classNames(styles.container, styles.gridContainer)}>
       <div>
         <div className={styles.flexContainer}>
-          Surname:&nbsp;<input className={styles.inputField} name='surname' />
+          Surname:&nbsp;
+          <input className={styles.inputField} name='surname' />
         </div>
         <div className={styles.flexContainer}>
-          Name:&nbsp;<input className={styles.inputField} name='name' />
+          Name:&nbsp;
+          <input className={styles.inputField} name='name' />
         </div>
         <div className={styles.flexContainer}>
-          Gender:&nbsp;<input className={styles.inputField} name='gender' />
+          Gender:&nbsp;
+          <input className={styles.inputField} name='gender' />
         </div>
         <div className={styles.flexContainer}>
-          DOB:&nbsp;<input className={styles.inputField} name='dob' />
+          DOB:&nbsp;
+          <input className={styles.inputField} name='dob' />
         </div>
-        <button className={styles.button} type='submit'>Submit</button>
+        <button className={styles.button} type='submit'>
+          Submit
+        </button>
       </div>
       <div className={styles.flexContainer}>
         Output:&nbsp;<strong>{output}</strong>

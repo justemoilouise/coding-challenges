@@ -18,8 +18,11 @@ export const Challenge = () => {
   return (
     <div className={classNames(styles.container, styles.gridContainer)}>
       <div className={styles.flexContainer}>
-        Input:&nbsp;<input type='number' min={1} ref={inputRef} className={styles.inputField} />
-        <button className={styles.button} onClick={onClick}>Submit</button>
+        Input:&nbsp;
+        <input type='number' min={1} ref={inputRef} className={styles.inputField} />
+        <button className={styles.button} onClick={onClick}>
+          Submit
+        </button>
       </div>
       <div>
         Output:&nbsp;<strong>{output}</strong>

@@ -14,25 +14,27 @@ export const Challenge = () => {
       return;
     }
 
-    setOutput(getAvgSpeed(
-      parseInt(upRateRef.current.value),
-      parseInt(downRateRef.current.value)
-    ));
+    setOutput(getAvgSpeed(parseInt(upRateRef.current.value), parseInt(downRateRef.current.value)));
   };
 
   return (
     <div className={classNames(styles.container, styles.gridContainer)}>
       <div>
         <div className={styles.flexContainer}>
-          Uphill Time:&nbsp;<input ref={upTimeRef} type='number' className={styles.inputField} />
+          Uphill Time:&nbsp;
+          <input ref={upTimeRef} type='number' className={styles.inputField} />
         </div>
         <div className={styles.flexContainer}>
-          Uphill Rate:&nbsp;<input ref={upRateRef} type='number' className={styles.inputField} />
+          Uphill Rate:&nbsp;
+          <input ref={upRateRef} type='number' className={styles.inputField} />
         </div>
         <div className={styles.flexContainer}>
-          Downhill Rate:&nbsp;<input ref={downRateRef} type='number' className={styles.inputField} />
+          Downhill Rate:&nbsp;
+          <input ref={downRateRef} type='number' className={styles.inputField} />
         </div>
-        <button className={styles.button} onClick={onClick}>Submit</button>
+        <button className={styles.button} onClick={onClick}>
+          Submit
+        </button>
       </div>
       {output && (
         <div className={styles.flexContainer}>

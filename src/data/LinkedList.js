@@ -1,4 +1,3 @@
-
 export class ListNode {
   constructor(value) {
     this.value = value;
@@ -17,8 +16,8 @@ export class LinkedList {
       this.root = node;
     } else {
       let n = this.root;
-      while(n.next != null) {
-        n = n.next
+      while (n.next != null) {
+        n = n.next;
       }
 
       n.next = node;
@@ -29,7 +28,7 @@ export class LinkedList {
     const arr = [];
 
     let node = this.root;
-    while(node != null) {
+    while (node != null) {
       arr.push(node.value);
       node = node.next;
     }

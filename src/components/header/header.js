@@ -11,9 +11,7 @@ export const Header = () => {
       <div className={styles.toggleHeading}>
         <DrawerToggle />
         <Link to='/' className={styles.headingLink}>
-          <h1 className={styles.heading}>
-            Coding Challenges
-          </h1>
+          <h1 className={styles.heading}>Coding Challenges</h1>
         </Link>
       </div>
       <a href='https://github.com/justemoilouise/vercel-gatsby/' className={styles.githubLink}>

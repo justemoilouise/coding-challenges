@@ -8,7 +8,7 @@ export const Challenge = () => {
   const [input, setInput] = React.useState([]);
   const [output, setOutput] = React.useState();
 
-  const onKeyDown = (evt) => {
+  const onKeyDown = evt => {
     if (evt.code === 'Enter') {
       const currentTarget = evt.currentTarget;
       setInput(input.concat(currentTarget.value));
@@ -24,13 +24,18 @@ export const Challenge = () => {
     <div className={classNames(styles.container, styles.gridContainer)}>
       <div>
         <div className={styles.flexContainer}>
-          Input:&nbsp;<input className={styles.inputField} onKeyDown={onKeyDown} />
-          <button className={styles.button} onClick={onClick}>Submit</button>
+          Input:&nbsp;
+          <input className={styles.inputField} onKeyDown={onKeyDown} />
+          <button className={styles.button} onClick={onClick}>
+            Submit
+          </button>
         </div>
         {input.length > 0 && (
           <div className={styles.flexContainer}>
             {input.map((value, index) => (
-              <Pill key={index} variant='secondary'>{value}</Pill>
+              <Pill key={index} variant='secondary'>
+                {value}
+              </Pill>
             ))}
           </div>
         )}
