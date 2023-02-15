@@ -1,0 +1,39 @@
+
+name: Formatting
+
+on:
+  push:
+    branches: ['main']
+  pull_request:
+    branches: ['main']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'yarn'
+      - name: Restore cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            public
+            .cache
+          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
+          restore-keys: |
+            ${{ runner.os }}-gatsby-build-
+      - name: Install dependencies
+        run: yarn install
+      - name: Build with Gatsby
+        env:
+          PREFIX_PATHS: 'true'
+        run: yarn run build
+      - name: Check linting and formatting
+        # Custom script for checking the linting and formatting being in place
+        run: yarn lint
