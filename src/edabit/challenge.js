@@ -1,5 +1,8 @@
-export const convertBinaryTextToNumber = (value) => {
-  let input = value.toLowerCase().split(' ').filter(x => ['zero', 'one'].includes(x));
+export const convertBinaryTextToNumber = value => {
+  let input = value
+    .toLowerCase()
+    .split(' ')
+    .filter(x => ['zero', 'one'].includes(x));
   const mod = input.length % 8;
   if (mod !== 0) {
     const quot = Math.floor(input.length / 8);
@@ -10,10 +13,10 @@ export const convertBinaryTextToNumber = (value) => {
     input,
     output: input.map(textNum => (textNum === 'zero' ? 0 : 1)),
   };
-}
+};
 
 export const getFibonacci = (len, arr = []) => {
-  if (arr.length === len ) {
+  if (arr.length === len) {
     return arr;
   }
 
@@ -28,13 +31,11 @@ export const getFibonacci = (len, arr = []) => {
   const arrLength = arr.length;
   const value = arr[arrLength - 1] + arr[arrLength - 2];
   return getFibonacci(len, arr.concat(value));
-}
+};
 
-export const boomSeven = (input) => {
-  return input.includes(7)
-    ? 'BOOM!'
-    : 'there is no 7 in the array';
-}
+export const boomSeven = input => {
+  return input.includes(7) ? 'BOOM!' : 'there is no 7 in the array';
+};
 
 export const towerOfHanoi = (disc, moves = [], from = 'A', to = 'B', aux = 'C') => {
   if (disc === 0) {
@@ -45,9 +46,9 @@ export const towerOfHanoi = (disc, moves = [], from = 'A', to = 'B', aux = 'C') 
   const move = `Move disc #${disc} from ${from} to ${aux}`;
 
   return towerOfHanoi(disc - 1, newMoves.concat(move), aux, to, from);
-}
+};
 
-export const countBoomerangs = (input) => {
+export const countBoomerangs = input => {
   return input.reduce((count, num, index) => {
     if (index > input.length - 3) {
       // almost end of the array
@@ -55,16 +56,16 @@ export const countBoomerangs = (input) => {
       return count;
     }
 
-    const isBoomerang = num === input[index+2] && num !== input[index+1];
+    const isBoomerang = num === input[index + 2] && num !== input[index + 1];
     return isBoomerang ? count + 1 : count;
   }, 0);
-}
+};
 
 /**
  * The politeness of a number is defined as the number of ways it can be expressed as the sum of consecutive integers.
  * This can be determine by getting the number of odd factors of a number.
  */
-export const getNumberPoliteness = (input) => {
+export const getNumberPoliteness = input => {
   let divisor = input;
 
   // get the "greatest" odd divisor
@@ -73,46 +74,48 @@ export const getNumberPoliteness = (input) => {
   }
 
   const divisors = [];
-  for(let i = 3; i <= divisor; i+=2) {
-    if ((divisor % i) === 0) {
+  for (let i = 3; i <= divisor; i += 2) {
+    if (divisor % i === 0) {
       divisors.push(i);
     }
   }
 
   return divisors;
-}
+};
 
-export const oddishOrEvenish = (input) => {
-  const sum = String(input).split('').reduce((partialSum, num) => {
-    return partialSum + parseInt(num);
-  }, 0);
+export const oddishOrEvenish = input => {
+  const sum = String(input)
+    .split('')
+    .reduce((partialSum, num) => {
+      return partialSum + parseInt(num);
+    }, 0);
 
   return sum % 2 === 0 ? 'Evenish' : 'Oddish';
-}
+};
 
 export const getAvgSpeed = (upRate, downRate) => {
   return (2 * upRate * downRate) / (upRate + downRate);
-}
+};
 
 export const getVodkaBottle = (obj, num) => {
   const objEntry = Object.entries(obj).filter(([key, value]) => key.includes('Rammstein') && value === num) ?? [];
-  
-  return objEntry.length > 0 ? objEntry[0][0] : undefined;
-}
 
-export const getSumOfProduct = (input) => {
-  const products = input.reduce((productArr, pair) => {
-    const num = pair.split(',');
-    return [
-      productArr[0] * parseInt(num[0]),
-      productArr[1] * parseInt(num[1]),
-    ];
-  }, [1,1]);
+  return objEntry.length > 0 ? objEntry[0][0] : undefined;
+};
+
+export const getSumOfProduct = input => {
+  const products = input.reduce(
+    (productArr, pair) => {
+      const num = pair.split(',');
+      return [productArr[0] * parseInt(num[0]), productArr[1] * parseInt(num[1])];
+    },
+    [1, 1],
+  );
 
   return products[0] + products[1];
-}
+};
 
-export const getStringsWithNumbers = (input) => {
+export const getStringsWithNumbers = input => {
   const regex = new RegExp(/\w*\d+\w*/, 'i');
   const output = input.reduce((arr, str) => {
     if (str.match(regex)) {
@@ -122,39 +125,42 @@ export const getStringsWithNumbers = (input) => {
   }, []);
 
   return output;
-}
+};
 
-export const getCombinations = (input) => {
+export const getCombinations = input => {
   return input.reduce((p, i) => p * i, 1);
-}
+};
 
-export const isPositiveDominant = (input) => {
-  const { pos: positive, neg: negative } = input.reduce(({ pos, neg }, num) => {
-    if (num > 0 && !pos.includes(num)) {
-      return { neg, pos: pos.concat(num) };
-    } else if (num < 0 && !neg.includes(num)) {
-      return { pos, neg: neg.concat(num) };
-    }
-    return { pos, neg };
-  }, { pos: [], neg: [] });
+export const isPositiveDominant = input => {
+  const { pos: positive, neg: negative } = input.reduce(
+    ({ pos, neg }, num) => {
+      if (num > 0 && !pos.includes(num)) {
+        return { neg, pos: pos.concat(num) };
+      } else if (num < 0 && !neg.includes(num)) {
+        return { pos, neg: neg.concat(num) };
+      }
+      return { pos, neg };
+    },
+    { pos: [], neg: [] },
+  );
 
   return positive.length > negative.length;
-}
+};
 
 export const getFiscalCode = ({ surname, name, dob, gender }) => {
   const fiscalCodeMonthConversion = {
-    1: "A",
-    2: "B",
-    3: "C",
-    4: "D",
-    5: "E",
-    6: "H",
-    7: "L",
-    8: "M",
-    9: "P",
-    10: "R",
-    11: "S",
-    12: "T",
+    1: 'A',
+    2: 'B',
+    3: 'C',
+    4: 'D',
+    5: 'E',
+    6: 'H',
+    7: 'L',
+    8: 'M',
+    9: 'P',
+    10: 'R',
+    11: 'S',
+    12: 'T',
   };
 
   const fiscalCodeArr = [];
@@ -194,7 +200,7 @@ export const getFiscalCode = ({ surname, name, dob, gender }) => {
   }
 
   return fiscalCodeArr.join('').toUpperCase();
-}
+};
 
 export const encryptCaesarCipher = (text, factor) => {
   const regex = new RegExp(/\w/, 'i');
@@ -212,34 +218,37 @@ export const encryptCaesarCipher = (text, factor) => {
   }, []);
 
   return output.join('');
-}
+};
 
-export const translateTapCode = (input) => {
+export const translateTapCode = input => {
   return isTapCode(input) ? tapCodeToText(input) : textToTapCode(input);
-}
+};
 
 export const getFrequencyByLevel = (arr, num) => {
   const output = countElementAtLevel(arr, num);
   return Object.entries(output);
-}
+};
 
 const countElementAtLevel = (arr, num, level = 0) => {
-  return arr.reduce((obj, el) => {
-    if (Array.isArray(el)) {
-      const freqInLevel = countElementAtLevel(el, num, level + 1);
-      return mergeObjects(obj, freqInLevel);
-    }
+  return arr.reduce(
+    (obj, el) => {
+      if (Array.isArray(el)) {
+        const freqInLevel = countElementAtLevel(el, num, level + 1);
+        return mergeObjects(obj, freqInLevel);
+      }
 
-    if (el === num) {
-      return {
-        ...obj,
-        [String(level)]: obj[String(level)] + 1,
-      };
-    }
+      if (el === num) {
+        return {
+          ...obj,
+          [String(level)]: obj[String(level)] + 1,
+        };
+      }
 
-    return obj;
-  }, { [String(level)]: 0 });
-}
+      return obj;
+    },
+    { [String(level)]: 0 },
+  );
+};
 
 const mergeObjects = (obj1, obj2) => {
   return Object.entries(obj2).reduce((obj, [k, v]) => {
@@ -255,7 +264,7 @@ const mergeObjects = (obj1, obj2) => {
       [k]: v,
     };
   }, obj1);
-}
+};
 
 const TapCodePolybiusSquare = [
   ['A', 'B', 'C', 'D', 'E'],
@@ -265,7 +274,7 @@ const TapCodePolybiusSquare = [
   ['V', 'W', 'X', 'Y', 'Z'],
 ];
 
-const textToTapCode = (str) => {
+const textToTapCode = str => {
   const tapCodeArr = str
     .toUpperCase()
     .split('')
@@ -289,28 +298,24 @@ const textToTapCode = (str) => {
   return tapCodeArr.join(' ');
 };
 
-const tapCodeToText = (code) => {
-  const textArr = code
-    .match(/(\.+)\s(\.+)/g)
-    .reduce((arr, c) => {
-      const index = c.split(' ');
-      const row = index[0].split('').length - 1;
-      const col = index[1].split('').length - 1;
+const tapCodeToText = code => {
+  const textArr = code.match(/(\.+)\s(\.+)/g).reduce((arr, c) => {
+    const index = c.split(' ');
+    const row = index[0].split('').length - 1;
+    const col = index[1].split('').length - 1;
 
-      return arr.concat(TapCodePolybiusSquare[row][col]);
-    }, []);
+    return arr.concat(TapCodePolybiusSquare[row][col]);
+  }, []);
 
   return textArr.join('').toLowerCase();
 };
 
-const isTapCode = (str) => str.split(' ').every(x => x.includes('.'));
+const isTapCode = str => str.split(' ').every(x => x.includes('.'));
 
-const getConsonantsInString = (str) =>
-  str.split('').reduce((arr, char) => isVowel(char) ? arr : arr.concat(char), []);
+const getConsonantsInString = str => str.split('').reduce((arr, char) => (isVowel(char) ? arr : arr.concat(char)), []);
 
-const getVowelsInString = (str) => 
-  str.split('').reduce((arr, char) => isVowel(char) ? arr.concat(char) : arr, []);
+const getVowelsInString = str => str.split('').reduce((arr, char) => (isVowel(char) ? arr.concat(char) : arr), []);
 
-const isVowel = (char) => ['a','e','i','o','u'].includes(char.toLowerCase());
+const isVowel = char => ['a', 'e', 'i', 'o', 'u'].includes(char.toLowerCase());
 
-const isUppercase = (char) => /[A-Z]/.test(char);
+const isUppercase = char => /[A-Z]/.test(char);

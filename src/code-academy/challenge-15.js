@@ -9,7 +9,7 @@ export const Challenge = () => {
   const numRef = React.useRef();
 
   const onClick = () => {
-    if(!numRef?.current || numRef.current.value <= 0) {
+    if (!numRef?.current || numRef.current.value <= 0) {
       return;
     }
 
@@ -20,14 +20,15 @@ export const Challenge = () => {
     <div className={classNames(styles.container, styles.gridContainer)}>
       <div>
         <div className={styles.flexContainer}>
-          Input:&nbsp;<input type='number' ref={numRef} className={styles.inputField} />
+          Input:&nbsp;
+          <input type='number' ref={numRef} className={styles.inputField} />
         </div>
-        <button className={styles.button} onClick={onClick}>Submit</button>
+        <button className={styles.button} onClick={onClick}>
+          Submit
+        </button>
       </div>
       <div>
-        <div className={styles.flexContainer}>
-          Output:
-        </div>
+        <div className={styles.flexContainer}>Output:</div>
         {output.map((value, index) => (
           <Pill key={index} variant='secondary'>
             {value.join(',')}

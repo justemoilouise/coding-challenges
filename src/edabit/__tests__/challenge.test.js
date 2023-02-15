@@ -1,4 +1,22 @@
-import { boomSeven, convertBinaryTextToNumber, countBoomerangs, encryptCaesarCipher, getAvgSpeed, getCombinations, getFibonacci, getFiscalCode, getFrequencyByLevel, getNumberPoliteness, getStringsWithNumbers, getSumOfProduct, getVodkaBottle, isPositiveDominant, oddishOrEvenish, towerOfHanoi, translateTapCode } from "../challenge";
+import {
+  boomSeven,
+  convertBinaryTextToNumber,
+  countBoomerangs,
+  encryptCaesarCipher,
+  getAvgSpeed,
+  getCombinations,
+  getFibonacci,
+  getFiscalCode,
+  getFrequencyByLevel,
+  getNumberPoliteness,
+  getStringsWithNumbers,
+  getSumOfProduct,
+  getVodkaBottle,
+  isPositiveDominant,
+  oddishOrEvenish,
+  towerOfHanoi,
+  translateTapCode,
+} from '../challenge';
 
 describe('Edabit challenges fns', () => {
   test('Challenge 1', () => {
@@ -51,33 +69,33 @@ describe('Edabit challenges fns', () => {
   test('Challenge 9', () => {
     const input = {
       whiskey: 100,
-      "Rammstein A": 100,
-      "Rammstein B": 50,
-      "Rammstein D": 70,
+      'Rammstein A': 100,
+      'Rammstein B': 50,
+      'Rammstein D': 70,
       beer: 70,
     };
-    expect(getVodkaBottle(input, 100)).toBe("Rammstein A");
-    expect(getVodkaBottle(input, 50)).toBe("Rammstein B");
-    expect(getVodkaBottle(input, 70)).toBe("Rammstein D");
+    expect(getVodkaBottle(input, 100)).toBe('Rammstein A');
+    expect(getVodkaBottle(input, 50)).toBe('Rammstein B');
+    expect(getVodkaBottle(input, 70)).toBe('Rammstein D');
   });
 
   test('Challenge 10', () => {
-    expect(getSumOfProduct(["1,2","1,1","2,3"])).toBe(8);
-    expect(getSumOfProduct(["1,2","0,3","3,0"])).toBe(0);
-    expect(getSumOfProduct(["10,2","5,0","2,3"])).toBe(100);
+    expect(getSumOfProduct(['1,2', '1,1', '2,3'])).toBe(8);
+    expect(getSumOfProduct(['1,2', '0,3', '3,0'])).toBe(0);
+    expect(getSumOfProduct(['10,2', '5,0', '2,3'])).toBe(100);
   });
 
   test('Challenge 11', () => {
-    const arr = ["abc", "ab10c", "a10bc", "bcd"];
+    const arr = ['abc', 'ab10c', 'a10bc', 'bcd'];
     const output = getStringsWithNumbers(arr);
     expect(output.length).toBe(2);
-    expect(output.at(0)).toBe("ab10c");
+    expect(output.at(0)).toBe('ab10c');
   });
 
   test('Challenge 12', () => {
-    expect(getCombinations([2,3])).toBe(6);
-    expect(getCombinations([3,7,4])).toBe(84);
-    expect(getCombinations([2,3,4,5])).toBe(120);
+    expect(getCombinations([2, 3])).toBe(6);
+    expect(getCombinations([3, 7, 4])).toBe(84);
+    expect(getCombinations([2, 3, 4, 5])).toBe(120);
   });
 
   test('Challenge 13', () => {
@@ -88,30 +106,38 @@ describe('Edabit challenges fns', () => {
   });
 
   test('Challenge 14', () => {
-    expect(getFiscalCode({
-      name: "Matt",
-      surname: "Edabit",
-      gender: "M",
-      dob: "1/1/1900"
-    })).toBe('DBTMTT00A01');
-    expect(getFiscalCode({
-      name: "Helen",
-      surname: "Yu",
-      gender: "F",
-      dob: "1/12/1950"
-    })).toBe('YUXHLN50T41');
-    expect(getFiscalCode({
-      name: "Mickey",
-      surname: "Mouse",
-      gender: "M",
-      dob: "16/1/1928"
-    })).toBe('MSOMKY28A16');
-    expect(getFiscalCode({
-      name: "Al",
-      surname: "Fox",
-      gender: "F",
-      dob: "16/3/1948"
-    })).toBe('FXOLAX48C56');
+    expect(
+      getFiscalCode({
+        name: 'Matt',
+        surname: 'Edabit',
+        gender: 'M',
+        dob: '1/1/1900',
+      }),
+    ).toBe('DBTMTT00A01');
+    expect(
+      getFiscalCode({
+        name: 'Helen',
+        surname: 'Yu',
+        gender: 'F',
+        dob: '1/12/1950',
+      }),
+    ).toBe('YUXHLN50T41');
+    expect(
+      getFiscalCode({
+        name: 'Mickey',
+        surname: 'Mouse',
+        gender: 'M',
+        dob: '16/1/1928',
+      }),
+    ).toBe('MSOMKY28A16');
+    expect(
+      getFiscalCode({
+        name: 'Al',
+        surname: 'Fox',
+        gender: 'F',
+        dob: '16/3/1948',
+      }),
+    ).toBe('FXOLAX48C56');
   });
 
   test('Challenge 15', () => {

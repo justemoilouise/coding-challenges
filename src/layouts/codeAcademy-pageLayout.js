@@ -9,7 +9,7 @@ export const CodeAcademyPageLayout = ({ breadcumbItems, title, description, link
   <PageLayout>
     <Breadcrumbs items={breadcumbItems} />
     <Banner
-      bgColor={[ 'beige', 'rgb(58, 16, 229)' ]}
+      bgColor={['beige', 'rgb(58, 16, 229)']}
       logo='/assets/logo-codeacademy.svg'
       link='https://www.codecademy.com/code-challenges'
       title='Code Academy'

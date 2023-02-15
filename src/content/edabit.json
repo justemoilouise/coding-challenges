@@ -3,97 +3,97 @@
     "title": "Convert 'Zero' and 'One' to '1' and '0'",
     "description": "Create a function that takes a string as an argument. The function must return a string containing 1s and 0s based on the string argument's words. If any word in the argument is not equal to 'zero or 'one' (case insensitive), you should ignore it. The returned string's length should be a multiple of 8, if the string is not a multiple of 8 you should remove the numbers in excess.",
     "link": "https://edabit.com/challenge/iKRmj2Q6GQHkAXXxf",
-    "tags": [ "Arrays", "Formatting", "Logic", "Loops" ]
+    "tags": ["Arrays", "Formatting", "Logic", "Loops"]
   },
   {
     "title": "Instances of the Fibonacci Sequence",
     "description": "Create a function that takes a number as an argument and returns n instances of the Fibonacci sequence as an array.",
     "link": "https://edabit.com/challenge/PeDpzoeGyv9TfF5G5",
-    "tags": [ "Arrays", "Algorithms", "Numbers", "Loops" ]
+    "tags": ["Arrays", "Algorithms", "Numbers", "Loops"]
   },
   {
     "title": "Seven Boom!",
     "description": "Create a function that takes an array of numbers and return \"Boom!\" if the digit 7 appears in the array. Otherwise, return \"there is no 7 in the array\"",
     "link": "https://edabit.com/challenge/6R6gReGTGwzpwuffD",
-    "tags": [ "Arrays", "Numbers", "Loops", "Regex" ]
+    "tags": ["Arrays", "Numbers", "Loops", "Regex"]
   },
   {
     "title": "Tower of Hanoi",
     "description": "There are three towers. The objective of the game is to move all the disks over to tower #3, but you can't place a larger disk onto a smaller disk.<br /><br />Create a function that takes a number discs as an argument and returns the minimum amount of steps needed to complete the game.",
     "link": "https://edabit.com/challenge/3ZtykTsx3GSoPHyBb",
-    "tags": [ "Algorithms", "Numbers", "Games", "Math" ]
+    "tags": ["Algorithms", "Numbers", "Games", "Math"]
   },
   {
     "title": "Number of Boomerangs",
     "description": "A boomerang is a V-shaped sequence that is either upright or upside down. Specifically, a boomerang can be defined as: sub-array of length 3, with the first and last digits being the same and the middle digit being different.",
     "link": "https://edabit.com/challenge/b7iHQDw72zzkmgCun",
-    "tags": [ "Arrays", "Loops" ]
+    "tags": ["Arrays", "Loops"]
   },
   {
     "title": "Consecutive Sum Check",
     "description": "Create a function that takes a number as an argument and checks whether the given number can be expressed as a sum of two or more consecutive positive numbers.",
     "link": "https://edabit.com/challenge/KX4eJv6ZSJWsvtijd",
-    "tags": [ "Bit operations", "Logic", "Math", "Numbers", "Validation" ]
+    "tags": ["Bit operations", "Logic", "Math", "Numbers", "Validation"]
   },
   {
     "title": "Oddish vs Evenish",
     "description": "Create a function that determines whether a number is Oddish or Evenish. A number is Oddish if the sum of all of its digits is odd, and a number is Evenish if the sum of all of its digits is even.",
     "link": "https://edabit.com/challenge/r6TSNwkLZ2DgsoKiH",
-    "tags": [ "Conditions", "Math", "Numbers", "Validation" ]
+    "tags": ["Conditions", "Math", "Numbers", "Validation"]
   },
   {
     "title": "Up the Hill, Down the Hill",
     "description": "If a person traveled up a hill for 18mins at 20mph and then traveled back down the same path at 60mph then their average speed traveled was 30mph.<br /><br />Write a function that returns the average speed traveled given an uphill time, uphill rate and a downhill rate. Uphill time is given in minutes. Return the rate as an integer (mph). No rounding is necessary.",
     "link": "https://edabit.com/challenge/vEY5A5Kq8xsPTQG8S",
-    "tags": [ "Math", "Physics" ]
+    "tags": ["Math", "Physics"]
   },
   {
     "title": "Burglary Series (12): Get Vodka Bottle",
     "description": "Given an object with alcoholic drinks and a number, return a string with the name of the Rammstein bottle that matches the given number.",
     "link": "https://edabit.com/challenge/paMpZoEJ6gr4feMS3",
-    "tags": [ "Arrays", "Loops", "Objects" ]
+    "tags": ["Arrays", "Loops", "Objects"]
   },
   {
     "title": "Function Times 3",
     "description": "Create a function that takes three collections of arguments and returns the sum of the product of numbers. Add the result of the first digit in each collection multiplied together to the result of the second digit in each collection multiplied together to get the final solution.",
     "link": "https://edabit.com/challenge/95YiRnBSnfzSQWAuu",
-    "tags": [ "Closures", "Functional programming", "Language fundamentals", "Scope" ]
+    "tags": ["Closures", "Functional programming", "Language fundamentals", "Scope"]
   },
   {
     "title": "Numbers in strings",
     "description": "Create a function that takes an array of strings and returns an array with only the strings that have numbers in them. If there are no strings containing numbers, return an empty array.",
     "link": "https://edabit.com/challenge/eCPim4XcssdZdvs32",
-    "tags": [ "Arrays", "Loops", "Numbers", "Strings", "Regex" ]
+    "tags": ["Arrays", "Loops", "Numbers", "Strings", "Regex"]
   },
   {
     "title": "Combinations",
     "description": "Create a function that takes a variable number of arguments, each argument representing the number of items in a group. The function should return the number of permutations (combinations) of choices you would have if you selected one item from each group.",
     "link": "https://edabit.com/challenge/tRx22rECqK4dTJTg8",
-    "tags": [ "Algorithms", "Numbers" ]
+    "tags": ["Algorithms", "Numbers"]
   },
   {
     "title": "Positive Dominant",
     "description": "An array is positive dominant if it contains strictly more unique positive values than unique negative values. Write a function that returns <b>true</b> if an array is positive dominant.",
     "link": "https://edabit.com/challenge/7pkKPYtTJzpxRMckZ",
-    "tags": [ "Arrays", "Validation" ]
+    "tags": ["Arrays", "Validation"]
   },
   {
     "title": "The Fiscal code",
     "description": "Each person in Italy has a unique identifying ID code issued by the national tax office after the birth registration: the Fiscal Code (Codice Fiscale). Given an object containing the personal data of a person (name, surname, gender and date of birth) return the 11 code characters as a string following these steps:<br /><ul><li>Generate 3 capital letters from the surname, if it has:<ul><li>At least 3 consonants then the first three consonants are used. (Newman -> NWM).</li><li>Less than 3 consonants then vowels will replace missing characters in the same order they appear (Fox -> FXO | Hope -> HPO).</li><li>Less than three letters then \"X\" will take the third slot after the consonant and the vowel (Yu -> YUX).</li></ul> </li><li>Generate 3 capital letters from the name, if it has:<ul><li>Exactly 3 consonants then consonants are used in the order they appear (Matt -> MTT).</li><li>More than 3 consonants then first, third and fourth consonant are used (Samantha -> SNT | Thomas -> TMS).</li><li>Less than 3 consonants then vowels will replace missing characters in the same order they appear (Bob -> BBO | Paula -> PLA).</li><li>Less than three letters then \"X\" will take the the third slot after the consonant and the vowel (Al -> LAX).</li></ul> </li><li>Generate 2 numbers, 1 letter and 2 numbers from date of birth and gender:<ul><li>Take the last two digits of the year of birth (1985 -> 85).</li><li>Generate a letter corresponding to the month of birth (January -> A | December -> T) using the table for conversion included in the code.</li><li>For males, take the day of birth adding one zero at the start if is less than 10 (any 9th day -> 09 | any 20th day -> 20).</li><li>For females, take the day of birth and sum 40 to it (any 9th day -> 49 | any 20th day -> 60).</li></li></ul>",
     "link": "https://edabit.com/challenge/Pa2rHJ6KeRBTF28Pg",
-    "tags": [ "Algorithms", "Formatting", "Objects", "Strings" ]
+    "tags": ["Algorithms", "Formatting", "Objects", "Strings"]
   },
   {
     "title": "Caesar's cipher",
     "description": "Julius Caesar protected his confidential information by encrypting it using a cipher. Caesar's cipher shifts each letter by a number of letters. If the shift takes you past the end of the alphabet, just rotate back to the front of the alphabet. In the case of a rotation by 3, w, x, y and z would map to z, a, b and c.<br /><br />Create a function that takes a string s (text to be encrypted) and an integer k (the rotation factor). It should return an encrypted string.",
     "link": "https://edabit.com/challenge/a33jdGXkaQRtK9ZTs",
-    "tags": [ "Algorithms", "Cryptography", "Strings" ]
+    "tags": ["Algorithms", "Cryptography", "Strings"]
   },
   {
     "title": "Tap code translation",
     "description": "Tap code is a way to communicate messages via a series of taps (or knocks) for each letter in the message. Letters are arranged in a 5x5 polybius square, with the letter <b>\"K\"</b> being moved to the space with <b>\"C\"</b>. Each letter is translated by tapping out the row and column number that the letter appears in, leaving a short pause in-between. If we use <b>\".\"</b> for each tap, and a single space to denote the pause, and another space is added between the groups of taps for each letter to give the final code.<br /><br /><pre><code> &nbsp; 1  2  3  4  5<br />1  A  B C\\K D  E<br />2  F  G  H  I  J<br />3  L  M  N  O  P<br />4  Q  R  S  T  U<br />5  V  W  X  Y  Z</code></pre><br /><br />Write a function that returns the tap code if given a word, or returns the translated word (in lower case) if given the tap code. When translating from tap-code, default to the letter <b>\"c\"</b> if the tap-code <b>\". ...\"</b> is found.",
     "link": "https://edabit.com/challenge/ihrD5RjtD34ThEb4z",
-    "tags": [ "Cryptography", "Math" ]
+    "tags": ["Cryptography", "Math"]
   },
   {
     "title": "",
@@ -105,6 +105,6 @@
     "title": "Frequency by Level of Nesting",
     "description": "Create a function that takes in a nested array and an element and returns the frequency of that element by nested level.",
     "link": "https://edabit.com/challenge/MCK2Rqzn78pMksvsK",
-    "tags": [ "Arrays", "Language fundamentals", "Loops", "Recursion" ]
+    "tags": ["Arrays", "Language fundamentals", "Loops", "Recursion"]
   }
 ]

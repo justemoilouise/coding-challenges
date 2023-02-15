@@ -18,16 +18,19 @@ export const Challenge = () => {
   return (
     <div className={classNames(styles.container, styles.gridContainer)}>
       <div className={styles.flexContainer}>
-        Input:&nbsp;<input type='number' min={1} ref={inputRef} className={styles.inputField} />
-        <button className={styles.button} onClick={onClick}>Play</button>
+        Input:&nbsp;
+        <input type='number' min={1} ref={inputRef} className={styles.inputField} />
+        <button className={styles.button} onClick={onClick}>
+          Play
+        </button>
       </div>
-      {output && output.length > 0  && (
+      {output && output.length > 0 && (
         <div>
-          <div className={styles.flexContainer}>
-            Output:
-          </div>
+          <div className={styles.flexContainer}>Output:</div>
           <ul>
-            {output.map((o, i) => (<li key={i}>{o}</li>))}
+            {output.map((o, i) => (
+              <li key={i}>{o}</li>
+            ))}
           </ul>
         </div>
       )}

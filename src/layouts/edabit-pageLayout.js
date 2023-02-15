@@ -8,11 +8,7 @@ import { PageLayout } from './pageLayout';
 export const EdabitPageLayout = ({ breadcumbItems, title, description, link, children }) => (
   <PageLayout>
     <Breadcrumbs items={breadcumbItems} />
-    <Banner
-      bgColor={[ 'beige', 'rgb(45, 184, 75)' ]}
-      link='https://edabit.com/challenges'
-      title='Edabit'
-    />
+    <Banner bgColor={['beige', 'rgb(45, 184, 75)']} link='https://edabit.com/challenges' title='Edabit' />
     {title && <h3>{title}</h3>}
     {description && (
       <p>

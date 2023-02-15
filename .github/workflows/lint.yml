@@ -1,7 +1,5 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-name: Unit Tests
+name: Formatting
 
 on:
   push:
@@ -36,5 +34,6 @@ jobs:
         env:
           PREFIX_PATHS: 'true'
         run: yarn run build
-      - name: Run tests
-        run: yarn test
+      - name: Check linting and formatting
+        # Custom script for checking the linting and formatting being in place
+        run: yarn lint

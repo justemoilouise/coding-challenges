@@ -15,14 +15,16 @@ export const Breadcrumbs = ({ items = [] }) => {
         if (it.link) {
           return (
             <p key={index} className={styles.breadcrumbItem}>
-              <Link to={it.link}>
-                {it.label}
-              </Link>
+              <Link to={it.link}>{it.label}</Link>
               <FontAwesomeIcon className={styles.icon} icon={faChevronRight} size='2xs' />
             </p>
-          )
+          );
         }
-        return (<p key={index} className={styles.breadcrumbItem}>{it.label}</p>);
+        return (
+          <p key={index} className={styles.breadcrumbItem}>
+            {it.label}
+          </p>
+        );
       })}
     </div>
   );

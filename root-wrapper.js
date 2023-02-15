@@ -7,10 +7,9 @@ import { store } from './src/state/store';
 const RootWrapper = ({ element }) => {
   return (
     <Provider store={store}>
-      <ParallaxProvider>
-        {element}
-      </ParallaxProvider>
-    </Provider>);
+      <ParallaxProvider>{element}</ParallaxProvider>
+    </Provider>
+  );
 };
 
 export default RootWrapper;

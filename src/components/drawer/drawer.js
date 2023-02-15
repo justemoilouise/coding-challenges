@@ -79,10 +79,13 @@ export const DrawerToggle = () => {
         targets: ref.current.children[0],
         translateY: 7,
       })
-      .add({
-        targets: ref.current.children[2],
-        translateY: -7,
-      }, '-=100')
+      .add(
+        {
+          targets: ref.current.children[2],
+          translateY: -7,
+        },
+        '-=100',
+      )
       .add({
         targets: [ref.current.children[0], ref.current.children[2]],
         rotate: '45deg',
@@ -91,14 +94,14 @@ export const DrawerToggle = () => {
         targets: ref.current.children[1],
         rotate: '-45deg',
       });
-    
+
     animation.current = timeline;
 
     animation.current.reverse();
     animation.current.play();
   }, []);
 
-  const handleClick = (evt) => {
+  const handleClick = evt => {
     evt.preventDefault();
     evt.stopPropagation();
 
@@ -113,5 +116,5 @@ export const DrawerToggle = () => {
       <div className={styles.block} />
       <div className={styles.block} />
     </button>
-  )
+  );
 };

@@ -15,32 +15,32 @@ export const Challenge = () => {
     }
 
     const el = elRef.current.value.split(',');
-  
-    setOutput(swapLinkedListElements(
-      JSON.parse(inputRef.current.value),
-      parseInt(el[0]),
-      parseInt(el[1])
-    ));
+
+    setOutput(swapLinkedListElements(JSON.parse(inputRef.current.value), parseInt(el[0]), parseInt(el[1])));
   };
 
   return (
     <div className={classNames(styles.container, styles.gridContainer)}>
       <div>
         <div className={styles.flexContainer}>
-          Input:&nbsp;<input ref={inputRef} className={styles.inputField} />
+          Input:&nbsp;
+          <input ref={inputRef} className={styles.inputField} />
         </div>
         <div className={styles.flexContainer}>
-          Elements:&nbsp;<input ref={elRef} className={styles.inputField} />
+          Elements:&nbsp;
+          <input ref={elRef} className={styles.inputField} />
         </div>
-        <button className={styles.button} onClick={onClick}>Submit</button>
+        <button className={styles.button} onClick={onClick}>
+          Submit
+        </button>
       </div>
       <div>
-        <div className={styles.flexContainer}>
-          Output:
-        </div>
+        <div className={styles.flexContainer}>Output:</div>
         <div className={styles.flexContainer}>
           {output.map((value, index) => (
-            <Pill key={index} variant='secondary'>{value}</Pill>
+            <Pill key={index} variant='secondary'>
+              {value}
+            </Pill>
           ))}
         </div>
       </div>

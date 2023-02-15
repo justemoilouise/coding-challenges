@@ -6,7 +6,7 @@ import data from '../../content/code-academy.json';
 const breadcumbItems = [
   {
     link: '/code-academy',
-    label: 'Code Academy'
+    label: 'Code Academy',
   },
   {
     label: 'Challenge 18',
@@ -17,11 +17,7 @@ const details = data[17];
 
 const Page = () => {
   return (
-    <CodeAcademyPageLayout
-      {...details}
-      title={`Challenge 18 - ${details.title}`}
-      breadcumbItems={breadcumbItems}
-    >
+    <CodeAcademyPageLayout {...details} title={`Challenge 18 - ${details.title}`} breadcumbItems={breadcumbItems}>
       <Challenge />
     </CodeAcademyPageLayout>
   );
