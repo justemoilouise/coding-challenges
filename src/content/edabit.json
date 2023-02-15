@@ -94,5 +94,17 @@
     "description": "Tap code is a way to communicate messages via a series of taps (or knocks) for each letter in the message. Letters are arranged in a 5x5 polybius square, with the letter <b>\"K\"</b> being moved to the space with <b>\"C\"</b>. Each letter is translated by tapping out the row and column number that the letter appears in, leaving a short pause in-between. If we use <b>\".\"</b> for each tap, and a single space to denote the pause, and another space is added between the groups of taps for each letter to give the final code.<br /><br /><pre><code> &nbsp; 1  2  3  4  5<br />1  A  B C\\K D  E<br />2  F  G  H  I  J<br />3  L  M  N  O  P<br />4  Q  R  S  T  U<br />5  V  W  X  Y  Z</code></pre><br /><br />Write a function that returns the tap code if given a word, or returns the translated word (in lower case) if given the tap code. When translating from tap-code, default to the letter <b>\"c\"</b> if the tap-code <b>\". ...\"</b> is found.",
     "link": "https://edabit.com/challenge/ihrD5RjtD34ThEb4z",
     "tags": [ "Cryptography", "Math" ]
+  },
+  {
+    "title": "",
+    "description": "",
+    "link": "",
+    "tags": []
+  },
+  {
+    "title": "Frequency by Level of Nesting",
+    "description": "Create a function that takes in a nested array and an element and returns the frequency of that element by nested level.",
+    "link": "https://edabit.com/challenge/MCK2Rqzn78pMksvsK",
+    "tags": [ "Arrays", "Language fundamentals", "Loops", "Recursion" ]
   }
 ]

@@ -218,6 +218,45 @@ export const translateTapCode = (input) => {
   return isTapCode(input) ? tapCodeToText(input) : textToTapCode(input);
 }
 
+export const getFrequencyByLevel = (arr, num) => {
+  const output = countElementAtLevel(arr, num);
+  return Object.entries(output);
+}
+
+const countElementAtLevel = (arr, num, level = 0) => {
+  return arr.reduce((obj, el) => {
+    if (Array.isArray(el)) {
+      const freqInLevel = countElementAtLevel(el, num, level + 1);
+      return mergeObjects(obj, freqInLevel);
+    }
+
+    if (el === num) {
+      return {
+        ...obj,
+        [String(level)]: obj[String(level)] + 1,
+      };
+    }
+
+    return obj;
+  }, { [String(level)]: 0 });
+}
+
+const mergeObjects = (obj1, obj2) => {
+  return Object.entries(obj2).reduce((obj, [k, v]) => {
+    if (obj[k]) {
+      return {
+        ...obj,
+        [k]: obj[k] + v,
+      };
+    }
+
+    return {
+      ...obj,
+      [k]: v,
+    };
+  }, obj1);
+}
+
 const TapCodePolybiusSquare = [
   ['A', 'B', 'C', 'D', 'E'],
   ['F', 'G', 'H', 'I', 'J'],

@@ -1,4 +1,5 @@
 import { TreeNode } from "../data/treeNode";
+import { LinkedList } from "../data/LinkedList";
 import { getFibonacci, getNumberPoliteness } from "../edabit/challenge";
 
 export const getMean = (input) => {
@@ -209,6 +210,53 @@ export const getNthFibonacci = (n) => {
   return fibSeq.pop();
 }
 
+// fix swap if root is included
+export const swapLinkedListElements = (arr, el1, el2) => {
+  const linkedList = convertArrayToLinkedList(arr);
+
+  let prev1 = null;
+  let placeholder1 = null;
+  let prev2 = null;
+  let placeholder2 = null;
+  let prev = null;
+  let node = linkedList.root;
+
+  do {
+    if (node.value === el1) {
+      placeholder1 = node;
+      prev1 = prev;
+    }
+    if (node.value === el2) {
+      placeholder2 = node;
+      prev2 = prev;
+    }
+
+    prev = node;
+    node = node.next;
+  } while(node != null);
+
+  if (placeholder1 != null && placeholder2 != null) {
+    if (prev1) {
+      prev1.next = placeholder2;
+    }
+    if (prev2) {
+      prev2.next = placeholder1;
+    }
+
+    const p2Next = placeholder2.next;
+    placeholder2.next = placeholder1.next;
+    placeholder1.next = p2Next; 
+  }
+
+  return linkedList.toArray();
+}
+
+const convertArrayToLinkedList = (input) => {
+  const linkedList = new LinkedList();
+  input.map(i => linkedList.insert(i));
+  return linkedList;
+}
+
 const arrayPermutations = arr => {
   if (arr.length <= 2) {
     return arr.length === 2 ? [arr, [arr[1], arr[0]]] : arr;
@@ -239,7 +287,7 @@ const getMaxInArr = (inputArr, maxArr, k) => {
   }
 
   return getMaxInArr(inputArr.filter(x => x !== max), maxArr, k);
-}
+};
 
 const isPrime = (num) => {
   if ([2,3,5].includes(num)) {
@@ -255,4 +303,4 @@ const isPrime = (num) => {
 
 const getNumbersInBetween = (start, len) => {
   return Array.from({ length: len - 1 }).map((v, i) => start + i + 1);
-}
+};

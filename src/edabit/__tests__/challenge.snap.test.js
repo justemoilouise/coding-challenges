@@ -16,6 +16,7 @@ import { Challenge as Challenge13 } from '../challenge-13';
 import { Challenge as Challenge14 } from '../challenge-14';
 import { Challenge as Challenge15 } from '../challenge-15';
 import { Challenge as Challenge16 } from '../challenge-16';
+import { Challenge as Challenge18 } from '../challenge-18';
 
 describe('Edabit challenges snapshots', () => {
   it('Challenge 1', () => {
@@ -126,6 +127,13 @@ describe('Edabit challenges snapshots', () => {
   it('Challenge 16', () => {
     const tree = renderer
       .create(<Challenge16 />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('Challenge 18', () => {
+    const tree = renderer
+      .create(<Challenge18 />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
