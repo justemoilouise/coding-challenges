@@ -271,8 +271,9 @@ export const getChangeOptions = (money, coins) => {
     return arr.concat([getCoinsChange(subArr, money)].concat(...getChangeOptionsFn(money, c, subArr.slice(1))));
   }, []);
 
-  console.log(options);
-
+  // filter results, such that
+  // - removes empty arrays
+  // - only those with elements with sum of input money
   return options.filter(x => x.length && x.reduce((s, a) => parseInt(a) + s, 0) === money);
 };
 
