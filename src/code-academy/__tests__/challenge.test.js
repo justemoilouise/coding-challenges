@@ -2,6 +2,7 @@ import {
   arrayToBST,
   fizzbuzz,
   flatten2DArray,
+  getChangeOptions,
   getMaxProduct,
   getMaxProfitDays,
   getMean,
@@ -139,6 +140,13 @@ describe('Code Academy challenges fns', () => {
     expect(getNthFibonacci(0)).toBe(0);
     expect(getNthFibonacci(1)).toBe(1);
     expect(getNthFibonacci(6)).toBe(8);
+  });
+
+  test('Challenge 17', () => {
+    const coins = [1, 2, 5, 10, 100];
+
+    expect(getChangeOptions(2, coins).length).toBe(2);
+    expect(getChangeOptions(5, coins).length).toBe(4);
   });
 
   test('Challenge 18', () => {

@@ -3,6 +3,7 @@ import {
   convertBinaryTextToNumber,
   countBoomerangs,
   encryptCaesarCipher,
+  encryptEdabitScheme,
   getAvgSpeed,
   getCombinations,
   getFibonacci,
@@ -149,6 +150,14 @@ describe('Edabit challenges fns', () => {
   test('Challenge 16', () => {
     expect(translateTapCode('break')).toBe('. .. .... .. . ..... . . . ...');
     expect(translateTapCode('.... ... ... ..... . ..... ... ... .... ....')).toBe('spent');
+  });
+
+  test('Challenge 17', () => {
+    expect(encryptEdabitScheme('if man was meant to stay on the ground god would have given us roots')).toBe(
+      'imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn sseoau',
+    );
+    expect(encryptEdabitScheme('haveaniceday')).toBe('hae and via ecy');
+    expect(encryptEdabitScheme('A Fool and His Money Are Soon Parted.')).toBe('Anoea FdnSr oHeot oiyoe lsAnd aMrP.');
   });
 
   test('Challenge 18', () => {

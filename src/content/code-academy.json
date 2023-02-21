@@ -96,10 +96,10 @@
     "tags": ["Dynamic programming", "Intermediate"]
   },
   {
-    "title": "",
-    "description": "",
-    "link": "",
-    "tags": [""]
+    "title": "Change please",
+    "description": "You're building an ATM and are tasked with determining how many different ways you can break a given amount of money into different bills.<br /><br />Given an input amount of money `inputMoney` and a list of values `coins` representing the possible denominations of coins the ATM can give back, complete the function `changeOptions(inputMoney, coins)` so that it returns the number of different ways the ATM could give you change.",
+    "link": "https://www.codecademy.com/code-challenges/code-challenge-change-please-javascript",
+    "tags": ["Dynamic programming", "Intermediate"]
   },
   {
     "title": "Swap elements in a linked list",
