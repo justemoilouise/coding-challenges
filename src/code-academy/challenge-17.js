@@ -22,7 +22,7 @@ export const Challenge = () => {
       return;
     }
 
-    setOutput(getChangeOptions(numRef.current.value, input));
+    setOutput(getChangeOptions(parseInt(numRef.current.value), input));
   };
 
   return (
