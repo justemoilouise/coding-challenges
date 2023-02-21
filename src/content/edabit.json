@@ -99,7 +99,7 @@
     "title": "Edabit's Encryption Scheme",
     "description": "An English text needs to be encrypted using Edabit’s encryption scheme. First, the spaces are removed from the text. Let L be the length of this text. Then, characters are written into a grid, whose rows and columns have the following constraints:<br /><br />For example, the sentence \"if man was meant to stay on the ground god would have given us roots\", after removing spaces, is 54 characters long. The square root of 54 is between 7 and 8, so it is written in the form of a grid with 7 rows and 8 columns.<ul><li>Ensure that rows x column >= L</li><li>If multiple grids satisfy the above conditions, choose the one with the minimum area.</li></ul>The encoded message is obtained by displaying the characters in a column, inserting a space, and then displaying the next column and inserting a space, and so on.",
     "link": "https://edabit.com/challenge/mNinzJLXY7QdRmqMN",
-    "tags": [ "Cryptography", "Loops", "Strings", "Validation" ]
+    "tags": ["Cryptography", "Loops", "Strings", "Validation"]
   },
   {
     "title": "Frequency by Level of Nesting",

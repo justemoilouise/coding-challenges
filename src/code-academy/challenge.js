@@ -42,7 +42,7 @@ export const getMode = input => {
     );
 
   return mode.value;
-}
+};
 
 export const getMaxProfitDays = input => {
   const min = Math.min(...input);
@@ -265,7 +265,7 @@ const convertArrayToLinkedList = input => {
 };
 
 export const getChangeOptions = (money, coins) => {
-  const filteredCoins = coins.filter(x => x <= money).sort((a, b )=> b - a);
+  const filteredCoins = coins.filter(x => x <= money).sort((a, b) => b - a);
   const options = filteredCoins.reduce((arr, c, i) => {
     const subArr = filteredCoins.slice(i);
     let coinsChange = [];
@@ -276,7 +276,7 @@ export const getChangeOptions = (money, coins) => {
   }, []);
 
   return options;
-}
+};
 
 // get change options using the same coin
 const getChangeOptionsFn = (money, coin, coins, changeOptions = [], reps = 1) => {
@@ -292,7 +292,7 @@ const getChangeOptionsFn = (money, coin, coins, changeOptions = [], reps = 1) =>
   }
 
   return getChangeOptionsFn(diff - coin, coin, coins, changeOptions, reps + 1);
-}
+};
 
 const getCoinsChange = (coins, currAmount, currCoins = []) => {
   if (currAmount === 0 || coins.length === 0) {
@@ -309,7 +309,7 @@ const getCoinsChange = (coins, currAmount, currCoins = []) => {
   }
 
   return getCoinsChange(coinsArr, currAmount - coinsArr[0], currCoins.concat(String(coinsArr[0])));
-}
+};
 
 const arrayPermutations = arr => {
   if (arr.length <= 2) {
@@ -320,7 +320,7 @@ const arrayPermutations = arr => {
     (acc, item, i) => acc.concat(arrayPermutations([...arr.slice(0, i), ...arr.slice(i + 1)]).map(val => [item, ...val])),
     [],
   );
-}
+};
 
 const getMaxInArr = (inputArr, maxArr, k) => {
   if (inputArr.length === 0) {
@@ -351,7 +351,7 @@ const isPrime = num => {
   }
 
   return true;
-}
+};
 
 const getNumbersInBetween = (start, len) => {
   return Array.from({ length: len - 1 }).map((v, i) => start + i + 1);

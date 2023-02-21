@@ -19,9 +19,12 @@ export const Challenge = () => {
     <div className={classNames(styles.container, styles.gridContainer)}>
       <div>
         <div className={styles.flexContainer}>
-          String:&nbsp;<input ref={strRef} className={styles.inputField} />
+          String:&nbsp;
+          <input ref={strRef} className={styles.inputField} />
         </div>
-        <button className={styles.button} onClick={onClick}>Submit</button>
+        <button className={styles.button} onClick={onClick}>
+          Submit
+        </button>
       </div>
       <div className={styles.flexContainer}>
         Output:&nbsp;<strong>{output}</strong>

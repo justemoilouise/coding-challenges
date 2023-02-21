@@ -153,7 +153,9 @@ describe('Edabit challenges fns', () => {
   });
 
   test('Challenge 17', () => {
-    expect(encryptEdabitScheme('if man was meant to stay on the ground god would have given us roots')).toBe('imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn sseoau');
+    expect(encryptEdabitScheme('if man was meant to stay on the ground god would have given us roots')).toBe(
+      'imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn sseoau',
+    );
     expect(encryptEdabitScheme('haveaniceday')).toBe('hae and via ecy');
     expect(encryptEdabitScheme('A Fool and His Money Are Soon Parted.')).toBe('Anoea FdnSr oHeot oiyoe lsAnd aMrP.');
   });

@@ -266,7 +266,7 @@ const mergeObjects = (obj1, obj2) => {
   }, obj1);
 };
 
-export const encryptEdabitScheme = (input) => {
+export const encryptEdabitScheme = input => {
   const str = input.replace(/\s/g, '');
   const len = str.length;
 
@@ -275,7 +275,7 @@ export const encryptEdabitScheme = (input) => {
 
   const grid = [];
 
-  for (let i = 0; i < len; i+=colCount) {
+  for (let i = 0; i < len; i += colCount) {
     const substr = str.slice(i, i + colCount);
     grid.push(substr.split(''));
   }
@@ -290,7 +290,7 @@ export const encryptEdabitScheme = (input) => {
   }
 
   return encryptedArr.join(' ');
-}
+};
 
 const TapCodePolybiusSquare = [
   ['A', 'B', 'C', 'D', 'E'],

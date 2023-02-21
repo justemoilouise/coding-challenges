@@ -9,7 +9,7 @@ export const Challenge = () => {
   const [output, setOutput] = React.useState([]);
   const numRef = React.useRef();
 
-  const onKeyDown = (evt) => {
+  const onKeyDown = evt => {
     if (evt.code === 'Enter') {
       const currentTarget = evt.currentTarget;
       setInput(input.concat(parseInt(currentTarget.value)));
@@ -18,7 +18,7 @@ export const Challenge = () => {
   };
 
   const onClick = () => {
-    if(!numRef?.current || numRef.current.value <= 0) {
+    if (!numRef?.current || numRef.current.value <= 0) {
       return;
     }
 
@@ -29,26 +29,34 @@ export const Challenge = () => {
     <div className={classNames(styles.container, styles.gridContainer)}>
       <div>
         <div className={styles.flexContainer}>
-          Coins:&nbsp;<input type='number' className={styles.inputField} onKeyDown={onKeyDown} />
+          Coins:&nbsp;
+          <input type='number' className={styles.inputField} onKeyDown={onKeyDown} />
         </div>
         {input.length > 0 && (
           <div className={styles.flexContainer}>
             {input.map((value, index) => (
-              <Pill key={index} variant='secondary'>{value}</Pill>
+              <Pill key={index} variant='secondary'>
+                {value}
+              </Pill>
             ))}
           </div>
         )}
         <div className={styles.flexContainer}>
-          Money:&nbsp;<input ref={numRef} type='number' className={styles.inputField} />
+          Money:&nbsp;
+          <input ref={numRef} type='number' className={styles.inputField} />
         </div>
-        <button className={styles.button} onClick={onClick}>Submit</button>
+        <button className={styles.button} onClick={onClick}>
+          Submit
+        </button>
       </div>
       <div>
         Output:
         {output.length > 0 && (
           <div className={styles.flexContainer}>
             {output.map((value, index) => (
-              <Pill key={index} variant='secondary'>{value.join(',')}</Pill>
+              <Pill key={index} variant='secondary'>
+                {value.join(',')}
+              </Pill>
             ))}
           </div>
         )}

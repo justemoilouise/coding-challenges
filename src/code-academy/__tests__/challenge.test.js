@@ -143,7 +143,7 @@ describe('Code Academy challenges fns', () => {
   });
 
   test('Challenge 17', () => {
-    const coins = [1,2,5,10,100];
+    const coins = [1, 2, 5, 10, 100];
 
     expect(getChangeOptions(2, coins).length).toBe(2);
     expect(getChangeOptions(5, coins).length).toBe(4);
