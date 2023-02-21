@@ -268,14 +268,12 @@ export const getChangeOptions = (money, coins) => {
   const filteredCoins = coins.filter(x => x <= money).sort((a, b) => b - a);
   const options = filteredCoins.reduce((arr, c, i) => {
     const subArr = filteredCoins.slice(i);
-    let coinsChange = [];
-    coinsChange.push(getCoinsChange(subArr, money));
-    coinsChange.push(getChangeOptionsFn(money, c, subArr.slice(1)));
-
-    return arr.concat([...coinsChange.filter(x => x.length > 0)]);
+    return arr.concat([getCoinsChange(subArr, money)].concat(...getChangeOptionsFn(money, c, subArr.slice(1))));
   }, []);
 
-  return options;
+  console.log(options);
+
+  return options.filter(x => x.length && x.reduce((s, a) => parseInt(a) + s, 0) === money);
 };
 
 // get change options using the same coin
@@ -286,10 +284,7 @@ const getChangeOptionsFn = (money, coin, coins, changeOptions = [], reps = 1) =>
   }
 
   const change = Array.from({ length: reps }).fill(String(coin)).concat(getCoinsChange(coins, diff));
-  const sum = change.reduce((s, c) => s + parseInt(c), 0);
-  if (sum === money) {
-    changeOptions.push([change]);
-  }
+  changeOptions.push([change]);
 
   return getChangeOptionsFn(diff - coin, coin, coins, changeOptions, reps + 1);
 };
