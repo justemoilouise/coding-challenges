@@ -224,9 +224,60 @@ export const translateTapCode = input => {
   return isTapCode(input) ? tapCodeToText(input) : textToTapCode(input);
 };
 
+export const encryptEdabitScheme = input => {
+  const str = input.replace(/\s/g, '');
+  const len = str.length;
+
+  const rowCount = Math.floor(Math.sqrt(len));
+  const colCount = Math.ceil(len / rowCount);
+
+  const grid = [];
+
+  for (let i = 0; i < len; i += colCount) {
+    const substr = str.slice(i, i + colCount);
+    grid.push(substr.split(''));
+  }
+
+  const encryptedArr = [];
+  for (let i = 0; i < colCount; i++) {
+    const fragment = [];
+    for (let j = 0; j < rowCount; j++) {
+      fragment.push(grid[j][i] ?? '');
+    }
+    encryptedArr.push(fragment.join(''));
+  }
+
+  return encryptedArr.join(' ');
+};
+
 export const getFrequencyByLevel = (arr, num) => {
   const output = countElementAtLevel(arr, num);
   return Object.entries(output);
+};
+
+export const getNextInQuadSequence = input => {
+  const len = input.length;
+
+  if (len < 3) {
+    return [];
+  }
+
+  const diffLast = input[len - 1] - input[len - 2];
+  const diffBefLast = input[len - 2] - input[len - 3];
+  const factor = diffLast - diffBefLast;
+
+  const seq = Array.from({ length: len }).reduce(
+    ({ arr, diff }) => {
+      const num = arr.length === 0 ? input[len - 1] : arr[arr.length - 1];
+      return {
+        arr: arr.concat(num + diff + factor),
+        diff: diff + factor,
+      };
+    },
+    { arr: [], diff: diffLast },
+  );
+
+  return seq.arr;
 };
 
 const countElementAtLevel = (arr, num, level = 0) => {
@@ -264,32 +315,6 @@ const mergeObjects = (obj1, obj2) => {
       [k]: v,
     };
   }, obj1);
-};
-
-export const encryptEdabitScheme = input => {
-  const str = input.replace(/\s/g, '');
-  const len = str.length;
-
-  const rowCount = Math.floor(Math.sqrt(len));
-  const colCount = Math.ceil(len / rowCount);
-
-  const grid = [];
-
-  for (let i = 0; i < len; i += colCount) {
-    const substr = str.slice(i, i + colCount);
-    grid.push(substr.split(''));
-  }
-
-  const encryptedArr = [];
-  for (let i = 0; i < colCount; i++) {
-    const fragment = [];
-    for (let j = 0; j < rowCount; j++) {
-      fragment.push(grid[j][i] ?? '');
-    }
-    encryptedArr.push(fragment.join(''));
-  }
-
-  return encryptedArr.join(' ');
 };
 
 const TapCodePolybiusSquare = [

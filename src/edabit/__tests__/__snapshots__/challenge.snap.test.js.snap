@@ -444,3 +444,27 @@ exports[`Edabit challenges snapshots Challenge 18 1`] = `
   </div>
 </div>
 `;
+
+exports[`Edabit challenges snapshots Challenge 19 1`] = `
+<div
+  className=""
+>
+  <div>
+    <div>
+      Input: 
+      <input />
+    </div>
+    <button
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+  <div>
+    <div>
+      Output:
+    </div>
+    <div />
+  </div>
+</div>
+`;
