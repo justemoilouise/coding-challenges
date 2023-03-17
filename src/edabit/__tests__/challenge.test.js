@@ -9,6 +9,7 @@ import {
   getFibonacci,
   getFiscalCode,
   getFrequencyByLevel,
+  getNextInQuadSequence,
   getNumberPoliteness,
   getStringsWithNumbers,
   getSumOfProduct,
@@ -173,5 +174,24 @@ describe('Edabit challenges fns', () => {
     expect(output2.length).toBe(3);
     expect(output2[1][1]).toBe(4);
     expect(output2[2][1]).toBe(0);
+  });
+
+  test('Challenge 19', () => {
+    expect(getNextInQuadSequence([2, 4]).length).toBe(0);
+
+    // quadSequence([48, 65, 84]) ➞ [105, 128, 153]
+    const output1 = getNextInQuadSequence([48, 65, 84]);
+    expect(output1.length).toBe(3);
+    expect(output1[0]).toBe(105);
+
+    // quadSequence([0, 1, 6, 15, 28]) ➞ [45, 66, 91, 120, 153]
+    const output2 = getNextInQuadSequence([0, 1, 6, 15, 28]);
+    expect(output2.length).toBe(5);
+    expect(output2[0]).toBe(45);
+
+    // quadSequence([9, 20, 33, 48]) ➞ [65, 84, 105, 128]
+    const output3 = getNextInQuadSequence([9, 20, 33, 48]);
+    expect(output3.length).toBe(4);
+    expect(output3[0]).toBe(65);
   });
 });
